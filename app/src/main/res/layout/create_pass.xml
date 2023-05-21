@@ -16,7 +16,7 @@
         android:height="55sp"
         android:fontFamily="@font/montserrat_extrabold"
         android:shadowColor="@color/black"
-        android:text="Quên mật khẩu"
+        android:text="Tạo mật khẩu"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="48sp"
@@ -29,40 +29,45 @@
         app:layout_constraintVertical_bias="0.216"
         app:lineHeight="55sp" />
 
-    <TextView
-        android:id="@+id/introduce_need_to_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nhập gmail của bạn"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.314" />
-
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="271dp"
         android:layout_height="53dp"
         android:width="268sp"
         android:background="@drawable/btn_bg"
-        android:drawableLeft="@drawable/mail_outline"
+        android:drawableLeft="@drawable/lock"
         android:ems="10"
         android:fontFamily="@font/montserrat_semibold"
-        android:hint="  User@gmail.com.vn"
-        android:inputType="textPersonName"
+        android:hint="  Nhập mật khẩu mới"
+        android:inputType="textPassword"
         android:paddingStart="10sp"
         android:rotation="0"
         android:rotationX="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.435"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461" />
+        app:layout_constraintVertical_bias="0.439" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="271dp"
+        android:layout_height="53dp"
+        android:width="268sp"
+        android:background="@drawable/btn_bg"
+        android:drawableLeft="@drawable/lock"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_semibold"
+        android:hint="  Xác nhận lại mật khẩu"
+        android:inputType="textPassword"
+        android:paddingStart="10sp"
+        android:rotation="0"
+        android:rotationX="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.585" />
 
     <TextView
         android:id="@+id/textView5"
@@ -157,10 +162,10 @@
         android:textColor="@color/white_B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606" />
+        app:layout_constraintVertical_bias="0.717" />
 
     <ImageView
         android:id="@+id/imageView2"

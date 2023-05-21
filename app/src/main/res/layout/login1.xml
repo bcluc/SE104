@@ -101,6 +101,22 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
         app:layout_constraintVertical_bias="0.0" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton"
+        android:layout_width="148sp"
+        android:layout_height="48sp"
+        android:background="@drawable/btn_bg"
+        android:backgroundTint="#3E6FEF"
+        android:fontFamily="@font/montserrat_extrabold"
+        android:text="Đăng nhập"
+        android:textColor="@color/white_B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.696" />
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
@@ -131,21 +147,6 @@
         app:layout_constraintTop_toBottomOf="@+id/appCompatButton"
         app:layout_constraintVertical_bias="0.347" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/appCompatButton"
-        android:layout_width="148sp"
-        android:layout_height="48sp"
-        android:background="@drawable/btn_bg"
-        android:backgroundTint="#3E6FEF"
-        android:fontFamily="@font/montserrat_extrabold"
-        android:text="Đăng nhập"
-        android:textColor="@color/while_B"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.696" />
 
     <TextView
         android:id="@+id/textView6"
