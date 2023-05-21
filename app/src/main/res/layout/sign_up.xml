@@ -14,20 +14,103 @@
         android:layout_height="53dp"
         android:width="268sp"
         android:background="@drawable/btn_bg"
+        android:drawableLeft="@drawable/mail_outline"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_semibold"
+        android:hint="   User@gmail.com.vn"
+        android:inputType="textEmailAddress"
+        android:paddingStart="10sp"
+        android:rotation="0"
+        android:rotationX="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="269dp"
+        android:layout_height="53dp"
+        android:width="268sp"
+        android:background="@drawable/btn_bg"
+        android:drawableLeft="@drawable/vector__2_"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_semibold"
+        android:hint="   099110022"
+        android:inputType="phone"
+        android:paddingStart="10sp"
+        android:rotation="0"
+        android:rotationX="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="269dp"
+        android:layout_height="53dp"
+        android:width="268sp"
+        android:background="@drawable/btn_bg"
         android:drawableLeft="@drawable/lock"
         android:ems="10"
         android:fontFamily="@font/montserrat_semibold"
-        android:hint="  Mật khẩu"
+        android:hint="   Mật khẩu"
         android:inputType="textPassword"
         android:paddingStart="10sp"
         android:rotation="0"
         android:rotationX="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintHorizontal_bias="0.288"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.55" />
+        app:layout_constraintVertical_bias="0.615" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextTextPersonName6"
+        android:layout_width="269dp"
+        android:layout_height="53dp"
+        android:width="268sp"
+        android:background="@drawable/btn_bg"
+        android:drawableLeft="@drawable/lock"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_semibold"
+        android:hint="   Xác nhận lại mật khẩu"
+        android:inputType="textPassword"
+        android:paddingStart="10sp"
+        android:rotation="0"
+        android:rotationX="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.288"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.715" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="271dp"
+        android:layout_height="53dp"
+        android:width="268sp"
+        android:background="@drawable/btn_bg"
+        android:drawableLeft="@drawable/fingerprint"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_semibold"
+        android:hint="   Tên người dùng"
+        android:inputType="textPersonName"
+        android:paddingStart="10sp"
+        android:rotation="0"
+        android:rotationX="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.321"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.268" />
 
     <TextView
         android:id="@+id/textView"
@@ -37,7 +120,7 @@
         android:height="55sp"
         android:fontFamily="@font/montserrat_extrabold"
         android:shadowColor="@color/black"
-        android:text="Đăng nhập"
+        android:text="Đăng ký"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="48sp"
@@ -47,59 +130,8 @@
         app:layout_constraintHorizontal_bias="0.254"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216"
+        app:layout_constraintVertical_bias="0.118"
         app:lineHeight="55sp" />
-
-    <TextView
-        android:id="@+id/introduce_need_to_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Đăng nhập để tiếp tục"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.324" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="271dp"
-        android:layout_height="53dp"
-        android:width="268sp"
-        android:background="@drawable/btn_bg"
-        android:drawableLeft="@drawable/mail_outline"
-        android:ems="10"
-        android:fontFamily="@font/montserrat_semibold"
-        android:hint="  User@gmail.com.vn"
-        android:inputType="textEmailAddress"
-        android:paddingStart="10sp"
-        android:rotation="0"
-        android:rotationX="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.435"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.438" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="147dp"
-        android:fontFamily="@font/montserrat_semibold"
-        android:text="Quên mật khẩu"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
-        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/appCompatButton"
@@ -115,52 +147,48 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.696" />
+        app:layout_constraintVertical_bias="0.809" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
         android:fontFamily="@font/montserrat_semibold"
         android:text="Đăng ký tài khoản mới"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintHorizontal_bias="0.628"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatButton"
-        app:layout_constraintVertical_bias="0.026" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.903" />
+
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
         android:fontFamily="sans-serif-light"
         android:text="Đăng nhập bằng"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatButton"
-        app:layout_constraintVertical_bias="0.347" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.935" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
         android:fontFamily="sans-serif-light"
         android:text="Hoặc,"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.265"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatButton"
-        app:layout_constraintVertical_bias="0.008" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.894" />
 
     <View
         android:layout_width="210dp"
