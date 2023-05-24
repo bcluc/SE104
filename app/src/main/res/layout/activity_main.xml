@@ -49,26 +49,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/white_bar"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="195dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/Montserrat_SemiBoldItalic"
-        android:text="Chuyến đi"
-        android:textColor="#000000"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="277dp" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/next_arrow"
-        tools:layout_editor_absoluteX="326dp"
-        tools:layout_editor_absoluteY="237dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="163dp" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -76,31 +58,28 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button"
         app:srcCompat="@drawable/white_big_bar"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="313dp" />
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="281dp" />
 
-    <TextView
-        android:id="@+id/departure_point"
+    <ImageView
+        android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:fontFamily="@font/Montserrat_SemiBold"
-        android:text="SGN"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="331dp" />
+        app:srcCompat="@drawable/next_arrow"
+        tools:layout_editor_absoluteX="327dp"
+        tools:layout_editor_absoluteY="205dp" />
 
     <TextView
         android:id="@+id/departure_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="16dp"
         android:fontFamily="@font/Montserrat_Medium"
         android:text="15:30"
         android:textColor="#8E8E8E"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="359dp" />
+        tools:layout_editor_absoluteY="327dp" />
 
     <TextView
         android:id="@+id/textView6"
@@ -110,9 +89,9 @@
         android:textColor="#8E8E8E"
         android:textSize="10sp"
         app:layout_constraintEnd_toStartOf="@+id/destination_point"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toEndOf="@+id/departure_point"
-        tools:layout_editor_absoluteY="334dp" />
+        tools:layout_editor_absoluteY="302dp" />
 
     <TextView
         android:id="@+id/destination_point"
@@ -121,8 +100,8 @@
         android:fontFamily="@font/Montserrat_SemiBold"
         android:text="HAN"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="197dp"
-        tools:layout_editor_absoluteY="330dp" />
+        tools:layout_editor_absoluteX="198dp"
+        tools:layout_editor_absoluteY="298dp" />
 
     <TextView
         android:id="@+id/destination_time"
@@ -130,42 +109,41 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/Montserrat_Medium"
         android:text="17:40"
-        android:textSize="12sp"
         android:textColor="#8E8E8E"
-        tools:layout_editor_absoluteX="197dp"
-        tools:layout_editor_absoluteY="359dp" />
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="198dp"
+        tools:layout_editor_absoluteY="327dp" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:fontFamily="@font/Montserrat_Medium"
         android:text="Chi tiết"
         android:textColor="#000000"
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="359dp" />
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="327dp" />
 
     <ImageView
         android:id="@+id/price_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/head_big_bar"
         android:background="@drawable/round_button"
-        tools:layout_editor_absoluteX="261dp"
-        tools:layout_editor_absoluteY="313dp" />
+        app:srcCompat="@drawable/head_big_bar"
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="281dp" />
 
     <TextView
         android:id="@+id/tu_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Từ"
         android:fontFamily="@font/Montserrat_Medium"
+        android:text="Từ"
         android:textColor="#000000"
         android:textSize="10sp"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="320dp" />
+        tools:layout_editor_absoluteX="266dp"
+        tools:layout_editor_absoluteY="288dp" />
 
     <TextView
         android:id="@+id/ticket_price"
@@ -175,8 +153,8 @@
         android:text="2,649,000 VND"
         android:textColor="#000000"
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="336dp" />
+        tools:layout_editor_absoluteX="266dp"
+        tools:layout_editor_absoluteY="304dp" />
 
     <TextView
         android:id="@+id/emty_seat"
@@ -186,26 +164,26 @@
         android:text="Còn 9 chỗ"
         android:textColor="#000000"
         android:textSize="8sp"
-        tools:layout_editor_absoluteX="314dp"
-        tools:layout_editor_absoluteY="369dp" />
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="337dp" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/chose_day_frame"
-        tools:layout_editor_absoluteX="116dp"
-        tools:layout_editor_absoluteY="227dp" />
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="195dp" />
 
     <TextView
         android:id="@+id/today"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="T7, 06/05/2023"
-        android:textSize="12sp"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="238dp" />
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="206dp" />
 
     <TextView
         android:id="@+id/next_day"
@@ -214,8 +192,29 @@
         android:text="CN, 07/05/2023"
         android:textColor="#8E8E8E"
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="238dp" />
+        tools:layout_editor_absoluteX="235dp"
+        tools:layout_editor_absoluteY="206dp" />
+
+    <TextView
+        android:id="@+id/departure_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/Montserrat_SemiBold"
+        android:text="SGN"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="299dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/Montserrat_SemiBoldItalic"
+        android:text="Chuyến đi"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="245dp" />
 
     <TextView
         android:id="@+id/flight_info"
@@ -309,8 +308,6 @@
         tools:layout_editor_absoluteX="191dp"
         tools:layout_editor_absoluteY="117dp" />
 
-
-
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="wrap_content"
@@ -337,6 +334,165 @@
         app:srcCompat="@drawable/down_arrow"
         tools:layout_editor_absoluteX="235dp"
         tools:layout_editor_absoluteY="146dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/white_board"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="370dp" />
+
+    <TextView
+        android:id="@+id/so_hieu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số hiệu máy bay:"
+        android:textColor="#000000"
+        android:fontFamily="@font/Montserrat_Regular"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="380dp" />
+
+    <TextView
+        android:id="@+id/flight_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VJ44"
+        android:textColor="#2F2B80"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="380dp" />
+
+    <ImageView
+        android:id="@+id/vtri_di"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/black_dot"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="377dp" />
+
+    <ImageView
+        android:id="@+id/vtri_den"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/black_dot"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="464dp" />
+
+    <ImageView
+        android:id="@+id/flight_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/down_long_arrow"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="422dp" />
+
+    <TextView
+        android:id="@+id/KH_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Điểm khởi hành"
+        android:textColor="#000000"
+        android:fontFamily="@font/Montserrat_Regular"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="402dp" />
+
+    <TextView
+        android:id="@+id/KH_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16 : 30, 06/05/2023 (Giờ địa phương)"
+        android:textColor="#000000"
+        android:fontFamily="@font/Montserrat_Medium"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="420dp" />
+
+    <TextView
+        android:id="@+id/KH_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TP Hồ Chí Minh - Sân bay Quốc tế Tân Sơn Nhất"
+        android:textColor="#000000"
+        android:fontFamily="@font/Montserrat_Medium"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="438dp" />
+
+    <TextView
+        android:id="@+id/DD_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Điểm đến"
+        android:textColor="#000000"
+        android:fontFamily="@font/Montserrat_Regular"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="489dp" />
+
+    <TextView
+        android:id="@+id/DD_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18 : 40, 06/05/2023 (Giờ địa phương)"
+        android:textColor="#000000"
+        android:fontFamily="@font/Montserrat_Medium"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="507dp" />
+
+    <TextView
+        android:id="@+id/DD_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hà Nội - Sân bay Nội Bài Hà Nội"
+        android:textColor="#000000"
+        android:fontFamily="@font/Montserrat_Medium"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="525dp" />
+
+    <ImageView
+        android:id="@+id/black_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/black_line"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="555dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thời gian: 2 giờ 10 phút"
+        android:textColor="#000000"
+        android:fontFamily="@font/Montserrat_Light"
+        android:textSize="8sp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="570dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/Montserrat_Light"
+        android:text="Tàu bay: A321"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView15"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        tools:layout_editor_absoluteY="570dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/Montserrat_Light"
+        android:text="Hãng khai thác: Vietjet"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        tools:layout_editor_absoluteX="254dp"
+        tools:layout_editor_absoluteY="570dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
