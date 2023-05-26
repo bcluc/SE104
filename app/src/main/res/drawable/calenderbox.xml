@@ -16,16 +16,13 @@
             </item>
 
 
-    <item
-        android:drawable="@drawable/vector__3_"
-        android:gravity = "end"
-        android:height="8dp"
-        android:width="10dp" />
+            <item
+                android:drawable="@drawable/baseline_calendar_month_24"
+                android:gravity = "end"
+                android:height="20dp"
+                android:width="20dp" />
 
         </layer-list>
     </item>
-
-
-
 
 </selector>

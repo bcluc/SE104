@@ -8,4 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="white_B">#FBFBFBFB</color>
+    <color name="while_gray">#E3EAED</color>
+    <color name="gray_font">#000000</color>
 </resources>

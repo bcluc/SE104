@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Layout con bên trên để hiển thị màn hình trước đó -->
+    <LinearLayout
+        android:id="@+id/layout_above_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_spinner"
+        android:orientation="vertical">
+
+        <!-- Các View cần hiển thị trên màn hình trước đó -->
+
+    </LinearLayout>
+
+    <!-- Layout con bên dưới để hiển thị Spinner -->
+    <LinearLayout
+        android:id="@+id/layout_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <!-- Các View cần hiển thị trong Spinner -->
+
+    </LinearLayout>
+
+</RelativeLayout>
