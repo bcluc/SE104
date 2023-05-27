@@ -82,25 +82,18 @@
                 android:scrollIndicators="none"
                 android:textSize="13sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/montserrat_light_italic"
-                android:text="Số ghế thương gia,giá"
-                android:textSize="10sp" />
 
             <EditText
                 android:id="@+id/spinner2"
                 android:layout_width="277dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="17dp"
                 android:background="@drawable/simple_white_box"
                 android:elevation="20dp"
                 android:fontFamily="@font/montserrat_semibold"
                 android:hint="SỐ GHẾ THƯƠNG GIA"
-                android:padding="10dp"
+                android:padding="12dp"
                 android:scaleType="center"
                 android:textSize="13sp" />
 
@@ -109,32 +102,23 @@
                 android:layout_width="277dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="23dp"
                 android:background="@drawable/simple_white_box"
                 android:elevation="20dp"
                 android:fontFamily="@font/montserrat_semibold"
-                android:hint="GIÁ GHẾ THƯƠNG GIA"
-                android:padding="10dp"
+                android:hint="   GIÁ GHẾ THƯƠNG GIA"
                 android:textSize="13sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/montserrat_light_italic"
-                android:text="Số ghế phổ thông đặc biệt,giá"
-                android:textSize="10sp" />
 
             <EditText
                 android:id="@+id/spinner3"
                 android:layout_width="277dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="23dp"
                 android:background="@drawable/simple_white_box"
                 android:elevation="20dp"
                 android:fontFamily="@font/montserrat_semibold"
-                android:hint="SỐ GHẾ PHỔ THÔNG ĐẶC BIỆT"
-                android:padding="10dp"
+                android:hint="   SỐ GHẾ PHỔ THÔNG ĐẶC BIỆT"
                 android:textSize="13sp" />
 
             <EditText
@@ -142,32 +126,11 @@
                 android:layout_width="277dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="18dp"
                 android:background="@drawable/simple_white_box"
                 android:elevation="20dp"
                 android:fontFamily="@font/montserrat_semibold"
-                android:hint="GIÁ GHẾ PHỔ THÔNG ĐẶC BIỆT"
-                android:padding="10dp"
-                android:textSize="13sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/montserrat_light_italic"
-                android:text="Số ghế phổ thông,giá"
-                android:textSize="10sp" />
-
-            <EditText
-                android:id="@+id/spinner9"
-                android:layout_width="277dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="50dp"
-                android:background="@drawable/simple_white_box"
-                android:elevation="20dp"
-                android:fontFamily="@font/montserrat_semibold"
-                android:hint="SỐ GHẾ PHỔ THÔNG"
-                android:padding="10dp"
+                android:hint="   GIÁ GHẾ PHỔ THÔNG ĐẶC BIỆT"
                 android:textSize="13sp" />
 
             <EditText
@@ -175,32 +138,23 @@
                 android:layout_width="277dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="19dp"
                 android:background="@drawable/simple_white_box"
                 android:elevation="20dp"
                 android:fontFamily="@font/montserrat_semibold"
-                android:hint="GIÁ GHẾ PHỔ THÔNG"
-                android:padding="10dp"
+                android:hint="   GIÁ GHẾ PHỔ THÔNG"
                 android:textSize="13sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/montserrat_light_italic"
-                android:text="Số ghế hạng nhất,giá"
-                android:textSize="10sp" />
 
             <EditText
                 android:id="@+id/spinner10"
                 android:layout_width="277dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="23dp"
                 android:background="@drawable/simple_white_box"
                 android:elevation="20dp"
                 android:fontFamily="@font/montserrat_semibold"
-                android:hint="SỐ GHẾ HẠNG NHẤT"
-                android:padding="10dp"
+                android:hint="   SỐ GHẾ HẠNG NHẤT"
                 android:textSize="13sp" />
 
             <EditText
@@ -208,11 +162,11 @@
                 android:layout_width="277dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="50dp"
+                android:layout_marginTop="23dp"
                 android:background="@drawable/simple_white_box"
                 android:elevation="20dp"
                 android:fontFamily="@font/montserrat_semibold"
-                android:hint="GIÁ GHẾ HẠNG NHẤT"
-                android:padding="10dp"
+                android:hint="   GIÁ GHẾ HẠNG NHẤT"
                 android:textSize="13sp" />
 
             <Spinner
@@ -224,11 +178,20 @@
                 android:background="@drawable/box"
                 android:contentDescription="Thời điểm xuất phát"
                 android:elevation="20dp"
-                android:padding="10dp"
                 android:fontFamily="@font/montserrat_semibold"
                 android:textSize="15sp" />
 
-
+            <EditText
+                android:id="@+id/spinner9"
+                android:layout_width="277dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/simple_white_box"
+                android:elevation="20dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:hint="   SỐ GHẾ PHỔ THÔNG"
+                android:textSize="13sp" />
 
             <Button
                 android:id="@+id/button"
@@ -239,7 +202,7 @@
                 android:layout_marginBottom="44dp"
                 android:backgroundTint="#3E6FEF"
                 android:fontFamily="@font/montserrat_semibold"
-                android:text="Sửa " />
+                android:text="Thêm " />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

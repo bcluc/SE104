@@ -52,6 +52,11 @@
         </gradient>
       </aapt:attr>
     </path>
+    <path
+        android:pathData="M26,39L295,39A19,19 0,0 1,314 58L314,83A19,19 0,0 1,295 102L26,102A19,19 0,0 1,7 83L7,58A19,19 0,0 1,26 39z"
+        android:fillColor="#ffffff"/>
+    <path
+        android:pathData="M0,301C0,294.37 5.37,289 12,289H348C354.63,289 360,294.37 360,301V800H0V301Z"
+        android:fillColor="#ffffff"/>
   </group>
-
 </vector>

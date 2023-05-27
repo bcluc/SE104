@@ -8,20 +8,19 @@
     android:backgroundTint="#000000"
     android:backgroundTintMode="screen">
 
-    <EditText
+    <TextView
         android:id="@+id/editTextTextPersonName"
         android:layout_width="277dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_marginTop="55dp"
-        android:background="@drawable/box"
+        android:background="@drawable/box_white"
         android:elevation="20dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
         android:ems="10"
         android:fontFamily="@font/montserrat_semibold"
         android:hint="MÃ CHUYẾN BAY"
-        android:inputType="textPersonName"
         android:padding="10dp"
-        android:minHeight="0dp"
-        android:minWidth="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,10 +31,9 @@
         android:id="@+id/textView4"
         android:layout_width="289dp"
         android:layout_height="46dp"
-        android:drawableRight="@drawable/add_ring"
         android:fontFamily="@font/montserrat_semibold"
         android:gravity="center"
-        android:text="Thêm chuyến bay"
+        android:text="Tra cứu chuyến bay"
         android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,28 +56,31 @@
         app:layout_constraintVertical_bias="0.075"
         app:srcCompat="@drawable/back_arrow" />
 
-    <Spinner
+    <TextView
         android:id="@+id/spinner2"
         android:layout_width="277dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_margin="10dp"
         android:layout_marginTop="17dp"
         android:background="@drawable/box"
+        android:contentDescription="Hãng hàng không"
+        android:padding="12dp"
+        android:scaleType="center"
         android:elevation="20dp"
-        android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
         app:layout_constraintVertical_bias="0.012" />
 
-    <Spinner
+    <TextView
         android:id="@+id/spinner5"
         android:layout_width="277dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_margin="10dp"
         android:layout_marginTop="23dp"
         android:background="@drawable/box"
+        android:contentDescription="Điểm xuất phát"
         android:elevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,13 +88,14 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner4"
         app:layout_constraintVertical_bias="0.04" />
 
-    <Spinner
+    <TextView
         android:id="@+id/spinner6"
         android:layout_width="277dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_margin="10dp"
         android:layout_marginTop="22dp"
         android:background="@drawable/box"
+        android:contentDescription="Điểm đến"
         android:elevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,13 +103,14 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner5"
         app:layout_constraintVertical_bias="0.038" />
 
-    <Spinner
+    <TextView
         android:id="@+id/spinner"
         android:layout_width="277dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_margin="10dp"
         android:layout_marginTop="23dp"
         android:background="@drawable/calenderbox"
+        android:contentDescription="Thời điểm xuất phát"
         android:elevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -115,13 +118,14 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner2"
         app:layout_constraintVertical_bias="0.021" />
 
-    <Spinner
+    <TextView
         android:id="@+id/spinner4"
         android:layout_width="277dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_margin="10dp"
         android:layout_marginTop="25dp"
         android:background="@drawable/calenderbox"
+        android:contentDescription="Thời gian đến dự kiến"
         android:elevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -131,18 +135,20 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="138dp"
+        android:layout_width="158dp"
         android:layout_height="48dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="140dp"
         android:backgroundTint="#3E6FEF"
+        android:drawableRight="@drawable/icon"
         android:fontFamily="@font/montserrat_semibold"
-        android:text="Tiếp tục "
+        android:text="Sửa thông tin"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
+        app:layout_constraintHorizontal_bias="0.841"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner6"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner6" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
