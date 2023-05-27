@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_ground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/back_icon" />
+        <TextView
+            android:id="@+id/content_forget_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/montserrat_extrabold"
+            android:textColor="@color/white_B"
+            android:text="Smart OTP"
+            android:textSize="45sp"/>
+
+        <TextView
+            android:id="@+id/tieude"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/content_forget_pass"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/montserrat_extrabold"
+            android:textColor="@color/white_B"
+            android:text="Nhập mã OTP được gửi vào số điện thoại "
+            android:textSize="20sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:hint="-"
+                android:id = "@+id/otp_box1"
+                android:background="@drawable/otp_while_box"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="1"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_weight="1"
+                android:textColor="@color/white"/>
+            <EditText
+                android:hint="-"
+                android:background="@drawable/otp_while_box"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="1"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_weight="1"
+                android:textColor="@color/white"/>
+            <EditText
+                android:hint="-"
+                android:background="@drawable/otp_while_box"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="1"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_weight="1"
+                android:textColor="@color/white"/>
+            <EditText
+                android:hint="-"
+                android:background="@drawable/otp_while_box"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="1"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_weight="1"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nhập lãi mã "
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_weight="5"
+                android:gravity="end"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tại đây "
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_weight="5"
+                android:textStyle="bold"
+                android:gravity="start"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="148dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="148dp"
+            android:background="@drawable/btn_bg"
+            android:backgroundTint="#426BF8"
+            android:text="Tiếp tục"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
