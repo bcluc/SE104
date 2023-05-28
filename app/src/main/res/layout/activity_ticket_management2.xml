@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".ticketManagement1">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/input_bg"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
+        android:text="Quản lý vé"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.268"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="419dp"
+        android:layout_height="738dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bottom_bg" />
+
+    <LinearLayout
+        android:layout_width="332dp"
+        android:layout_height="676dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/input_bg"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingTop="20dp"
+        android:paddingRight="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.367"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/text_Plane_ID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/text_soghe_gia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="Số ghế thương gia, giá:"
+            android:textColor="@color/Input_color"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/text_ghe_tg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/text_gia_tg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/text_soghe_gia2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="Số ghế phổ thông đặc biệt, giá:"
+            android:textColor="@color/Input_color"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/text_ghe_ptdb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/text_gia_ptdb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/text_soghe_gia3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="Số ghế phổ thông, giá:"
+            android:textColor="@color/Input_color"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/text_ghe_pt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/text_gia_pt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/text_soghe_gia4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="Số ghế hạng nhất, giá:"
+            android:textColor="@color/Input_color"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/text_ghe_h1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/text_gia_h1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="TextView" />
+
+        <Spinner
+            android:id="@+id/spinner_dichvuthem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_bg"
+            android:backgroundTintMode="add"
+            android:dropDownWidth="wrap_content"
+            android:dropDownSelector="@android:drawable/btn_dropdown"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:popupBackground="@android:drawable/btn_dropdown" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
