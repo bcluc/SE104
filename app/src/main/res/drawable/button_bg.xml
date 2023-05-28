@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+
+android:insetLeft="-6dp"
+android:insetTop="-6dp"
+android:insetRight="0dp"
+android:insetBottom="0dp">
+<shape android:shape="rectangle">
+    <solid android:color="@color/Blue2" />
+    <stroke android:color="@color/black" android:width="2dp"></stroke>
+    <corners android:radius="10dp" />
+
+
+</shape>
+<!--    <selector xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+<!--        <item android:drawable="@color/Bttn_Color_click" android:state_pressed="true"></item>-->
+<!--        <item android:drawable="@color/Blue2" android:state_pressed="false"></item>-->
+<!--    </selector>-->
+
+</inset>
+
