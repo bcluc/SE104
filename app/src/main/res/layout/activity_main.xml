@@ -89,7 +89,7 @@
         android:textColor="#8E8E8E"
         android:textSize="10sp"
         app:layout_constraintEnd_toStartOf="@+id/destination_point"
-        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/departure_point"
         tools:layout_editor_absoluteY="302dp" />
 

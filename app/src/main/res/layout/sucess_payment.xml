@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/head_frame" />
+
+    <ImageView
+        android:id="@+id/out_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/arrow"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="24dp" />
+
+    <TextView
+        android:id="@+id/lua_chon_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/Montserrat_Bold"
+        android:text="Thanh toán"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="18dp" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/success"
+        tools:layout_editor_absoluteY="130dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/Montserrat_Bold"
+        android:text="Thanh toán thành công"
+        android:textColor="#27272A"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="257dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/Montserrat_Regular"
+        android:text="Tham khảo hàng trăm chuyến bay khác \n trên Traveloka ngay bây giờ!"
+        android:textColor="#27272A"
+        android:textSize="13sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="290dp" />
+
+    <Button
+        android:id="@+id/return_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/return_button"
+        android:text="Trang chủ"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="343dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
