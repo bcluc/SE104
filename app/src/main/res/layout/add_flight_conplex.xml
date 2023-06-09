@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="900dp"
-    android:background="@drawable/th_m_chuy_n_bay__s__gh_"
+    android:layout_height="wrap_content"
+
     android:backgroundTint="#000000"
     android:backgroundTintMode="screen"
     android:orientation="vertical">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@drawable/th_m_chuy_n_bay__s__gh_"
         >
 
         <LinearLayout
@@ -105,8 +106,9 @@
                 android:layout_marginTop="23dp"
                 android:background="@drawable/simple_white_box"
                 android:elevation="20dp"
+                android:padding="12dp"
                 android:fontFamily="@font/montserrat_semibold"
-                android:hint="   GIÁ GHẾ THƯƠNG GIA"
+                android:hint="GIÁ GHẾ THƯƠNG GIA"
                 android:textSize="13sp" />
 
             <EditText
@@ -117,8 +119,9 @@
                 android:layout_marginTop="23dp"
                 android:background="@drawable/simple_white_box"
                 android:elevation="20dp"
+                android:padding="12dp"
                 android:fontFamily="@font/montserrat_semibold"
-                android:hint="   SỐ GHẾ PHỔ THÔNG ĐẶC BIỆT"
+                android:hint="SỐ GHẾ PHỔ THÔNG ĐẶC BIỆT"
                 android:textSize="13sp" />
 
             <EditText
@@ -129,8 +132,9 @@
                 android:layout_marginTop="18dp"
                 android:background="@drawable/simple_white_box"
                 android:elevation="20dp"
+                android:padding="12dp"
                 android:fontFamily="@font/montserrat_semibold"
-                android:hint="   GIÁ GHẾ PHỔ THÔNG ĐẶC BIỆT"
+                android:hint="GIÁ GHẾ PHỔ THÔNG ĐẶC BIỆT"
                 android:textSize="13sp" />
 
             <EditText
@@ -141,8 +145,9 @@
                 android:layout_marginTop="19dp"
                 android:background="@drawable/simple_white_box"
                 android:elevation="20dp"
+                android:padding="12dp"
                 android:fontFamily="@font/montserrat_semibold"
-                android:hint="   GIÁ GHẾ PHỔ THÔNG"
+                android:hint="GIÁ GHẾ PHỔ THÔNG"
                 android:textSize="13sp" />
 
             <EditText
@@ -153,8 +158,9 @@
                 android:layout_marginTop="23dp"
                 android:background="@drawable/simple_white_box"
                 android:elevation="20dp"
+                android:padding="12dp"
                 android:fontFamily="@font/montserrat_semibold"
-                android:hint="   SỐ GHẾ HẠNG NHẤT"
+                android:hint="SỐ GHẾ HẠNG NHẤT"
                 android:textSize="13sp" />
 
             <EditText
@@ -165,8 +171,9 @@
                 android:layout_marginTop="23dp"
                 android:background="@drawable/simple_white_box"
                 android:elevation="20dp"
+                android:padding="12dp"
                 android:fontFamily="@font/montserrat_semibold"
-                android:hint="   GIÁ GHẾ HẠNG NHẤT"
+                android:hint="GIÁ GHẾ HẠNG NHẤT"
                 android:textSize="13sp" />
 
             <Spinner
@@ -179,6 +186,7 @@
                 android:contentDescription="Thời điểm xuất phát"
                 android:elevation="20dp"
                 android:fontFamily="@font/montserrat_semibold"
+
                 android:textSize="15sp" />
 
             <EditText
@@ -189,8 +197,9 @@
                 android:layout_marginTop="23dp"
                 android:background="@drawable/simple_white_box"
                 android:elevation="20dp"
+                android:padding="12dp"
                 android:fontFamily="@font/montserrat_semibold"
-                android:hint="   SỐ GHẾ PHỔ THÔNG"
+                android:hint="SỐ GHẾ PHỔ THÔNG"
                 android:textSize="13sp" />
 
             <Button
@@ -204,5 +213,5 @@
                 android:fontFamily="@font/montserrat_semibold"
                 android:text="Thêm " />
         </LinearLayout>
-    </ScrollView>
-</RelativeLayout>
+    </LinearLayout>
+</ScrollView>

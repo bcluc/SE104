@@ -25,10 +25,10 @@ public class clock_activity extends AppCompatActivity
         setContentView(R.layout.clock);
         initDatePicker();
         dateButton = findViewById(R.id.datePickerButton);
-        dateButton.setText(getTodaysDate());
+        dateButton.setText(getTodaysDate());                    // nút bấm để thay đổi ngày tháng trên đồng hồ
     }
 
-    private String getTodaysDate()
+    private String getTodaysDate()              //lấy ngày hnay
     {
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
@@ -38,16 +38,16 @@ public class clock_activity extends AppCompatActivity
         return makeDateString(day, month, year);
     }
 
-    private void initDatePicker()
+    private void initDatePicker()                       //khởi tạo đồng hồ
     {
-        DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener()
+        DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener()       //
         {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int day)
             {
                 month = month + 1;
                 String date = makeDateString(day, month, year);
-                dateButton.setText(date);
+                dateButton.setText(date);               // set lại cái đồng hồ bằng lịch mới
             }
         };
 
@@ -58,7 +58,7 @@ public class clock_activity extends AppCompatActivity
 
         int style = AlertDialog.THEME_HOLO_LIGHT;
 
-        datePickerDialog = new DatePickerDialog(this, style, dateSetListener, year, month, day);
+        datePickerDialog = new DatePickerDialog(this, style, dateSetListener, year, month, day);        // khởi tạo giá trị của datePickerDialog
         //datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
 
     }
