@@ -52,22 +52,22 @@ public class MainActivity extends AppCompatActivity {
         myAdapter = new Adaptor(MainActivity.this, R.layout.item_flight_listview, list);
         listView.setAdapter(myAdapter);
 
-//        launcher = registerForActivityResult(
-//                new ActivityResultContracts.StartActivityForResult(),
-//                new ActivityResultCallback<ActivityResult>() {
-//                    @Override
-//                    public void onActivityResult(ActivityResult result) {
-//                        if (result.getResultCode() == Activity.RESULT_OK) {
-//                            Intent intent = result.getData();
-//                            String Name = intent.getStringExtra("Name");
-//
-//                            Log.d("MainActivity", "Name: " + Name);
-//                            myAdapter.notifyDataSetChanged();
-//                            //Toast.makeText(getApplicationContext(), dataClassList.size(), Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//                }
-//        );
+        launcher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                new ActivityResultCallback<ActivityResult>() {
+                    @Override
+                    public void onActivityResult(ActivityResult result) {
+                        if (result.getResultCode() == Activity.RESULT_OK) {
+                            Intent intent = result.getData();
+                            String Name = intent.getStringExtra("Name");
+
+                            Log.d("MainActivity", "Name: " + Name);
+                            myAdapter.notifyDataSetChanged();
+                            //Toast.makeText(getApplicationContext(), dataClassList.size(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+        );
 //
 //        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //            @Override
@@ -93,8 +93,12 @@ public class MainActivity extends AppCompatActivity {
 //                    }
 //                }
 //        );
-        listView.setOnItemClickListener(new Adaptor());
-        registerForContextMenu(listView);
-    }
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(MainActivity.this, "Click", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 }
