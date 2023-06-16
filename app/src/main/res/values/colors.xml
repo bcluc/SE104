@@ -10,4 +10,5 @@
     <color name="white_B">#FBFBFBFB</color>
     <color name="while_gray">#E3EAED</color>
     <color name="gray_font">#000000</color>
+    <color name="black_50">#80000000</color>
 </resources>
