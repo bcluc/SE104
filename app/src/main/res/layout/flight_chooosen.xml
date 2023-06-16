@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:background="@drawable/box_white"
-    tools:context="flight_listview.MainActivity">
+    tools:context="add_flight.MainActivity">
     <LinearLayout
         android:layout_marginTop="18dp"
         android:layout_width="match_parent"
@@ -37,7 +37,7 @@
     </LinearLayout>
 
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/list_View"
         android:layout_width="match_parent"
         android:layout_height="206dp" />
     <Button

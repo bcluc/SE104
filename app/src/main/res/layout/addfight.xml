@@ -7,7 +7,7 @@
     android:background="@drawable/th_m_chuy_n_bay__1_"
     android:backgroundTint="#000000"
     android:backgroundTintMode="screen"
-    tools:context="add_flight.add_flight"
+    tools:context="flight_listview.add_flight"
     android:orientation="vertical"
     >
     <LinearLayout

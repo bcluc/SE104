@@ -5,8 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -18,15 +16,13 @@ import java.util.ArrayList;
 public class Adaptor extends ArrayAdapter<Contact> {
     private Context context;
     private ArrayList<Contact> list;
-    private int resource;
 
-    public Adaptor(Context context, int resource ,ArrayList<Contact> list) {
-        super(context, resource, list);
+    public Adaptor(Context context,ArrayList<Contact> list) {
+        super(context, R.layout.item_flight_listview, list);
         this.context = context;
-        this.resource = resource;
         this.list = list;
     }
-
+    
     @Nullable
     @Override
     public Contact getItem(int position) {
