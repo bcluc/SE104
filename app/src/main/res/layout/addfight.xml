@@ -76,7 +76,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="17dp"
         android:background="@drawable/box"
-        android:text="HÃNG HÀNG KHÔNG"
+        android:text="@string/Brand"
         android:contentDescription="Hãng hàng không"
         android:fontFamily="@font/montserrat_semibold"
         android:gravity="left"
@@ -96,7 +96,6 @@
         android:layout_height="48dp"
         android:layout_marginTop="17dp"
         android:background="@drawable/calenderbox"
-        android:contentDescription="Điểm xuất phát"
         android:elevation="20dp"
         android:ems="10"
         android:fontFamily="@font/montserrat_semibold"
@@ -106,7 +105,7 @@
         android:textColor="@color/black"
         android:padding="12dp"
         android:layout_marginLeft="50dp"
-        android:text="Thời gian xuât phát"/>
+        android:text="@string/start_time"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/time_come"
@@ -114,7 +113,6 @@
         android:layout_height="48dp"
         android:layout_marginTop="22dp"
         android:background="@drawable/calenderbox"
-        android:contentDescription="Điểm đến"
         android:elevation="20dp"
         android:minHeight="0dp"
         android:minWidth="0dp"
@@ -126,7 +124,7 @@
         android:textColor="@color/black"
         android:padding="12dp"
         android:layout_marginLeft="50dp"
-        android:text="Thời gian đến dự kiến"/>
+        android:text="@string/end_time"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/start_locate"
@@ -134,7 +132,6 @@
         android:layout_height="48dp"
         android:layout_marginTop="23dp"
         android:background="@drawable/box"
-        android:contentDescription="Thời điểm xuất phát"
         android:elevation="20dp"
         android:minWidth="0dp"
         android:minHeight="0dp"
@@ -146,7 +143,7 @@
         android:textColor="@color/black"
         android:padding="12dp"
         android:layout_marginLeft="50dp"
-        android:text="Điểm xuất phát"/>
+        android:text="@string/start_locate"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/end_locate"
@@ -154,7 +151,6 @@
         android:layout_height="48dp"
         android:layout_marginTop="25dp"
         android:background="@drawable/box"
-        android:contentDescription="Thời gian đến dự kiến"
         android:elevation="20dp"
         android:minWidth="0dp"
         android:minHeight="0dp"
@@ -166,7 +162,7 @@
         android:textColor="@color/black"
         android:padding="12dp"
         android:layout_marginLeft="50dp"
-        android:text="Điểm đến"/>
+        android:text="@string/end_locate"/>
 
     <Button
         android:id="@+id/next_page"

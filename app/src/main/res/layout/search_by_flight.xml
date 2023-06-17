@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="900dp"
-    android:background="@drawable/tra_c_u_chuy_n_bay">
+    android:layout_height="match_parent"
+    android:background="@drawable/tra_c_u_chuy_n_bay"
+    tools:context="search_flight.SearchByFlightActivity">
 
 
     <TextView

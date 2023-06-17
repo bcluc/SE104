@@ -16,15 +16,17 @@ import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.se104.MainActivity;
 import com.example.se104.R;
 
 import java.util.ArrayList;
 import java.util.Locale;
+
+import filght_complex.add_flight_complex;
 
 public class add_flight  extends AppCompatActivity {
 //    Button btn_open_dialog_flight = findViewById(R.id.hang_hang_ko);
@@ -81,15 +83,18 @@ public class add_flight  extends AppCompatActivity {
         btn_open_dialog_flight_continue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (btn_open_dialog_start_locate != null
-                && btn_open_dialog_flight_end_locate != null
-                && btn_open_dialog_flight != null
-                && btn_open_dialog_lock_come != null
-                && btn_open_dialog_lock_start != null)
+
+                if (!btn_open_dialog_start_locate.getText().toString().equals("Điểm xuất phát")
+                && !btn_open_dialog_flight_end_locate.getText().toString().equals("Điểm đến")
+                        && !btn_open_dialog_flight.getText().toString().equals("Hãng hàng không")
+                        && !btn_open_dialog_lock_come.getText().toString().equals("Thời gian xuất phát")
+                        && !btn_open_dialog_lock_start.getText().toString().equals("Thời gian đến dự kiến") )
                 {
                     Intent intent = new Intent(add_flight.this, add_flight_complex.class);
                     startActivity(intent);
                 }
+                else
+                    Toast.makeText(getApplicationContext(), "Vui lòng điền đầy đủ thông tin!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -152,6 +157,7 @@ public class add_flight  extends AppCompatActivity {
 
             }
         });
+        dialog.show();
 
     }
 
@@ -197,38 +203,50 @@ public class add_flight  extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+        dialog.show();
+    }
+    public String temp;
 
+    public void setTemp(String temp) {
+        this.temp = temp;
     }
 
-    public void popTimePicker(View view) {
+    public void popTimePicker(View view, int ID) {
         TimePickerDialog.OnTimeSetListener onTimeSetListener = new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
                 hour = selectedHour;
                 minute = selectedMinute;
-                date = String.format(Locale.getDefault(), "%02d:%02d", hour, minute);
+                setTemp(String.format(Locale.getDefault(), "%02d:%02d", hour, minute));
+                Button btn = findViewById(ID);
+                date = date + "   "+ temp;
+                btn.setText(date);
             }
         };
         TimePickerDialog timePickerDialog = new TimePickerDialog(this, /*style,*/ onTimeSetListener, hour, minute, true);
 
         timePickerDialog.setTitle("Select Time");
         timePickerDialog.show();
+        Button btn = findViewById(ID);
+
+
+
     }
     private void openClock(int gravity,int ID) {
-        popTimePicker(findViewById(ID));
+//        popTimePicker(findViewById(ID));
         final Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.calender);
         CalendarView mCalendarView;
         Button btn_open_dialog_lock_start = findViewById(ID);
 
-        mCalendarView = (CalendarView) findViewById(R.id.calendarView);
+        mCalendarView = (CalendarView) dialog.findViewById(R.id.calendarView);
         mCalendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(CalendarView CalendarView, int year, int month, int dayOfMonth) {
-                date = date + "     " + year + "/" + month + "/"+ dayOfMonth ;
-                btn_open_dialog_lock_start.setText(date);
+                date = "     " + year + "/" + month + "/"+ dayOfMonth ;
                 dialog.dismiss();
+                popTimePicker(findViewById(ID),ID);
             }
         });
 
