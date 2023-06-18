@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/head_frame"
+        android:padding="20dp">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/out_arrow"
+            android:layout_width="11.11dp"
+            android:layout_height="18dp"
+            android:background="@drawable/arrow"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/Montserrat_Bold"
+            android:text="Lựa chọn chuyến đi"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="70dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/black_frame">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/flight_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/Montserrat_Medium"
+                android:text="Chuyến bay 1 chiều"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginLeft="20dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_line"
+                android:layout_marginLeft="10dp">
+
+
+            <TextView
+                android:id="@+id/people_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/Montserrat_Medium"
+                android:text="1 người lớn"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioGroup
+                android:id="@+id/location_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+
+                <RadioButton
+                    android:id="@+id/start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="75dp"
+                    android:fontFamily="@font/Montserrat_Medium"
+                    android:padding="0dp"
+                    android:text="Điểm khởi hành"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="75dp"
+                    android:checked="true"
+                    android:fontFamily="@font/Montserrat_Medium"
+                    android:padding="0dp"
+                    android:text="Điểm đến"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/start_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/Montserrat_Medium"
+                    android:text="TP Hồ Chí Minh (SGN)"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:id="@+id/end_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/Montserrat_Medium"
+                    android:text="Hà Nội (HAN)"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:layout_marginTop="30dp"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sum_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_auto_round_bar"
+            android:layout_marginLeft="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tong"
+                android:layout_width="51dp"
+                android:layout_height="20dp"
+                android:text="Tổng"
+                android:textColor="#000000"
+                android:fontFamily="@font/Montserrat_Medium"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tong_arrow"
+                android:layout_width="15dp"
+                android:layout_height="10dp"
+                android:layout_gravity="right"
+                android:background="@drawable/down_arrow"
+                android:layout_marginLeft="150dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/white_bar">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T7, 06/05/2023"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:background="@drawable/next_button"
+            android:layout_gravity="center"
+            android:layout_marginLeft="130dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/next_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CN, 07/05/2023"
+            android:background="none"
+            android:textColor="#8E8E8E"
+            android:textSize="12sp"
+            android:layout_gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/next_arrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/next_arrow"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/Montserrat_SemiBoldItalic"
+        android:text="Chuyến đi"
+        android:textColor="#000000"
+        android:layout_marginLeft="15dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/white_big_bar" >
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/departure_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="SGN"
+                android:textColor="#000000"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/departure_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/Montserrat_Medium"
+                android:text="15:30"
+                android:textColor="#8E8E8E"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/flight_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 giờ 10 phút"
+                android:textColor="#8E8E8E"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/Montserrat_Medium"
+                android:text="Chi tiết"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/destination_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="HAN"
+                android:textColor="#000000"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/destination_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/Montserrat_Medium"
+                android:text="17:40"
+                android:textColor="#8E8E8E"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/head_big_bar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/Montserrat_Medium"
+                android:text="Từ"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="4dp"/>
+
+            <TextView
+                android:id="@+id/ticket_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/Montserrat_MediumItalic"
+                android:text="2,649,000 VND"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="7dp"/>
+
+            <TextView
+                android:id="@+id/space_seat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/Montserrat_SemiBoldItalic"
+                android:text="Còn 9 chỗ"
+                android:textColor="#000000"
+                android:textSize="8sp"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="3dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/next_button"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Đi tiếp"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        android:textSize="15dp"
+        android:layout_marginTop="250dp"/>
+
+
+</LinearLayout>

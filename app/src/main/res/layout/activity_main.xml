@@ -410,7 +410,7 @@
         android:layout_height="wrap_content"
         android:text="Hạng phổ thông"
         android:textSize="13sp"
-        android:fontFamily="@font/Montserrat_SemiBold"
+        android:fontFamily="@font/montserrat_semibold"
         android:textColor="#000000"
         tools:layout_editor_absoluteX="60dp"
         tools:layout_editor_absoluteY="390dp" />
