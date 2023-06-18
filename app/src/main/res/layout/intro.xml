@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/intro__2_"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center"
+        android:text="Your Journey Made"
+        android:textColor="@color/black_green"
+        android:textSize="30sp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center"
+        android:text="Memorable"
+        android:textColor="@color/blue"
+        android:textSize="30sp"
+    />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:text="So sánh và hỗ trợ hết mình người dùng trong mỗi chuyến bay."
+        android:textColor="@color/black_light"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button"
+        android:layout_width="148dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_bg"
+        android:backgroundTint="#3E6FEF"
+        android:fontFamily="@font/montserrat_semibold"
+        android:foregroundTint="#2F2B80"
+        android:text="Bắt đầu"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

@@ -63,7 +63,7 @@
                 android:textStyle="bold"
                 android:textSize="30sp"
                 android:layout_weight="1"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"/>
             <EditText
                 android:hint="-"
                 android:background="@drawable/otp_while_box"
@@ -78,7 +78,7 @@
                 android:textStyle="bold"
                 android:textSize="30sp"
                 android:layout_weight="1"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"/>
             <EditText
                 android:hint="-"
                 android:background="@drawable/otp_while_box"
@@ -93,7 +93,7 @@
                 android:textStyle="bold"
                 android:textSize="30sp"
                 android:layout_weight="1"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"/>
             <EditText
                 android:hint="-"
                 android:background="@drawable/otp_while_box"
@@ -108,7 +108,7 @@
                 android:textStyle="bold"
                 android:textSize="30sp"
                 android:layout_weight="1"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"/>
 
         </LinearLayout>
         <LinearLayout
@@ -142,6 +142,8 @@
             android:background="@drawable/btn_bg"
             android:backgroundTint="#426BF8"
             android:text="Tiếp tục"
+            android:textSize="18sp"
+            android:textColor="@color/white"
             android:layout_gravity="center"
             android:gravity="center"/>
 

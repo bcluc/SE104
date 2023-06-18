@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back_ground"
-    android:backgroundTintMode="screen">
+    android:backgroundTintMode="screen"
+    tools:context="login.login">
 
 
     <com.google.android.material.textfield.TextInputEditText
