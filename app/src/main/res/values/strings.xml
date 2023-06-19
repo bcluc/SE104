@@ -5,5 +5,11 @@
     <string name="start_time">Thời gian xuât phát</string>
     <string name="end_time">Thời gian đến dự kiến</string>
     <string name="end_locate">Điểm đến</string>
-
+    <string-array name="flight_id">
+        <item>CS101</item>
+        <item>CS201</item>
+        <item>CS102</item>
+        <item>CS202</item>
+        <item>CS103</item>
+    </string-array>
 </resources>
