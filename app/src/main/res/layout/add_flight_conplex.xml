@@ -55,19 +55,13 @@
                     android:gravity="center"
                     android:text="Thêm chuyến bay"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.45"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.062" />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/flight_id"
                 android:layout_marginLeft="50dp"
                 android:layout_width="277dp"
                 android:layout_height="48dp"

@@ -83,12 +83,11 @@ public class add_flight  extends AppCompatActivity {
         btn_open_dialog_flight_continue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if (!btn_open_dialog_start_locate.getText().toString().equals("Điểm xuất phát")
-                && !btn_open_dialog_flight_end_locate.getText().toString().equals("Điểm đến")
-                        && !btn_open_dialog_flight.getText().toString().equals("Hãng hàng không")
-                        && !btn_open_dialog_lock_come.getText().toString().equals("Thời gian xuất phát")
-                        && !btn_open_dialog_lock_start.getText().toString().equals("Thời gian đến dự kiến") )
+                if (btn_open_dialog_start_locate.getText().toString().compareTo("Điểm xuất phát") == 0
+                || btn_open_dialog_flight_end_locate.getText().toString().compareTo("Điểm đến") == 0
+                        || btn_open_dialog_flight.getText().toString().compareTo("Hãng hàng không") == 0
+                        || btn_open_dialog_lock_come.getText().toString().compareTo("Thời gian xuất phát") == 0
+                        || btn_open_dialog_lock_start.getText().toString().compareTo("Thời gian đến dự kiến") ==0 )
                 {
                     Intent intent = new Intent(add_flight.this, add_flight_complex.class);
                     startActivity(intent);
