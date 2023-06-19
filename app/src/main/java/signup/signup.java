@@ -13,8 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.se104.R;
 
-import org.w3c.dom.Text;
-
 import login.login;
 
 public class signup extends AppCompatActivity {

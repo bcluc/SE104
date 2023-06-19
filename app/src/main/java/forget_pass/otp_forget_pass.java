@@ -15,7 +15,6 @@ import android.widget.TextView;
 import com.example.se104.R;
 
 import forget_pass.create_pass.create_pass;
-import login.login;
 import signup.signup;
 
 public class otp_forget_pass extends AppCompatActivity {

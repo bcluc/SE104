@@ -13,8 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.se104.R;
 
-import login.login;
-
 public class smart_otp extends AppCompatActivity {
 
     Button btn_continue;

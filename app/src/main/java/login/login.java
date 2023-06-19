@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.se104.MainActivity;
 import com.example.se104.R;
 
 import forget_pass.forget_pass;
