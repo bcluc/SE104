@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -97,6 +98,13 @@ public class add_flight  extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Vui lòng điền đầy đủ thông tin!", Toast.LENGTH_SHORT).show();
             }
         });
+        ImageView btn_back = findViewById(R.id.back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 
@@ -158,7 +166,6 @@ public class add_flight  extends AppCompatActivity {
             }
         });
         dialog.show();
-
     }
 
     private void findLocate(int gravity,int ID) {
