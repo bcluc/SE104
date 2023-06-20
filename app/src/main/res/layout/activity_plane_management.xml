@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,11 +7,12 @@
     android:background="@drawable/bg"
     android:minWidth="0dp"
     android:minHeight="0dp"
-    tools:context=".ticketManagement1">
+    android:orientation="vertical"
+    >
 
     <Button
         android:id="@+id/button"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
@@ -19,7 +20,7 @@
         android:background="@drawable/input_bg"
         android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
-        android:text="Quản lý vé"
+        android:text="Quản lý hãng hàng không"
         android:textAlignment="viewStart"
         android:textColor="#000000"
         app:backgroundTint="@color/white"
@@ -35,6 +36,7 @@
         android:background="@drawable/round_bg"
         android:backgroundTint="#80FFFFFF"
         android:orientation="vertical"
+        android:layout_gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button">
@@ -61,4 +63,4 @@
     </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
