@@ -5,8 +5,9 @@
     android:background="@drawable/img_bg"
     android:orientation="vertical">
 
-    <HorizontalScrollView
+    <ScrollView
         android:layout_width="match_parent"
+        android:layout_weight="1"
         android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
@@ -15,15 +16,286 @@
             android:padding="20dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="Xin chào B"
-
                 android:textColor="#263238"
                 android:textSize="24sp"/>
+            <TextView
+                android:paddingTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Tiết kiệm hơn, bay nhiều hơn"
+
+                android:textColor="#63767E"
+                android:textSize="13sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_square_corner"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rb_two_way"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="#1319B5"
+                        android:checked="true"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:outlineAmbientShadowColor="#1319B5"
+                        android:outlineSpotShadowColor="#1319B5"
+                        android:paddingStart="10dp"
+                        android:text="Khứ hồi"
+                        android:textColor="#263238"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rb_one_way"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="#1319B5"
+                        android:checked="false"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:outlineAmbientShadowColor="#1319B5"
+                        android:outlineSpotShadowColor="#1319B5"
+                        android:paddingStart="10dp"
+                        android:text="Một chiều"
+                        android:textColor="#263238"
+                        android:textSize="12sp" />
+
+                </RadioGroup>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation = "horizontal"
+                    android:padding="5dp">
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/ic_plane"
+                        android:layout_gravity="center"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Điểm khởi hành"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="#63767E"
+                            android:textSize="12sp"/>
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinner_des_start"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation = "horizontal"
+                    android:layout_gravity="end"
+                    android:padding="5dp">
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/line"
+                        android:layout_weight="10"
+                        android:layout_gravity="center"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="0"
+                        android:id="@+id/btn_switch_des"
+                        android:background="@drawable/btn_reverse"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation = "horizontal"
+                    android:padding="5dp">
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/ic_plane_landed"
+                        android:layout_gravity="center"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Điểm khởi hành"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="#63767E"
+                            android:textSize="12sp"/>
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinner_des_end"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation = "horizontal"
+                    android:layout_marginTop="15dp"
+                    android:paddingTop="20dp"
+                    android:padding="5dp">
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/ic_calendar"
+                        android:layout_gravity="center"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:id="@+id/lay_day_go"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ngày đi"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="#63767E"
+                            android:textSize="12sp"/>
+                        <TextView
+                            android:background="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:id="@+id/txt_day_go"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="#263238"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:orientation="vertical"
+                        android:id="@+id/lay_day_back"
+                        android:visibility="visible">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ngày về"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="#63767E"
+                            android:textSize="12sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:id="@+id/txt_day_back"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="#263238"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation = "horizontal"
+                    android:layout_marginTop="15dp"
+                    android:paddingTop="20dp"
+                    android:padding="5dp">
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/ic_user"
+                        android:layout_gravity="center"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lay_customer"
+                        android:paddingStart="10dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hành khách"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="#63767E"
+                            android:textSize="12sp"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:text=""
+                                android:layout_gravity="center"
+                                android:id="@+id/btn_plus_customer"
+                                android:background="@drawable/btn_plus"/>
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:gravity="center"
+                                android:id="@+id/txt_customer_quanity"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textColor="#263238"
+                                android:textSize="18sp"/>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:text=""
+                                android:layout_gravity="center"
+                                android:id="@+id/btn_minus_customer"
+                                android:background="@drawable/btn_minus"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_gradient"
+                        android:elevation="100dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="Tìm chuyến bay"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
         </LinearLayout>
 
-    </HorizontalScrollView>
+    </ScrollView>
 
 </LinearLayout>

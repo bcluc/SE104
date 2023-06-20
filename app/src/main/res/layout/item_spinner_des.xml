@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Địa điểm"
+        android:id="@+id/txt_des_id"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="#263238"
+        android:textSize="14sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_alignBottom="@id/txt_des_id"
+        android:layout_toEndOf="@id/txt_des_id"
+        android:layout_marginStart="10dp"
+        android:id="@+id/txt_des_name"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="#263238"
+        android:textSize="14sp"
+        />
+
+</RelativeLayout>
