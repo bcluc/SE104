@@ -64,7 +64,7 @@
 
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/flight_id"
                 android:layout_marginLeft="50dp"
                 android:layout_width="277dp"
                 android:layout_height="48dp"
@@ -91,7 +91,7 @@
                 android:textSize="10sp" />
 
             <EditText
-                android:id="@+id/spinner2"
+                android:id="@+id/number_of_business_chair"
                 android:layout_width="277dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="50dp"
@@ -104,7 +104,7 @@
                 android:textSize="13sp" />
 
             <EditText
-                android:id="@+id/spinner"
+                android:id="@+id/cost_of_business_chair"
                 android:layout_width="277dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="50dp"
@@ -125,7 +125,7 @@
                 android:textSize="10sp" />
 
             <EditText
-                android:id="@+id/spinner3"
+                android:id="@+id/number_of_special_popular_char"
                 android:layout_width="277dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="50dp"
@@ -137,7 +137,7 @@
                 android:textSize="13sp" />
 
             <EditText
-                android:id="@+id/spinner7"
+                android:id="@+id/cost_of_special_popular_char"
                 android:layout_width="277dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="50dp"
@@ -158,7 +158,7 @@
                 android:textSize="10sp" />
 
             <EditText
-                android:id="@+id/spinner9"
+                android:id="@+id/number_of_popular_chair"
                 android:layout_width="277dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="50dp"
@@ -170,7 +170,7 @@
                 android:textSize="13sp" />
 
             <EditText
-                android:id="@+id/spinner8"
+                android:id="@+id/cost_of_popular_char"
                 android:layout_width="277dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="50dp"
@@ -191,7 +191,7 @@
                 android:textSize="10sp" />
 
             <EditText
-                android:id="@+id/spinner10"
+                android:id="@+id/number_of_first_chair"
                 android:layout_width="277dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="50dp"
@@ -203,7 +203,7 @@
                 android:textSize="13sp" />
 
             <EditText
-                android:id="@+id/spinner11"
+                android:id="@+id/cost_of_first_chair"
                 android:layout_width="277dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="50dp"
@@ -215,7 +215,7 @@
                 android:textSize="13sp" />
 
             <Spinner
-                android:id="@+id/spinner12"
+                android:id="@+id/more_service"
                 android:layout_width="277dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="50dp"
@@ -230,7 +230,7 @@
 
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/complete_edit"
                 android:layout_width="138dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="200dp"

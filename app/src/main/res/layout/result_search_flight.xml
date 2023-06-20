@@ -1,15 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/th_m_chuy_n_bay__1_"
     android:backgroundTint="#000000"
-    android:backgroundTintMode="screen">
+    android:backgroundTintMode="screen"
+    tools:context="flight_listview.add_flight"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/editTextTextPersonName"
+        <ImageView
+            android:id="@+id/back"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="47dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView4"
+            app:layout_constraintHorizontal_bias="0.862"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.075"
+            app:srcCompat="@drawable/back_arrow" />
+        <TextView
+            android:layout_weight="4"
+            android:layout_marginTop="43dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="60dp"
+            android:id="@+id/textView4"
+            android:layout_width="289dp"
+            android:layout_height="46dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:text="Tra cứu chuyến bay"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            />
+
+    </LinearLayout>
+
+
+
+    <EditText
+        android:id="@+id/flight_id"
         android:layout_width="277dp"
         android:layout_height="48dp"
         android:layout_marginTop="55dp"
@@ -20,135 +60,119 @@
         android:ems="10"
         android:fontFamily="@font/montserrat_semibold"
         android:hint="MÃ CHUYẾN BAY"
+        android:inputType="textPersonName"
         android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.003" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="289dp"
-        android:layout_height="46dp"
-        android:fontFamily="@font/montserrat_semibold"
-        android:gravity="center"
-        android:text="Tra cứu chuyến bay"
+        android:textSize="15sp"
         android:textColor="@color/black"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.062" />
+        android:layout_marginLeft="50dp"
+        />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="22dp"
-        android:layout_height="29dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
-        app:layout_constraintHorizontal_bias="0.862"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.075"
-        app:srcCompat="@drawable/back_arrow" />
 
-    <TextView
-        android:id="@+id/spinner2"
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/hang_hang_ko"
         android:layout_width="277dp"
         android:layout_height="48dp"
-        android:layout_margin="10dp"
         android:layout_marginTop="17dp"
         android:background="@drawable/box"
+        android:text="@string/Brand"
         android:contentDescription="Hãng hàng không"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="left"
+        android:ems="10"
+        android:textStyle="normal"
+        android:textSize="15sp"
+        android:textColor="@color/black"
         android:padding="12dp"
+        android:layout_marginLeft="50dp"
         android:scaleType="center"
         android:elevation="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-        app:layout_constraintVertical_bias="0.012" />
+        />
 
-    <TextView
-        android:id="@+id/spinner5"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/time_start"
         android:layout_width="277dp"
         android:layout_height="48dp"
-        android:layout_margin="10dp"
-        android:layout_marginTop="23dp"
-        android:background="@drawable/box"
-        android:contentDescription="Điểm xuất phát"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/calenderbox"
         android:elevation="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner4"
-        app:layout_constraintVertical_bias="0.04" />
+        android:ems="10"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="left"
+        android:textStyle="normal"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:padding="12dp"
+        android:layout_marginLeft="50dp"
+        android:text="@string/start_time"/>
 
-    <TextView
-        android:id="@+id/spinner6"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/time_come"
         android:layout_width="277dp"
         android:layout_height="48dp"
-        android:layout_margin="10dp"
         android:layout_marginTop="22dp"
-        android:background="@drawable/box"
-        android:contentDescription="Điểm đến"
+        android:background="@drawable/calenderbox"
         android:elevation="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner5"
-        app:layout_constraintVertical_bias="0.038" />
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="left"
+        android:ems="10"
+        android:textStyle="normal"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:padding="12dp"
+        android:layout_marginLeft="50dp"
+        android:text="@string/end_time"/>
 
-    <TextView
-        android:id="@+id/spinner"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/start_locate"
         android:layout_width="277dp"
         android:layout_height="48dp"
-        android:layout_margin="10dp"
         android:layout_marginTop="23dp"
-        android:background="@drawable/calenderbox"
-        android:contentDescription="Thời điểm xuất phát"
+        android:background="@drawable/box"
         android:elevation="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2"
-        app:layout_constraintVertical_bias="0.021" />
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="left"
+        android:ems="10"
+        android:textStyle="normal"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:padding="12dp"
+        android:layout_marginLeft="50dp"
+        android:text="@string/start_locate"/>
 
-    <TextView
-        android:id="@+id/spinner4"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/end_locate"
         android:layout_width="277dp"
         android:layout_height="48dp"
-        android:layout_margin="10dp"
         android:layout_marginTop="25dp"
-        android:background="@drawable/calenderbox"
-        android:contentDescription="Thời gian đến dự kiến"
+        android:background="@drawable/box"
         android:elevation="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner"
-        app:layout_constraintVertical_bias="0.029" />
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="left"
+        android:ems="10"
+        android:textStyle="normal"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:padding="12dp"
+        android:layout_marginLeft="50dp"
+        android:text="@string/end_locate"/>
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="158dp"
+        android:id="@+id/next_page"
+        android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#3E6FEF"
-        android:drawableRight="@drawable/icon"
         android:fontFamily="@font/montserrat_semibold"
+        android:drawableRight="@drawable/icon"
         android:text="Sửa thông tin"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.841"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner6" />
+        android:layout_marginLeft="190dp" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

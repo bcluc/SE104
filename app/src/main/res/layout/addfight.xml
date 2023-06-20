@@ -30,11 +30,11 @@
             app:layout_constraintVertical_bias="0.075"
             app:srcCompat="@drawable/back_arrow" />
         <TextView
+            android:id="@+id/textview_title"
             android:layout_weight="4"
             android:layout_marginTop="43dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="60dp"
-            android:id="@+id/textView4"
             android:layout_width="289dp"
             android:layout_height="46dp"
             android:drawableRight="@drawable/add_ring"

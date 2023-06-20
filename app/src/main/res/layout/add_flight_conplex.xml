@@ -142,7 +142,7 @@
                 android:elevation="20dp"
                 android:padding="12dp"
                 android:fontFamily="@font/montserrat_semibold"
-                android:hint="GIÁ GHẾ PHỔ THÔNG"
+                android:hint="SỐ GHẾ PHỔ THÔNG"
                 android:textSize="13sp" />
 
             <EditText

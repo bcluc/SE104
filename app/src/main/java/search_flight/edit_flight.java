@@ -1,4 +1,4 @@
-package flight_listview;
+package search_flight;
 
 import android.app.Dialog;
 import android.app.TimePickerDialog;
@@ -29,20 +29,20 @@ import java.util.Locale;
 
 import filght_complex.add_flight_complex;
 
-public class add_flight  extends AppCompatActivity {
-//    Button btn_open_dialog_flight = findViewById(R.id.hang_hang_ko);
-    ArrayList<Contact> list;
+public class edit_flight  extends AppCompatActivity {
+    //    Button btn_open_dialog_flight = findViewById(R.id.hang_hang_ko);
+    ArrayList<flight_listview.Contact> list;
     String date;
     int hour, minute;
 
 
-    Contact selectName;
+    flight_listview.Contact selectName;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Button btn_open_dialog_flight_continue = findViewById(R.id.next_page);
-        setContentView(R.layout.addfight);
+        setContentView(R.layout.edit_fight_simple);
 
         Button btn_open_dialog_flight = findViewById(R.id.hang_hang_ko);
         Button btn_open_dialog_lock_start = findViewById(R.id.time_start);
@@ -84,13 +84,13 @@ public class add_flight  extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (btn_open_dialog_start_locate.getText().toString().compareTo("Điểm xuất phát") == 0
-                || btn_open_dialog_flight_end_locate.getText().toString().compareTo("Điểm đến") == 0
+                        || btn_open_dialog_flight_end_locate.getText().toString().compareTo("Điểm đến") == 0
                         || btn_open_dialog_flight.getText().toString().compareTo("Hãng hàng không") == 0
                         || btn_open_dialog_lock_come.getText().toString().compareTo("Thời gian xuất phát") == 0
                         || btn_open_dialog_lock_start.getText().toString().compareTo("Thời gian đến dự kiến") ==0 )
                 {
-                        Intent intent = new Intent(add_flight.this, add_flight_complex.class);
-                        startActivity(intent);
+                    Intent intent = new Intent(edit_flight.this, edit_flight_complex.class);
+                    startActivity(intent);
 
                 }
                 else
@@ -109,11 +109,11 @@ public class add_flight  extends AppCompatActivity {
         ListView listView;
         listView = (ListView) dialog.findViewById(R.id.list_View);
         list = new ArrayList<>();
-        list.add(new Contact("Bamboo"));
-        list.add(new Contact("Vietjet air"));
-        list.add(new Contact("Vietnam airlines"));
-        Adaptor myAdapter;
-        myAdapter = new Adaptor(this, list);
+        list.add(new flight_listview.Contact("Bamboo"));
+        list.add(new flight_listview.Contact("Vietjet air"));
+        list.add(new flight_listview.Contact("Vietnam airlines"));
+        flight_listview.Adaptor myAdapter;
+        myAdapter = new flight_listview.Adaptor(this, list);
         Button btn_open_dialog_flight = findViewById(R.id.hang_hang_ko);
 // Khởi tạo đối tượng ArrayAdapter
         listView.setAdapter(myAdapter);
@@ -121,7 +121,7 @@ public class add_flight  extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                selectName = (Contact) adapterView.getItemAtPosition(i);
+                selectName = (flight_listview.Contact) adapterView.getItemAtPosition(i);
             }
         });
         btn_exit.setOnClickListener(new View.OnClickListener() {
@@ -272,4 +272,4 @@ public class add_flight  extends AppCompatActivity {
 //            super.onCreate(savedInstanceState);
 //            setContentView(R.layout.addfight);
 //        }
-    }
+}
