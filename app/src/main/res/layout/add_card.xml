@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/head_frame"
+        android:padding="20dp">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/out_arrow"
+            android:layout_width="11.11dp"
+            android:layout_height="18dp"
+            android:background="@drawable/arrow"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thanh toán"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="110dp" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/bank_card"
+        android:paddingTop="20dp"
+        android:layout_marginLeft="30dp" />
+
+    <TextView
+        android:id="@+id/card_owner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Card Owner"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:paddingTop="20dp"
+        android:layout_marginLeft="30dp" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_background"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="12sp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/card_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Card Number"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="30dp" />
+
+    <EditText
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_background"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="277dp"
+        android:layout_marginLeft="30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EXP"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="144dp"
+            android:text="CVV"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/EXP_info"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/frame_payment_mini"
+            android:ems="7"
+            android:inputType="textPostalAddress" />
+
+
+        <EditText
+            android:id="@+id/card_cvv"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:ems="4"
+            android:inputType="number"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/frame_payment_mini" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/next_button"
+        android:text="Đi tiếp"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        android:layout_marginTop="300dp"/>
+
+
+</LinearLayout>

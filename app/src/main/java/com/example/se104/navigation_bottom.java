@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -87,11 +88,15 @@ public class navigation_bottom extends AppCompatActivity {
             }
         });
     }
-//    private void replaceFragment(Fragment fragment){
-//
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//        fragmentTransaction.replace(R.id.frameLayout,fragment);
-//        fragmentTransaction.commit();
-//    }
+
+    public void goto_message_activity()
+    {
+        Intent intent = new Intent(navigation_bottom.this, activity_message.class);
+        startActivity(intent);
+    }
+    public void goto_find_flights_activity()
+    {
+        Intent intent = new Intent(navigation_bottom.this, MainActivity.class);
+        startActivity(intent);
+    }
 }

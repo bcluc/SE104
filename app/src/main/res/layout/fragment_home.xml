@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".fragment_home">
     <LinearLayout
-        android:background="@drawable/img_bg"
+        android:background="@drawable/bg_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -288,6 +288,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:layout_marginStart="10dp"
+                        android:id="@+id/btn_find_flight"
                         android:layout_weight="1"
                         android:background="@drawable/bg_btn_gradient"
                         android:elevation="100dp"

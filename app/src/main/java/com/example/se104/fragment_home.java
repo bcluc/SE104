@@ -1,6 +1,8 @@
 package com.example.se104;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +26,7 @@ import java.util.Calendar;
 public class fragment_home extends Fragment implements DatePickerDialog.OnDateSetListener {
 
     private object_user user;
+    private object_developer developer = new object_developer();
     private ArrayList<object_Airline_Brand> arrayList_airline_brand;
     private adapter_Airline_Brand adapter_airline_brand;
     private navigation_bottom bottom_navigation;
@@ -40,6 +43,11 @@ public class fragment_home extends Fragment implements DatePickerDialog.OnDateSe
     Button btn_switch_des;
     Button btn_plus_customer;
     Button btn_minus_customer;
+    Button btn_cskh_vid;
+    Button btn_cskh_pay;
+    Button btn_cskh_call;
+    Button btn_cskh_chat;
+    Button btn_find_flight;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -65,6 +73,11 @@ public class fragment_home extends Fragment implements DatePickerDialog.OnDateSe
         btn_switch_des = view.findViewById(R.id.btn_switch_des);
         btn_plus_customer = view.findViewById(R.id.btn_plus_customer);
         btn_minus_customer = view.findViewById(R.id.btn_minus_customer);
+        btn_cskh_vid = view.findViewById(R.id.btn_cskh_vid);
+        btn_cskh_pay = view.findViewById(R.id.btn_cskh_pay);
+        btn_cskh_call = view.findViewById(R.id.btn_cskh_hotline);
+        btn_cskh_chat = view.findViewById(R.id.btn_cskh_chat);
+        btn_find_flight = view.findViewById(R.id.btn_find_flight);
 
         // adapter
         initList();
@@ -73,6 +86,12 @@ public class fragment_home extends Fragment implements DatePickerDialog.OnDateSe
         spiner_des_end.setAdapter(adapter_airline_brand);
 
         // setOnCLick
+        btn_find_flight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bottom_navigation.goto_find_flights_activity();
+            }
+        });
         btn_switch_des.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -100,6 +119,38 @@ public class fragment_home extends Fragment implements DatePickerDialog.OnDateSe
                 tv_quanity_customer.setText(quanity);
             }
         });
+        btn_cskh_vid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse(developer.getLink_yt_intro()); // missing 'http://' will cause crashed
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+        btn_cskh_call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse(developer.getHotline()));
+                startActivity(intent);
+            }
+        });
+        btn_cskh_pay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse(developer.getLink_yt_pay()); // missing 'http://' will cause crashed
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+        btn_cskh_chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bottom_navigation.goto_message_activity();
+            }
+        });
+
+
         rb_one_way.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
