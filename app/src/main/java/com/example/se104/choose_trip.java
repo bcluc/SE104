@@ -14,37 +14,16 @@ import java.util.List;
 
 public class choose_trip extends AppCompatActivity {
 
-    Button nextButton; //Khai báo một button
-    Button backButton; //Khai báo một button
-
-
-
     private RecyclerView flight_ticket;
+    private RecyclerView time;
     private TicketAdapter ticketAdapter;
+    private timeAdapter timeAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choose_trip);
-
-        nextButton = (Button) findViewById(R.id.next_button);
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(choose_trip.this, check_out.class);
-                startActivity(intent);
-            }
-        });
-
-        backButton = (Button) findViewById(R.id.out_arrow);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(choose_trip.this, check_out.class);
-                startActivity(intent);
-            }
-        });
-
 
         flight_ticket = findViewById(R.id.flight_list);
         ticketAdapter = new TicketAdapter(this);
@@ -55,10 +34,16 @@ public class choose_trip extends AppCompatActivity {
         ticketAdapter.setData(getListTicket());
 
         flight_ticket.setAdapter(ticketAdapter);
+
+        time = findViewById(R.id.today_time);
+        timeAdapter = new timeAdapter(this);
+
+        LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
+        time.setLayoutManager(linearLayoutManager1);
+
+        timeAdapter.setData(getListTime());
+
     }
-
-
-
 
     private List<Ticket> getListTicket() {
         List<Ticket> ticketList = new ArrayList<>();
@@ -74,4 +59,16 @@ public class choose_trip extends AppCompatActivity {
 
     }
 
+    private List<time> getListTime(){
+        List<time> timeList = new ArrayList<>();
+        timeList.add(new time("CN 19/10/2023"));
+        timeList.add(new time("T2 20/10/2023"));
+        timeList.add(new time("CN 19/10/2023"));
+        timeList.add(new time("T2 20/10/2023"));
+        timeList.add(new time("CN 19/10/2023"));
+        timeList.add(new time("T2 20/10/2023"));
+        return timeList;
+    }
+
 }
+

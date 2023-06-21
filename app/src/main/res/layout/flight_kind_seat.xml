@@ -45,11 +45,11 @@
             android:id="@+id/space_seat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="330dp"
-            android:layout_marginTop="50dp"
             android:text="Còn 9 chổ"
+            android:textSize="12sp"
             android:textColor="#000000"
-            android:textSize="12sp" />
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="330dp"/>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

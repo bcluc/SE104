@@ -34,7 +34,11 @@ public class timeAdapter extends RecyclerView.Adapter<timeAdapter.timeViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull timeViewHolder holder, int position) {
-
+        time time = mListTime.get(position);
+        if (time == null) {
+            return;
+        }
+        holder.time.setText(time.getTime());
     }
 
     @Override
