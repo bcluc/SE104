@@ -2,6 +2,7 @@ package com.example.se104.Plane_management;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -36,14 +37,23 @@ public class activity_plane_management extends AppCompatActivity {
         super.onCreate(savedInstancesState);
         setContentView(R.layout.activity_plane_management);
 
+
         listView = findViewById(R.id.lv_plane);
         btn_add= findViewById(R.id.btn_add);
 
-        list = new ArrayList<>();
-        //Demo voi du lieu ban dau
-        list.add(new Plane("VIETJET", "VJ", "1234578", "123@gmail.com"));
-        list.add(new Plane("VIET NAM AIRLINE", "VNA", "787878", "333@gmail.com"));
-
+        Intent bundle  = getIntent();
+        if(bundle == null)
+        {
+            list = new ArrayList<>();
+            //Demo voi du lieu ban dau
+            list.add(new Plane("VIETJET", "VJ", "1234578", "123@gmail.com"));
+            list.add(new Plane("VIET NAM AIRLINE", "VNA", "787878", "333@gmail.com"));
+        }
+        else
+        {
+            Plane extra = new Plane(bundle.getStringExtra("Name"), bundle.getStringExtra("ID"),bundle.getStringExtra("Phone"), bundle.getStringExtra("Email") );
+            list.add(extra);
+        }
         myAdapter = new Adaptor(activity_plane_management.this, R.layout.list_plane_item, list);
         listView.setAdapter(myAdapter);
 

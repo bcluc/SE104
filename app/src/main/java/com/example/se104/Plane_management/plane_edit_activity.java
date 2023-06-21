@@ -21,6 +21,7 @@ public class plane_edit_activity extends AppCompatActivity {
     private EditText edit_Name;
     private EditText edit_Phone;
     private EditText edit_Email;
+    private TextView plane_ID;
 
     private Button btn_edit;
 
@@ -45,6 +46,7 @@ public class plane_edit_activity extends AppCompatActivity {
                String Email= edit_Email.getText().toString();
 
                Intent intent=new Intent(getApplicationContext(), activity_plane_management.class);
+
                intent.putExtra("Name", Name);
                intent.putExtra("Phone", Phone);
                intent.putExtra("Email", Email);

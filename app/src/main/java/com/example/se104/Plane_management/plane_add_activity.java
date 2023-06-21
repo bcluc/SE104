@@ -53,7 +53,8 @@ public class plane_add_activity extends AppCompatActivity {
                 intent.putExtra("ID", ID);
                 intent.putExtra("Phone Number", Phone);
                 intent.putExtra("Email", Email);
-                setResult(RESULT_OK, intent);
+
+                startActivity(intent);
                 finish();
             }
         });
