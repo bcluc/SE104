@@ -19,7 +19,7 @@
         android:background="@drawable/input_bg"
         android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
-        android:text="Quản lý vé"
+        android:text="Quản lý hãng hàng không"
         android:textAlignment="viewStart"
         android:textColor="#000000"
         app:backgroundTint="@color/white"
