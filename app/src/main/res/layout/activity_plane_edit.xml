@@ -51,7 +51,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/text_Plane_ID"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -61,7 +61,7 @@
             android:textStyle="italic" />
 
         <TextView
-            android:id="@+id/text_Plane_ID_show"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/text_bg"
@@ -71,7 +71,7 @@
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/text_Plane_Name"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -80,7 +80,7 @@
             android:textColor="@color/Input_color"
             android:textStyle="italic" />
 
-        <TextView
+        <EditText
             android:id="@+id/text_Plane_Name_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/text_Plane_Phone"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -100,7 +100,7 @@
             android:textColor="@color/Input_color"
             android:textStyle="italic" />
 
-        <TextView
+        <EditText
             android:id="@+id/text_Plane_Phone_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/text_Plane_Email"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -120,7 +120,7 @@
             android:textColor="@color/Input_color"
             android:textStyle="italic" />
 
-        <TextView
+        <EditText
             android:id="@+id/text_Plane_Email_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -131,7 +131,7 @@
             android:text="TextView" />
 
         <Button
-            android:id="@+id/bttn_done"
+            android:id="@+id/btn_edit"
             android:layout_width="120dp"
 
             android:layout_height="50dp"
