@@ -26,7 +26,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/Montserrat_Bold"
+            android:fontFamily="@font/montserrat_bold"
             android:text="Thanh toán"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
@@ -59,10 +59,10 @@
                 android:layout_marginEnd="75dp"
                 android:background="@drawable/frame_payment"
                 android:padding="20dp"
-                android:fontFamily="@font/Montserrat_Regular"
+                android:fontFamily="@font/montserrat_regular"
                 android:text="MOMO Wallet"
                 android:textSize="12sp"
-                android:drawableLeft="@drawable/MoMo_Logo"
+                android:drawableLeft="@drawable/momo"
                 />
 
             <RadioButton
@@ -76,7 +76,7 @@
                 android:padding="20dp"
                 android:text="Cash Payment"
                 android:textSize="12sp"
-                android:fontFamily="@font/Montserrat_Regular"
+                android:fontFamily="@font/montserrat_regular"
                 android:drawableLeft="@drawable/cash_payment"
                 />
 
@@ -91,7 +91,7 @@
                 android:drawableLeft="@drawable/banking_method"
                 android:text="Online Banking"
                 android:textSize="12sp"
-                android:fontFamily="@font/Montserrat_Regular" />
+                android:fontFamily="@font/montserrat_regular" />
         </RadioGroup>
 
 
@@ -104,8 +104,8 @@
         android:text="Add new card"
         android:textSize="12sp"
         android:drawableLeft="@drawable/add_card"
-        android:background="none"
-        android:fontFamily="@font/Montserrat_Regular"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/montserrat_regular"
         android:layout_marginLeft="150dp"
         android:layout_marginTop="300dp" />
 

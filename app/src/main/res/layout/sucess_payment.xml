@@ -25,12 +25,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/Montserrat_Bold"
+            android:fontFamily="@font/montserrat_bold"
             android:text="Thanh toán"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:layout_gravity="center"
-            android:layout_marginLeft="90dp" />
+            android:layout_marginLeft="110dp" />
 
 
     </LinearLayout>
@@ -46,7 +46,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/Montserrat_Bold"
+        android:fontFamily="@font/montserrat_bold"
         android:text="Thanh toán thành công"
         android:textColor="#27272A"
         android:textSize="16sp"
@@ -56,7 +56,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/Montserrat_Regular"
+        android:fontFamily="@font/montserrat_regular"
         android:text="Tham khảo hàng trăm chuyến bay khác \n trên Traveloka ngay bây giờ!"
         android:textColor="#27272A"
         android:textSize="13sp"
