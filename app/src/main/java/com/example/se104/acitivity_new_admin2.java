@@ -14,6 +14,10 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
+import Class_file.Admin;
+
 public class acitivity_new_admin2 extends AppCompatActivity {
 
     EditText user_name;
@@ -28,6 +32,7 @@ public class acitivity_new_admin2 extends AppCompatActivity {
     Button btn_done;
     LinearLayout admin1;
     LinearLayout admin2;
+    ArrayList<Admin> list_Admin;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -209,6 +214,9 @@ public class acitivity_new_admin2 extends AppCompatActivity {
                 else {
 
                     Toast.makeText(getApplicationContext(), "Tạo tài khoản thành công!", Toast.LENGTH_LONG).show();
+                    Admin new_admin = new Admin(user_name.getText().toString(), password.getText().toString(), name.getText().toString(), Phone.getText().toString(), Email.getText().toString(), Airline_Brand.getText().toString());
+                    list_Admin.add(new_admin);
+                    finish();
                 }
 
             }
