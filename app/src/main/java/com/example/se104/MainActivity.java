@@ -43,6 +43,12 @@ public class MainActivity extends AppCompatActivity {
         List<Ticket> ticketList = new ArrayList<>();
         ticketList.add(new Ticket("HAN", "09:00", "7h00p", "ICN", "15:00", "5.000.000", "Còn 3 chỗ"));
         ticketList.add(new Ticket("SGN", "07:00", "2h30p", "HAN", "09:30", "1.500.000", "Còn 10 chỗ"));
+        ticketList.add(new Ticket("HAN", "09:00", "7h00p", "ICN", "15:00", "5.000.000", "Còn 3 chỗ"));
+        ticketList.add(new Ticket("SGN", "07:00", "2h30p", "HAN", "09:30", "1.500.000", "Còn 10 chỗ"));
+        ticketList.add(new Ticket("HAN", "09:00", "7h00p", "ICN", "15:00", "5.000.000", "Còn 3 chỗ"));
+        ticketList.add(new Ticket("SGN", "07:00", "2h30p", "HAN", "09:30", "1.500.000", "Còn 10 chỗ"));
+        ticketList.add(new Ticket("HAN", "09:00", "7h00p", "ICN", "15:00", "5.000.000", "Còn 3 chỗ"));
+        ticketList.add(new Ticket("SGN", "07:00", "2h30p", "HAN", "09:30", "1.500.000", "Còn 10 chỗ"));
         return ticketList;
 
     }

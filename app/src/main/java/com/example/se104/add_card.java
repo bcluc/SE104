@@ -1,4 +1,10 @@
 package com.example.se104;
+import android.text.Editable;
+import android.text.TextWatcher;
+
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+
 import java.util.Scanner;
 import java.util.Locale;
 import java.time.LocalDate;
@@ -28,10 +34,14 @@ public class add_card {
             System.out.println("Loại thẻ không hợp lệ");
         else
             System.out.println("Thẻ hợp lệ");
+
+
     }
 
+
+
     public boolean check_name(String cardOwner) { // Kiểm tra tên chủ thẻ
-        if (cardOwner.length() != 0) {
+        if (cardOwner.length()  == 0) {
             return false; // Tên chủ thẻ không được bằng 0
         } else if (isAlphabetString(cardOwner) == false) {
             return false; // Tên chủ thẻ không được chứa số, ký tự đặc biệt

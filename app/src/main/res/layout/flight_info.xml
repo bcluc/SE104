@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/white_board" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số hiệu máy bay:"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="17dp" />
+
+    <TextView
+        android:id="@+id/flight_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VJ44"
+        android:textColor="#2F2B80"
+        tools:layout_editor_absoluteX="143dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/black_dot"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/black_dot"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/down_long_arrow"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="55dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Điểm khởi hành"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="33dp" />
+
+    <TextView
+        android:id="@+id/start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16 : 30, 06/05/2023 (Giờ địa phương)"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="48dp" />
+
+    <TextView
+        android:id="@+id/start_airport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TP Hồ Chí Minh - Sân bay Quốc tế Tân Sơn Nhất"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="65dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Điểm đến"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="125dp" />
+
+    <TextView
+        android:id="@+id/end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18 : 40, 06/05/2023 (Giờ địa phương)"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="140dp" />
+
+    <TextView
+        android:id="@+id/end_airport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hà Nội - Sân bay Nội Bài Hà Nội"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="155dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/black_line"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="180dp" />
+
+    <TextView
+        android:id="@+id/flight_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thời gian: 2 giờ 10 phút"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="190dp" />
+
+    <TextView
+        android:id="@+id/plane_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tàu bay: A321"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toStartOf="@+id/airline"
+        app:layout_constraintStart_toEndOf="@+id/flight_time"
+        tools:layout_editor_absoluteY="190dp" />
+
+    <TextView
+        android:id="@+id/airline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hãng khai thác: Vietjet"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        tools:layout_editor_absoluteX="254dp"
+        tools:layout_editor_absoluteY="190dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

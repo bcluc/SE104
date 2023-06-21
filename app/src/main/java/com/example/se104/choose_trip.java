@@ -10,17 +10,28 @@ import androidx.appcompat.app.AppCompatActivity;
 public class choose_trip extends AppCompatActivity {
 
     Button nextButton; //Khai báo một button
+    Button backButton; //Khai báo một button
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choose_trip);
 
-        nextButton = (Button) findViewById(R.id.next_button); //Ánh xạ button
+        nextButton = (Button) findViewById(R.id.next_button);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(choose_trip.this, check_out.class));
+                Intent intent = new Intent(choose_trip.this, check_out.class);
+                startActivity(intent);
+            }
+        });
+
+        backButton = (Button) findViewById(R.id.out_arrow);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(choose_trip.this, flight_info.class);
+                startActivity(intent);
             }
         });
     }
