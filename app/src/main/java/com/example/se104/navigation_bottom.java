@@ -2,23 +2,34 @@ package com.example.se104;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.DatePicker;
+import android.widget.TextView;
 
 import com.example.shoppingapp.customerview.fragment.ViewPagerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class navigation_bottom extends AppCompatActivity {
+import java.text.DateFormat;
+import java.util.Calendar;
+
+public class navigation_bottom extends AppCompatActivity implements DatePickerDialog.OnDateSetListener{
     private BottomNavigationView bottomNavigationView;
     private ViewPager view_pager;
+    private int ck_day = 0;
+    private TextView tv_day;
+    private TextView tv_day_go;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.navigation_bottom);
@@ -98,5 +109,21 @@ public class navigation_bottom extends AppCompatActivity {
     {
         Intent intent = new Intent(navigation_bottom.this, MainActivity.class);
         startActivity(intent);
+    }
+
+    public void choose_day_go_activity(TextView day)
+    {
+        tv_day = day;
+        DialogFragment datePicker = new fragment_datepicker();
+        datePicker.show(getSupportFragmentManager(), "Date Picker");
+    }
+    @Override
+    public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+        Calendar c = Calendar.getInstance();
+        c.set(Calendar.YEAR, year);
+        c.set(Calendar.MONTH, month);
+        c.set(Calendar.DAY_OF_MONTH, day);
+        String currentDateString = DateFormat.getDateInstance(DateFormat.DEFAULT).format(c.getTime());
+        tv_day.setText(currentDateString);
     }
 }
