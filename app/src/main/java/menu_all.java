@@ -13,30 +13,29 @@ import com.example.se104.R;
 import flight_listview.add_flight;
 import search_flight.SearchByFlightActivity;
 
-public class menu_quanly extends AppCompatActivity {
+public class menu_all extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu_quanly);
+        setContentView(R.layout.menu_all);
         ImageView back = findViewById(R.id.back);
-        TextView add_flight_txt = findViewById(R.id.add_flight);
-        TextView search_flight_txt = findViewById(R.id.search_flight);
+        TextView quanly = findViewById(R.id.quanly);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-        add_flight_txt.setOnClickListener(new View.OnClickListener() {
+        quanly.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(menu_quanly.this, add_flight.class));
+                startActivity(new Intent(menu_all.this, menu_quanly.class));
             }
         });
-        search_flight_txt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(menu_quanly.this, SearchByFlightActivity.class));
-            }
-        });
+        TextView update_searvice = findViewById(R.id.update_more_service);
+        TextView quanly_ve = findViewById(R.id.quanly_ve);
+        TextView flight_brand = findViewById(R.id.brand_info);
+        TextView doanhthu = findViewById(R.id.doanhthu);
+        TextView phanquyen = findViewById(R.id.account);
+        TextView customer = findViewById(R.id.customer);
     }
 }

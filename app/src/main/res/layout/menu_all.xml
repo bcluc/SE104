@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_ground"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="100dp"
+        android:padding="8dp"
+        android:background="@drawable/simple_white_box">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:layout_gravity="center"
+            android:background="@drawable/back_arrow"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:text="Xin chào!"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_white"
+        android:backgroundTint="#B8FFFFFF"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/quanly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textSize="15sp"
+            android:text="Quản lý chuyến bay"
+            android:drawableRight="@drawable/baseline_flight_24"
+            android:fontFamily="@font/montserrat_extrabold"
+
+            />
+        <TextView
+            android:id="@+id/update_more_service"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Cập nhật dịch vụ thêm"
+            android:drawableRight="@drawable/baseline_luggage_24"
+            android:fontFamily="@font/montserrat_extrabold"
+            />
+        <TextView
+            android:id="@+id/quanly_ve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textSize="15sp"
+            android:text="Quản lý vé"
+            android:drawableRight="@drawable/baseline_airplane_ticket_24"
+            android:fontFamily="@font/montserrat_extrabold"
+
+            />
+        <TextView
+            android:id="@+id/brand_info"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Thông tin hãng hàng không"
+            android:drawableRight="@drawable/baseline_menu_book_24"
+            android:fontFamily="@font/montserrat_extrabold"
+            />
+        <TextView
+            android:id="@+id/doanhthu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textSize="15sp"
+            android:text="Tổng kết doanh thu"
+            android:drawableRight="@drawable/baseline_leaderboard_24"
+            android:fontFamily="@font/montserrat_extrabold"
+
+            />
+        <TextView
+            android:id="@+id/account"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Phân quyền tài khoản"
+            android:drawableRight="@drawable/baseline_account_box_24"
+            android:fontFamily="@font/montserrat_extrabold"
+            />
+        <TextView
+            android:id="@+id/customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textSize="15sp"
+            android:text="Chăm sóc khách hàng"
+            android:drawableRight="@drawable/outline_notifications_none_24"
+            android:fontFamily="@font/montserrat_extrabold"
+            android:layout_marginBottom="20dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

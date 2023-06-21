@@ -47,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"
-        android:text="Thêm chuyến bay"
+        android:text="Tra cứu chuyến bay"
         android:drawableRight="@drawable/eyes"
         android:fontFamily="@font/montserrat_extrabold"
         />
