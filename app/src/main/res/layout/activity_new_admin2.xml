@@ -8,7 +8,7 @@
     android:orientation="vertical"
     >
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/text_ID"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -61,7 +61,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/etxt_ID"
+            android:id="@+id/text_ID"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
@@ -73,7 +73,7 @@
             android:paddingLeft="10dp" />
 
         <TextView
-            android:id="@+id/text_pass"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -89,7 +89,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/etxt_pass"
+            android:id="@+id/text_pass"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
@@ -101,7 +101,7 @@
             android:paddingLeft="10dp" />
 
         <Button
-            android:id="@+id/bttn_done"
+            android:id="@+id/button_next"
             android:layout_width="120dp"
 
             android:layout_height="50dp"
