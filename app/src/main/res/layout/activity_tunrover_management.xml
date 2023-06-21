@@ -70,7 +70,7 @@
             android:textColor="@color/Input_color"
             android:textStyle="italic" />
 
-        <EditText
+        <TextView
             android:id="@+id/calender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
