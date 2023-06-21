@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/img_bg"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment_home">
+    <LinearLayout
+        android:background="@drawable/img_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -28,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
                 android:text="Tiết kiệm hơn, bay nhiều hơn"
-
+                android:layout_marginBottom="10dp"
                 android:textColor="#63767E"
                 android:textSize="13sp"/>
             <LinearLayout
@@ -252,8 +257,8 @@
                                 android:layout_height="22dp"
                                 android:text=""
                                 android:layout_gravity="center"
-                                android:id="@+id/btn_plus_customer"
-                                android:background="@drawable/btn_plus"/>
+                                android:id="@+id/btn_minus_customer"
+                                android:background="@drawable/btn_minus" />
 
                             <TextView
                                 android:layout_width="50dp"
@@ -272,8 +277,8 @@
                                 android:layout_height="22dp"
                                 android:text=""
                                 android:layout_gravity="center"
-                                android:id="@+id/btn_minus_customer"
-                                android:background="@drawable/btn_minus"/>
+                                android:id="@+id/btn_plus_customer"
+                                android:background="@drawable/btn_plus" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -282,7 +287,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
-                        android:layout_marginStart="50dp"
+                        android:layout_marginStart="10dp"
                         android:layout_weight="1"
                         android:background="@drawable/bg_btn_gradient"
                         android:elevation="100dp"
@@ -292,10 +297,115 @@
                         android:textSize="12sp" />
 
                 </LinearLayout>
+                
 
             </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Chăm sóc khách hàng"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="#263238"
+                android:textSize="13sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:id="@+id/btn_cskh_vid"
+                    android:background="@drawable/btn_cskh_vid"/>
+
+                <TextView
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium_italic"
+                    android:text="Hướng dẫn đặt chuyến bay"
+                    android:layout_marginStart="15dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="43dp"
+                        android:layout_height="43dp"
+                        android:id="@+id/btn_cskh_pay"
+                        android:background="@drawable/btn_cskh_pay"/>
+
+                    <TextView
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium_italic"
+                        android:text="Hướng dẫn đặt thanh toán"
+                        android:layout_marginStart="15dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="43dp"
+                        android:layout_height="43dp"
+                        android:id="@+id/btn_cskh_hotline"
+                        android:background="@drawable/btn_cskh_hotline"/>
+
+                    <TextView
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium_italic"
+                        android:text="Hotline"
+                        android:layout_marginStart="15dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="43dp"
+                        android:layout_height="43dp"
+                        android:id="@+id/btn_cskh_chat"
+                        android:background="@drawable/btn_cskh_chat"/>
+
+                    <TextView
+                        android:layout_width="98dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium_italic"
+                        android:text="Chat với nhân viên"
+                        android:layout_marginStart="15dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+            
         </LinearLayout>
 
     </ScrollView>
-
-</LinearLayout>
+    </LinearLayout>
+</FrameLayout>
