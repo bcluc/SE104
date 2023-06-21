@@ -1,3 +1,5 @@
+package search_flight;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +19,7 @@ public class menu_all extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_all);
+
         ImageView back = findViewById(R.id.back);
         TextView quanly = findViewById(R.id.quanly);
         back.setOnClickListener(new View.OnClickListener() {
@@ -28,7 +31,7 @@ public class menu_all extends AppCompatActivity {
         quanly.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(menu_all.this, menu_quanly.class));
+                startActivity(new Intent(search_flight.menu_all.this, search_flight.menu_quanly.class));
             }
         });
         TextView update_searvice = findViewById(R.id.update_more_service);

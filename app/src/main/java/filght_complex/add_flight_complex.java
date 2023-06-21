@@ -1,6 +1,7 @@
 package filght_complex;
 
 import android.content.Intent;
+import android.widget.ImageView;
 import android.widget.Toast;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -24,6 +25,14 @@ public class add_flight_complex extends AppCompatActivity {
                 check_information();
             }
         });
+        ImageView btn_back = findViewById(R.id.back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
     }
 
     private void check_information() {

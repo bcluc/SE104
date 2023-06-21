@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 import filght_complex.add_flight_complex;
+import flight_listview.add_flight;
 
 public class edit_flight  extends AppCompatActivity {
     //    Button btn_open_dialog_flight = findViewById(R.id.hang_hang_ko);
@@ -42,9 +43,9 @@ public class edit_flight  extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Button btn_open_dialog_flight_continue = findViewById(R.id.next_page);
         setContentView(R.layout.edit_fight_simple);
 
+        Button btn_open_dialog_flight_continue = findViewById(R.id.next_page);
         Button btn_open_dialog_flight = findViewById(R.id.hang_hang_ko);
         Button btn_open_dialog_lock_start = findViewById(R.id.time_start);
         Button btn_open_dialog_lock_come = findViewById(R.id.time_come);
@@ -84,19 +85,18 @@ public class edit_flight  extends AppCompatActivity {
         btn_open_dialog_flight_continue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (btn_open_dialog_start_locate.getText().toString().compareTo("Điểm xuất phát") == 0
-                        || btn_open_dialog_flight_end_locate.getText().toString().compareTo("Điểm đến") == 0
-                        || btn_open_dialog_flight.getText().toString().compareTo("Hãng hàng không") == 0
-                        || btn_open_dialog_lock_come.getText().toString().compareTo("Thời gian xuất phát") == 0
-                        || btn_open_dialog_lock_start.getText().toString().compareTo("Thời gian đến dự kiến") ==0 )
-                {
-                    Toast.makeText(getApplicationContext(), "Vui lòng điền đầy đủ thông tin!", Toast.LENGTH_SHORT).show();
-                }
-                else
-                {
-                    Intent intent = new Intent(edit_flight.this, edit_flight_complex.class);
-                    startActivity(intent);
-                }
+//                if (!btn_open_dialog_start_locate.getText().toString().equals("Điểm xuất phát")
+//                && !btn_open_dialog_flight_end_locate.getText().toString().equals("Điểm đến")
+//                        && !btn_open_dialog_flight.getText().toString().equals("Hãng hàng không")
+//                        && !btn_open_dialog_lock_come.getText().toString().equals("Thời gian xuất phát")
+//                        &&!btn_open_dialog_lock_start.getText().toString().equals("Thời gian đến dự kiến") )
+//                {
+                Intent intent = new Intent(edit_flight.this, edit_flight_complex.class);
+                startActivity(intent);
+
+//                }
+//                else
+//                    Toast.makeText(getApplicationContext(), "Vui lòng điền đầy đủ thông tin!", Toast.LENGTH_SHORT).show();
             }
         });
         ImageView back = findViewById(R.id.back);
