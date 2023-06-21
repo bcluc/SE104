@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".new_admin1">
+    android:orientation="vertical">
     <Button
         android:id="@+id/button"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
@@ -19,16 +19,13 @@
         android:text="Phân quyền tài khoản"
         android:textAlignment="viewStart"
         android:textColor="#000000"
-        app:backgroundTint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.268"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:backgroundTint="@color/white" />
 
     <LinearLayout
         android:layout_width="333dp"
         android:layout_height="562dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
         android:background="@drawable/round_bg"
         android:backgroundTint="#80FFFFFF"
         android:orientation="vertical"
@@ -162,4 +159,4 @@
             android:text="Tạo tài khoản"
             app:backgroundTint="@null" />
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

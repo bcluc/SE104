@@ -1,73 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
-    android:minWidth="0dp"
-    android:minHeight="0dp"
-    tools:context=".ticketManagement1">
+    android:background="@drawable/tra_c_u_chuy_n_bay"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="0dp"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
-        android:background="@drawable/input_bg"
-        android:backgroundTint="@color/white"
-        android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
-        android:text="Quản lý vé"
-        android:textAlignment="viewStart"
-        android:textColor="#000000"
-        app:backgroundTint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.268"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="650dp"
-        android:layout_marginStart="-10dp"
-        android:paddingLeft="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/input_bg" />
+        <ImageView
+            android:id="@+id/back"
+            android:layout_gravity="center"
+            android:layout_width="22dp"
+            android:layout_height="29dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView4"
+            app:layout_constraintHorizontal_bias="0.862"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.075"
+            app:srcCompat="@drawable/baseline_arrow_back_ios_24" />
 
-    <EditText
-        android:id="@+id/Search_input"
-        android:layout_width="252dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="176dp"
-        android:background="@drawable/search_bg"
-        android:drawableRight="@drawable/baseline_search_24"
-        android:ems="10"
-        android:inputType="textShortMessage"
-        android:padding="10dp"
-        android:text="Nhập mã chuyến bay"
-        android:textColor="#80000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="289dp"
+            android:layout_height="46dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center"
+            android:background="@color/white"
+            android:text="Tra cứu chuyến bay"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="280dp"
-        android:contentDescription="Cancel"
-        android:padding="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
-        app:layout_constraintStart_toEndOf="@+id/Search_input"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baseline_cancel_24" />
+        android:orientation="horizontal"
+        android:layout_marginTop="200dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <SearchView
+            android:layout_gravity="center"
+            android:id="@+id/searchView"
+            android:layout_marginLeft="50dp"
+            android:layout_width="275dp"
+            android:layout_height="38dp"
+            android:background="@drawable/text_bg"
+            android:queryHint="Nhập mã chuyến bay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.35"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.307" />
+
+        <ImageView
+            android:id="@+id/exit"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.185"
+            app:layout_constraintStart_toEndOf="@+id/searchView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.398"
+            app:srcCompat="@drawable/baseline_cancel_24" />
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

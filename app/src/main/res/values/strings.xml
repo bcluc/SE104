@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SE104</string>
+    <string-array name="spinner_day">
+    </string-array>
 </resources>
