@@ -30,9 +30,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="285dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
         android:background="@drawable/round_bg"
         android:backgroundTint="#80FFFFFF"
         android:orientation="vertical"
@@ -58,7 +59,7 @@
         <ListView
             android:id="@+id/lv_plane"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content" />
 
         <ImageButton
             android:id="@+id/btn_add"
