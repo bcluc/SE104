@@ -1,5 +1,6 @@
 package search_flight;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -21,7 +22,7 @@ public class result_of_search extends AppCompatActivity {
         repair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(result_of_search.this,edit_flight.class));
             }
         });
 

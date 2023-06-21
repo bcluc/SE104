@@ -1,6 +1,7 @@
 package search_flight;
 
 import android.content.Intent;
+import android.widget.ImageView;
 import android.widget.Toast;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -22,6 +23,13 @@ public class edit_flight_complex extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 check_information();
+            }
+        });
+        ImageView back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

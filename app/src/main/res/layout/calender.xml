@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context="flight_listview.add_flight"
-    android:background="@color/white_B">
+    android:background="@color/white">
 
     <CalendarView
         android:id="@+id/calendarView"

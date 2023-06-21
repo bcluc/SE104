@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 
@@ -29,6 +30,7 @@ public class SearchByFlightActivity extends AppCompatActivity {
         search_id = (ListView) findViewById(R.id.list_id);
         ArrayList <String> array_id = new ArrayList<>();
         array_id.addAll(Arrays.asList(getResources().getStringArray(R.array.flight_id)));
+        ImageView back = findViewById(R.id.back);
 
         adapter = new ArrayAdapter<>(
                 SearchByFlightActivity.this,
@@ -54,6 +56,12 @@ public class SearchByFlightActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 startActivity(new Intent(SearchByFlightActivity.this,result_of_search.class));
+            }
+        });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

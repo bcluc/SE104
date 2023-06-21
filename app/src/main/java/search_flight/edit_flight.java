@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -89,12 +90,20 @@ public class edit_flight  extends AppCompatActivity {
                         || btn_open_dialog_lock_come.getText().toString().compareTo("Thời gian xuất phát") == 0
                         || btn_open_dialog_lock_start.getText().toString().compareTo("Thời gian đến dự kiến") ==0 )
                 {
-                    Intent intent = new Intent(edit_flight.this, edit_flight_complex.class);
-                    startActivity(intent);
-
+                    Toast.makeText(getApplicationContext(), "Vui lòng điền đầy đủ thông tin!", Toast.LENGTH_SHORT).show();
                 }
                 else
-                    Toast.makeText(getApplicationContext(), "Vui lòng điền đầy đủ thông tin!", Toast.LENGTH_SHORT).show();
+                {
+                    Intent intent = new Intent(edit_flight.this, edit_flight_complex.class);
+                    startActivity(intent);
+                }
+            }
+        });
+        ImageView back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 
