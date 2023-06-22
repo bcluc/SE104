@@ -8,271 +8,271 @@
     android:orientation="vertical"
     >
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
-        android:background="@drawable/input_bg"
-        android:backgroundTint="@color/white"
-        android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
-        android:text="Quản lý vé"
-        android:textAlignment="viewStart"
-        android:textColor="#000000"
-        app:backgroundTint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.268"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <Button-->
+<!--        android:id="@+id/button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:layout_marginEnd="50dp"-->
+<!--        android:background="@drawable/input_bg"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        android:drawableLeft="@drawable/baseline_arrow_back_ios_24"-->
+<!--        android:text="Quản lý vé"-->
+<!--        android:textAlignment="viewStart"-->
+<!--        android:textColor="#000000"-->
+<!--        app:backgroundTint="@color/white"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.268"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView4"-->
-<!--        android:layout_width="419dp"-->
-<!--        android:layout_height="738dp"-->
+<!--&lt;!&ndash;    <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/imageView4"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="419dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="738dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:srcCompat="@drawable/bottom_bg" />&ndash;&gt;-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:background="@drawable/input_bg"-->
+<!--        android:orientation="vertical"-->
+<!--        android:paddingLeft="10dp"-->
+<!--        android:paddingTop="20dp"-->
+<!--        android:paddingRight="10dp"-->
 <!--        app:layout_constraintBottom_toBottomOf="parent"-->
 <!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:srcCompat="@drawable/bottom_bg" />-->
+<!--        app:layout_constraintHorizontal_bias="0.367"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/input_bg"
-        android:orientation="vertical"
-        android:paddingLeft="10dp"
-        android:paddingTop="20dp"
-        android:paddingRight="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.367"
-        app:layout_constraintStart_toStartOf="parent">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:orientation="vertical">-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="40dp"
-            android:orientation="vertical">
+<!--        <TextView-->
 
-        <TextView
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:text="Số ghế thương gia, giá:"-->
+<!--            android:textColor="@color/Input_color"-->
+<!--            android:textStyle="italic" />-->
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:text="Số ghế thương gia, giá:"
-            android:textColor="@color/Input_color"
-            android:textStyle="italic" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageView"-->
+<!--                    android:layout_width="22dp"-->
+<!--                    android:layout_height="29dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginEnd="4dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toStartOf="@+id/textView4"-->
+<!--                    app:layout_constraintHorizontal_bias="0.862"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintVertical_bias="0.075"-->
+<!--                    app:srcCompat="@drawable/baseline_arrow_back_ios_24" />-->
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="22dp"
-                    android:layout_height="29dp"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="4dp"
-                    android:layout_weight="1"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textView4"
-                    app:layout_constraintHorizontal_bias="0.862"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.075"
-                    app:srcCompat="@drawable/baseline_arrow_back_ios_24" />
+<!--                <TextView-->
+<!--                    android:id="@+id/textView4"-->
+<!--                    android:layout_width="180dp"-->
+<!--                    android:layout_height="46dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginRight="55dp"-->
+<!--                    android:layout_weight="3"-->
+<!--                    android:fontFamily="@font/montserrat_semibold"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="Quản lý vé"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="20sp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="0.45"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintVertical_bias="0.062" />-->
+<!--            </LinearLayout>-->
 
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="180dp"
-                    android:layout_height="46dp"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="55dp"
-                    android:layout_weight="3"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:gravity="center"
-                    android:text="Quản lý vé"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.45"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.062" />
-            </LinearLayout>
+<!--        <TextView-->
 
-        <TextView
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:text="Số ghế phổ thông đặc biệt, giá:"-->
+<!--            android:textColor="@color/Input_color"-->
+<!--            android:textStyle="italic" />-->
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:text="Số ghế phổ thông đặc biệt, giá:"
-            android:textColor="@color/Input_color"
-            android:textStyle="italic" />
+<!--            <EditText-->
+<!--                android:id="@+id/flight_id"-->
+<!--                android:layout_marginLeft="50dp"-->
+<!--                android:layout_width="277dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:layout_marginTop="55dp"-->
+<!--                android:background="@drawable/text_bg"-->
+<!--                android:elevation="20dp"-->
+<!--                android:ems="10"-->
+<!--                android:fontFamily="@font/montserrat_semibold"-->
+<!--                android:hint="MÃ CHUYẾN BAY"-->
+<!--                android:inputType="textPersonName"-->
+<!--                android:minWidth="0dp"-->
+<!--                android:minHeight="0dp"-->
+<!--                android:padding="10dp"-->
+<!--                android:scrollIndicators="none"-->
+<!--                android:textSize="13sp" />-->
 
-            <EditText
-                android:id="@+id/flight_id"
-                android:layout_marginLeft="50dp"
-                android:layout_width="277dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="55dp"
-                android:background="@drawable/text_bg"
-                android:elevation="20dp"
-                android:ems="10"
-                android:fontFamily="@font/montserrat_semibold"
-                android:hint="MÃ CHUYẾN BAY"
-                android:inputType="textPersonName"
-                android:minWidth="0dp"
-                android:minHeight="0dp"
-                android:padding="10dp"
-                android:scrollIndicators="none"
-                android:textSize="13sp" />
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="50dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:fontFamily="@font/montserrat_semibold"-->
+<!--                android:text="Số ghế thương gia,giá"-->
+<!--                android:textSize="10sp" />-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/montserrat_semibold"
-                android:text="Số ghế thương gia,giá"
-                android:textSize="10sp" />
+<!--        <TextView-->
 
-        <TextView
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:text="Số ghế phổ thông, giá:"-->
+<!--            android:textColor="@color/Input_color"-->
+<!--            android:textStyle="italic" />-->
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:text="Số ghế phổ thông, giá:"
-            android:textColor="@color/Input_color"
-            android:textStyle="italic" />
+<!--            <EditText-->
+<!--                android:id="@+id/cost_of_business_chair"-->
+<!--                android:layout_width="277dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:layout_marginLeft="50dp"-->
+<!--                android:background="@drawable/text_bg"-->
+<!--                android:elevation="20dp"-->
+<!--                android:fontFamily="@font/montserrat_semibold"-->
+<!--                android:hint="GIÁ GHẾ THƯƠNG GIA"-->
+<!--                android:padding="10dp"-->
+<!--                android:textSize="13sp" />-->
 
-            <EditText
-                android:id="@+id/cost_of_business_chair"
-                android:layout_width="277dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="50dp"
-                android:background="@drawable/text_bg"
-                android:elevation="20dp"
-                android:fontFamily="@font/montserrat_semibold"
-                android:hint="GIÁ GHẾ THƯƠNG GIA"
-                android:padding="10dp"
-                android:textSize="13sp" />
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="50dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:fontFamily="@font/montserrat_semibold"-->
+<!--                android:text="Số ghế phổ thông đặc biệt,giá"-->
+<!--                android:textSize="10sp" />-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/montserrat_semibold"
-                android:text="Số ghế phổ thông đặc biệt,giá"
-                android:textSize="10sp" />
+<!--        <TextView-->
 
-        <TextView
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:text="Số ghế hạng nhất, giá:"-->
+<!--            android:textColor="@color/Input_color"-->
+<!--            android:textStyle="italic" />-->
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:text="Số ghế hạng nhất, giá:"
-            android:textColor="@color/Input_color"
-            android:textStyle="italic" />
+<!--            <EditText-->
+<!--                android:id="@+id/cost_of_special_popular_char"-->
+<!--                android:layout_width="277dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:layout_marginLeft="50dp"-->
+<!--                android:background="@drawable/text_bg"-->
+<!--                android:elevation="20dp"-->
+<!--                android:fontFamily="@font/montserrat_semibold"-->
+<!--                android:hint="GIÁ GHẾ PHỔ THÔNG ĐẶC BIỆT"-->
+<!--                android:padding="10dp"-->
+<!--                android:textSize="13sp" />-->
 
-            <EditText
-                android:id="@+id/cost_of_special_popular_char"
-                android:layout_width="277dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="50dp"
-                android:background="@drawable/text_bg"
-                android:elevation="20dp"
-                android:fontFamily="@font/montserrat_semibold"
-                android:hint="GIÁ GHẾ PHỔ THÔNG ĐẶC BIỆT"
-                android:padding="10dp"
-                android:textSize="13sp" />
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="50dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:fontFamily="@font/montserrat_semibold"-->
+<!--                android:text="Số ghế phổ thông,giá"-->
+<!--                android:textSize="10sp" />-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/montserrat_semibold"
-                android:text="Số ghế phổ thông,giá"
-                android:textSize="10sp" />
+<!--            <EditText-->
+<!--                android:id="@+id/number_of_popular_chair"-->
+<!--                android:layout_width="277dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:layout_marginLeft="50dp"-->
+<!--                android:background="@drawable/text_bg"-->
+<!--                android:elevation="20dp"-->
+<!--                android:fontFamily="@font/montserrat_semibold"-->
+<!--                android:hint="SỐ GHẾ PHỔ THÔNG"-->
+<!--                android:padding="10dp"-->
+<!--                android:textSize="13sp" />-->
 
-            <EditText
-                android:id="@+id/number_of_popular_chair"
-                android:layout_width="277dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="50dp"
-                android:background="@drawable/text_bg"
-                android:elevation="20dp"
-                android:fontFamily="@font/montserrat_semibold"
-                android:hint="SỐ GHẾ PHỔ THÔNG"
-                android:padding="10dp"
-                android:textSize="13sp" />
+<!--            <EditText-->
+<!--                android:id="@+id/cost_of_popular_char"-->
+<!--                android:layout_width="277dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:layout_marginLeft="50dp"-->
+<!--                android:background="@drawable/text_bg"-->
+<!--                android:elevation="20dp"-->
+<!--                android:fontFamily="@font/montserrat_semibold"-->
+<!--                android:hint="GIÁ GHẾ PHỔ THÔNG"-->
+<!--                android:padding="10dp"-->
+<!--                android:textSize="13sp" />-->
 
-            <EditText
-                android:id="@+id/cost_of_popular_char"
-                android:layout_width="277dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="50dp"
-                android:background="@drawable/text_bg"
-                android:elevation="20dp"
-                android:fontFamily="@font/montserrat_semibold"
-                android:hint="GIÁ GHẾ PHỔ THÔNG"
-                android:padding="10dp"
-                android:textSize="13sp" />
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="50dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:fontFamily="@font/montserrat_semibold"-->
+<!--                android:text="Số ghế hạng nhất,giá"-->
+<!--                android:textSize="10sp" />-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/montserrat_semibold"
-                android:text="Số ghế hạng nhất,giá"
-                android:textSize="10sp" />
+<!--            <EditText-->
+<!--                android:id="@+id/number_of_first_chair"-->
+<!--                android:layout_width="277dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:layout_marginLeft="50dp"-->
+<!--                android:background="@drawable/text_bg"-->
+<!--                android:elevation="20dp"-->
+<!--                android:fontFamily="@font/montserrat_semibold"-->
+<!--                android:hint="SỐ GHẾ HẠNG NHẤT"-->
+<!--                android:padding="10dp"-->
+<!--                android:textSize="13sp" />-->
 
-            <EditText
-                android:id="@+id/number_of_first_chair"
-                android:layout_width="277dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="50dp"
-                android:background="@drawable/text_bg"
-                android:elevation="20dp"
-                android:fontFamily="@font/montserrat_semibold"
-                android:hint="SỐ GHẾ HẠNG NHẤT"
-                android:padding="10dp"
-                android:textSize="13sp" />
+<!--            <EditText-->
+<!--                android:id="@+id/cost_of_first_chair"-->
+<!--                android:layout_width="277dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:layout_marginLeft="50dp"-->
+<!--                android:background="@drawable/text_bg"-->
+<!--                android:elevation="20dp"-->
+<!--                android:fontFamily="@font/montserrat_semibold"-->
+<!--                android:hint="GIÁ GHẾ HẠNG NHẤT"-->
+<!--                android:padding="10dp"-->
+<!--                android:textSize="13sp" />-->
 
-            <EditText
-                android:id="@+id/cost_of_first_chair"
-                android:layout_width="277dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="50dp"
-                android:background="@drawable/text_bg"
-                android:elevation="20dp"
-                android:fontFamily="@font/montserrat_semibold"
-                android:hint="GIÁ GHẾ HẠNG NHẤT"
-                android:padding="10dp"
-                android:textSize="13sp" />
-
-            <Spinner
-                android:id="@+id/more_service"
-                android:layout_width="277dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="23dp"
-                android:background="@drawable/text_bg"
-                android:contentDescription="Thời điểm xuất phát"
-                android:elevation="20dp"
-                android:padding="10dp"
-                android:fontFamily="@font/montserrat_semibold"
-                android:textSize="15sp" />
+<!--            <Spinner-->
+<!--                android:id="@+id/more_service"-->
+<!--                android:layout_width="277dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:layout_marginLeft="50dp"-->
+<!--                android:layout_marginTop="23dp"-->
+<!--                android:background="@drawable/text_bg"-->
+<!--                android:contentDescription="Thời điểm xuất phát"-->
+<!--                android:elevation="20dp"-->
+<!--                android:padding="10dp"-->
+<!--                android:fontFamily="@font/montserrat_semibold"-->
+<!--                android:textSize="15sp" />-->
 
 
 
-        </LinearLayout>
-    </LinearLayout>
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
 
 </LinearLayout>
