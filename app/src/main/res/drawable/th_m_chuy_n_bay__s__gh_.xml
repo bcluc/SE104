@@ -1,23 +1,23 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aapt="http://schemas.android.com/aapt"
     android:width="360dp"
-    android:height="800dp"
+    android:height="900dp"
     android:viewportWidth="360"
-    android:viewportHeight="800">
+    android:viewportHeight="900">
   <group>
     <clip-path
-        android:pathData="M0,0h360v800h-360z"/>
+        android:pathData="M0,0h360v900h-360z"/>
     <path
-        android:pathData="M0,0h360v800h-360z"
+        android:pathData="M0,0h360v900h-360z"
         android:fillColor="#ffffff"/>
     <path
-        android:pathData="M0,0h360v800h-360z">
+        android:pathData="M0,0h360v900h-360z">
       <aapt:attr name="android:fillColor">
         <gradient 
             android:startX="0"
             android:startY="0"
-            android:endX="301"
-            android:endY="800"
+            android:endX="368.81"
+            android:endY="871.3"
             android:type="linear">
           <item android:offset="0" android:color="#FF426BF8"/>
           <item android:offset="1" android:color="#FFF2F2F2"/>
@@ -52,9 +52,14 @@
         </gradient>
       </aapt:attr>
     </path>
+    <path
+        android:pathData="M2,133h358v767h-358z"
+        android:fillColor="#E3EAED"/>
+    <path
+        android:pathData="M26,39L295,39A19,19 0,0 1,314 58L314,83A19,19 0,0 1,295 102L26,102A19,19 0,0 1,7 83L7,58A19,19 0,0 1,26 39z"
+        android:fillColor="#ffffff"/>
+    <path
+        android:pathData="M35,121L326,121A13,13 0,0 1,339 134L339,871A13,13 0,0 1,326 884L35,884A13,13 0,0 1,22 871L22,134A13,13 0,0 1,35 121z"
+        android:fillColor="#ffffff"/>
   </group>
-<<<<<<< HEAD
-=======
-
->>>>>>> hung-admin-branch
 </vector>

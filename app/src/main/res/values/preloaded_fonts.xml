@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+<<<<<<< HEAD
         <item>@font/montserrat_extrabold</item>
+=======
+        <item>@font/montserrat_light_italic</item>
+>>>>>>> hung-admin-branch
         <item>@font/montserrat_semibold</item>
     </array>
 </resources>

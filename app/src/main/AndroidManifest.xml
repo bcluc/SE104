@@ -12,16 +12,7 @@
         android:theme="@style/Theme.SE104"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="login.login"
+            android:name="search_flight.menu_all"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +21,31 @@
             </intent-filter>
         </activity>
         <activity
+
+            android:name="login.login"
+           android:name="search_flight.menu_quanly"
+
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+<<<<<<< Updated upstream
+                <category android:name="android.intent.category.DEFAULT" />
+=======
+
+                <category android:name="android.intent.category.LAUNCHER" />
+>>>>>>> Stashed changes
+            </intent-filter>
+        </activity>
+        <activity
             android:name="signup.smart_otp"
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="flight_listview.add_flight"
+
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,34 +55,84 @@
         </activity>
         <activity
             android:name="signup.success_create"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="forget_pass.forget_pass"
+            android:name="filght_complex.add_flight_complex"
+
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
+<<<<<<< Updated upstream
+=======
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            <action android:name="forget_pass.forget_pass" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="search_flight.SearchByFlightActivity"
+
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+>>>>>>> Stashed changes
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name="signup.signup"
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="search_flight.result_of_search"
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="search_flight.edit_flight"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
+<<<<<<< Updated upstream
+=======
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="search_flight.edit_flight_complex"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+>>>>>>> hung-admin-branch
+>>>>>>> Stashed changes
             </intent-filter>
         </activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
 
 </manifest>

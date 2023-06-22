@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <size android:width="10dp"
+                        android:height="10dp"/>
+                    <solid android:color="@color/white_B"/>
+                    <corners android:radius="4dp" />
+                    <padding android:right="12dp"
+                        android:left="12dp"
+                        android:top="50px"
+                        />
+                </shape>
+            </item>
+
+
+    <item
+        android:drawable="@drawable/vector__3_"
+        android:gravity = "end"
+        android:height="8dp"
+        android:width="10dp" />
+
+        </layer-list>
+    </item>
+
+
+
+
+</selector>

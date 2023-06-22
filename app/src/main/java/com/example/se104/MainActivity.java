@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+<<<<<<< HEAD
         setContentView(R.layout.intro);
         Button btn_start;
         btn_start = findViewById(R.id.Button);
@@ -24,5 +25,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, login.class));
             }
         });
+=======
+        setContentView(R.layout.addfight);
+>>>>>>> hung-admin-branch
     }
 }

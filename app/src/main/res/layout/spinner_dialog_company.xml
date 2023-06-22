@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/simple_white_box"
+    android:layout_margin="16dp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:background="@drawable/simple_white_box"
+        android:text="Chọn hãng hàng không"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical"
+        >
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="271dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="169dp"
+            android:layout_height="48dp"
+            android:width="48dp"
+            android:height="169dp"
+            android:backgroundTint="#0D000000"
+            android:gravity="center"
+            android:textColor="@color/gray_font"
+            android:text="Huỷ bỏ" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="169dp"
+            android:layout_height="48dp"
+            android:width="48dp"
+            android:height="169dp"
+            android:backgroundTint="#3E6FEF"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="Tiếp tục" />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

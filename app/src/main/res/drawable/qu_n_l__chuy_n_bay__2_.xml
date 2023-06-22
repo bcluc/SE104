@@ -52,9 +52,17 @@
         </gradient>
       </aapt:attr>
     </path>
+    <path
+        android:pathData="M26,39L295,39A19,19 0,0 1,314 58L314,83A19,19 0,0 1,295 102L26,102A19,19 0,0 1,7 83L7,58A19,19 0,0 1,26 39z"
+        android:fillColor="#ffffff"/>
+    <path
+        android:pathData="M0,291C0,279.4 9.4,270 21,270H339C350.6,270 360,279.4 360,291V469C360,480.6 350.6,490 339,490H21C9.4,490 0,480.6 0,469V291Z"
+        android:fillColor="#ffffff"
+        android:fillAlpha="0.72"/>
+    <path
+        android:strokeWidth="1"
+        android:pathData="M0,291C0,279.4 9.4,270 21,270H339C350.6,270 360,279.4 360,291V469C360,480.6 350.6,490 339,490H21C9.4,490 0,480.6 0,469V291Z"
+        android:fillColor="#00000000"
+        android:strokeColor="#000000"/>
   </group>
-<<<<<<< HEAD
-=======
-
->>>>>>> hung-admin-branch
 </vector>
