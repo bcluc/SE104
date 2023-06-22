@@ -1,7 +1,5 @@
 package com.maadi.flightticketbooking.utilities;
 
-
-
 import com.maadi.flightticketbooking.models.City;
 import com.maadi.flightticketbooking.models.User;
 
@@ -14,7 +12,7 @@ public class ECONSTANT {
     public static List<City> cityList = new ArrayList<>();
 
     public static final String TAG = "TAG";
-    private static final String IP = "http://192.168.1.10/";
+    private static final String IP = "http://192.168.56.1/";
             private static final String BASE_URL = IP + "flight_ticket_boooking_api/";
     private static final String BASE_IMAGE_URL = IP + "flight_ticket_boooking_api/";
 
