@@ -29,8 +29,13 @@
         <activity
             android:name=".activity_message"
             android:exported="true"></activity>
-        <activity android:label="SE104" android:name=".choose_trip"> </activity>
-        <activity android:label="SE104" android:name=".check_out"> </activity>
+        <activity android:exported="true"
+            android:name=".choose_trip"> </activity>
+        <activity android:exported="true"
+            android:name=".check_out"> </activity>
+
+        <activity android:exported="true"
+            android:name=".finish"> </activity>
 
         <meta-data
             android:name="preloaded_fonts"

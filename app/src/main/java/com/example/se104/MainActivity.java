@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         time.setLayoutManager(linearLayoutManager1);
 
         timeAdapter.setData(getListTime());
+        time.setAdapter(timeAdapter);
 
     }
 

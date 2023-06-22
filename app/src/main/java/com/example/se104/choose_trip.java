@@ -14,6 +14,9 @@ import java.util.List;
 
 public class choose_trip extends AppCompatActivity {
 
+    Button nextButton;
+    Button backButton;
+
     private RecyclerView flight_ticket;
     private RecyclerView time;
     private TicketAdapter ticketAdapter;
@@ -24,6 +27,25 @@ public class choose_trip extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choose_trip);
+
+        nextButton = (Button) findViewById(R.id.next_button);
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    Intent intent = new Intent(choose_trip.this, check_out.class);
+                    startActivity(intent);
+            }
+        });
+
+        backButton = (Button) findViewById(R.id.out_arrow);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    Intent intent = new Intent(choose_trip.this, navigation_bottom.class);
+                    startActivity(intent);
+            }
+        });
 
         flight_ticket = findViewById(R.id.flight_list);
         ticketAdapter = new TicketAdapter(this);

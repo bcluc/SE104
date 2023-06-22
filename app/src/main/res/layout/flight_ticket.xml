@@ -41,7 +41,7 @@
             android:textColor="#8E8E8E"
             android:textSize="12sp"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="120dp"/>
+            android:layout_marginLeft="117dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -102,5 +102,7 @@
             android:textSize="12sp"
             android:layout_marginLeft="334dp"
             android:layout_marginTop="50dp" />
+
+
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
