@@ -5,102 +5,955 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0970eaa-e9e7-4137-a1c6-46ca7c9d0795" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/.idea/Flight Ticket Booking System Mini Project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/modules/._Flight_Ticket_Booking.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/modules/app/._Flight_Ticket_Booking.app.androidTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/modules/app/._Flight_Ticket_Booking.app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/modules/app/._Flight_Ticket_Booking.app.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/modules/app/._Flight_Ticket_Booking.app.unitTest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+    <list default="true" id="cf1012da-a279-4fbc-87d2-7015164e26bc" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/Welcome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/AboutUs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/BookTicket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/BookingHistory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/ContactUs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/MyBookingDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/Profile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/Register.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/SearchVehical.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/Splash.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/VehicleDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/adapters/BookingAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/adapters/CityAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/adapters/PassengerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/adapters/VehicleAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/models/Banner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/models/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/models/MyBooking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/models/PassengerModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/models/Vehical.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/utilities/EFastSaveInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/utilities/EHelpingFunctions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/utilities/MyNetwork.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/bounce.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/bounce_text.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/go_down.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/go_up.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/noavatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/abc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/address.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bkline.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/blue_fill__rounded_color.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/btn_circle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/camera.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/cell.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circle_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circle_bold.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/contacts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/counter_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/cu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/cursor_color.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/defaultcart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/email.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/grey_cursor_color.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/half_blue_roundshape.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/half_circle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/hexagone1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/hexagone2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add_circle_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_book_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_cancel_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_person_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_search_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_do_not_disturb_on_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_lock_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/inf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/logout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/movie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/noavatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/order.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/phone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/prof.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rectangle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/reg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/right_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_corner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shapelogin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/shapelogin_red.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/side_nav_bar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/small_cicle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ticket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/white_cursor_color.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/white_hexagone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/white_rounded_corner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/semi_bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/semibold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_about_us.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_book_ticket.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_booking_history.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_contact_us.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cropper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_booking_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_vehical.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_vehicle_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/city_dialog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_row_booking.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_row_city.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_row_passenger.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_row_vehicle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/menuf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/about.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/contac.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/history.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/pickimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/profi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/searchbus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/about.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/contac.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/history.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/pickimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/profi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/searchbus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/about.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/contac.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/history.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/pickimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/profi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/searchbus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/about.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/contac.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/history.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/pickimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/profi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/searchbus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/about.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/contac.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/history.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/pickimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/profi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/searchbus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/delievered.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/empty.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/empty_box.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/empty_cart.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/in_progress.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/loading.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/no_test.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/on_the_way.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/order_empty.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/packed.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/packing.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/addcontactus.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/adddonation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/addpas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/bookticket.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/changepass.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/db.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/db1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/getbanner.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/getbookingid.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/getcity.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/getmybooking.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/getpassengers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/images/banners/1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/images/banners/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/images/banners/2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/images/banners/3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/images/user/54a7915f751ffbbb63ebf5cf4ed40db5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/images/user/p2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/images/user/t@mail.com.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/searchvehicle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight_ticket_boooking_api/signup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/se104/ExampleInstrumentedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/se104/MainActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v33/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/se104/ExampleUnitTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/.idea/Flight Ticket Booking System Mini Project.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/Welcome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/AboutUs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/BookTicket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/BookingHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/ContactUs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/MyBookingDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/Profile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/Register.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/SearchVehical.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/Splash.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/VehicleDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/adapters/BookingAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/adapters/CityAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/adapters/PassengerAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/adapters/VehicleAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/models/Banner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/models/City.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/models/MyBooking.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/models/PassengerModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/models/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/models/Vehical.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/utilities/EFastSaveInit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/utilities/EHelpingFunctions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/utilities/MyNetwork.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/anim/bounce.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/anim/bounce_text.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/anim/go_down.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/anim/go_up.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable-v24/noavatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/abc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/address.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/bkline.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/blue_fill__rounded_color.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/btn_circle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/camera.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/cat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/cell.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/circle_arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/circle_bold.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/contacts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/counter_bg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/cu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/cursor_color.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/defaultcart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/email.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/grey_cursor_color.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/half_blue_roundshape.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/half_circle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/hexagone1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/hexagone2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/ic_add_circle_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/ic_baseline_book_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/ic_baseline_cancel_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/ic_baseline_person_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/ic_baseline_search_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/ic_do_not_disturb_on_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/ic_lock_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/inf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/logout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/movie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/noavatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/order.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/phone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/prof.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/rectangle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/reg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/right_arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/rounded_corner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/shapelogin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/shapelogin_red.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/side_nav_bar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/small_cicle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/ticket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/white_cursor_color.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/white_hexagone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/white_rounded_corner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/font/bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/font/light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/font/medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/font/regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/font/semi_bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/font/semibold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/activity_about_us.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/activity_book_ticket.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/activity_booking_history.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/activity_contact_us.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/activity_cropper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/activity_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/activity_my_booking_detail.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/activity_profile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/activity_register.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/activity_search_vehical.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/activity_splash.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/activity_vehicle_detail.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/activity_welcome.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/app_bar_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/city_dialog.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/content_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/nav_header_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/single_row_booking.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/single_row_city.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/single_row_passenger.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/single_row_vehicle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/menu/menuf.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-hdpi/about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-hdpi/contac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-hdpi/history.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-hdpi/pickimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-hdpi/profi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-hdpi/searchbus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-mdpi/about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-mdpi/contac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-mdpi/history.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-mdpi/pickimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-mdpi/profi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-mdpi/searchbus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xhdpi/about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xhdpi/contac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xhdpi/history.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xhdpi/pickimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xhdpi/profi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xhdpi/searchbus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxhdpi/about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxhdpi/contac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxhdpi/history.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxhdpi/pickimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxhdpi/profi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxhdpi/searchbus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxxhdpi/about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxxhdpi/contac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxxhdpi/history.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxxhdpi/pickimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxxhdpi/profi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxxhdpi/searchbus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/delievered.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/empty.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/empty_box.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/empty_cart.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/in_progress.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/loading.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/no_test.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/on_the_way.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/order_empty.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/packed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/packing.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/FlightTicketBooking/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/addcontactus.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/adddonation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/addpas.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/bookticket.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/changepass.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/db.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/db1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/getbanner.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/getbookingid.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/getcity.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/getmybooking.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/getpassengers.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/images/banners/1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/images/banners/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/images/banners/2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/images/banners/3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/images/user/54a7915f751ffbbb63ebf5cf4ed40db5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/images/user/p2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/images/user/t@mail.com.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/searchvehicle.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/signup.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/._.DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/._FlightTicketBooking" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/._flight_ticket_boooking_api" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/._flight_ticket_boooking_api.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/._.DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/._.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/._.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/._.idea" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/._app" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/._build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/._gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/._gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/._gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/._gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/._local.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/._settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/._.DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/._6.1.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/._buildOutputCleanup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/._checksums" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/._vcs-1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/6.1.1/._executionHistory" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/6.1.1/._fileChanges" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/6.1.1/._fileContent" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/6.1.1/._fileHashes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/6.1.1/._gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/6.1.1/._javaCompile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/6.1.1/._vcsMetadata-1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/6.1.1/executionHistory/._executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/6.1.1/executionHistory/._executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/6.1.1/fileChanges/._last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/6.1.1/fileContent/._fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/6.1.1/fileHashes/._fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/6.1.1/fileHashes/._fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/6.1.1/fileHashes/._resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/6.1.1/javaCompile/._classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/6.1.1/javaCompile/._jarAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/6.1.1/javaCompile/._javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/6.1.1/javaCompile/._taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/buildOutputCleanup/._buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/buildOutputCleanup/._cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/buildOutputCleanup/._outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/checksums/._checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/checksums/._md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/checksums/._sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.gradle/vcs-1/._gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/._.DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/._.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/._.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/._assetWizardSettings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/._caches" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/._codeStyles" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/._compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/._gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/._jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/._libraries" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/._misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/._modules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/._modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/._workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/caches/._build_file_checksums.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/codeStyles/._Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_activity_activity_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_annotation_annotation_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_annotation_annotation_experimental_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_appcompat_appcompat_1_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_appcompat_appcompat_resources_1_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_arch_core_core_common_2_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_cardview_cardview_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_collection_collection_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_constraintlayout_constraintlayout_2_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_constraintlayout_constraintlayout_solver_2_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_coordinatorlayout_coordinatorlayout_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_core_core_1_3_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_customview_customview_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_drawerlayout_drawerlayout_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_fragment_fragment_1_2_4_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_lifecycle_lifecycle_common_2_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_lifecycle_lifecycle_extensions_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_lifecycle_lifecycle_livedata_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_lifecycle_lifecycle_livedata_core_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_lifecycle_lifecycle_process_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_lifecycle_lifecycle_runtime_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_lifecycle_lifecycle_service_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_lifecycle_lifecycle_viewmodel_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_lifecycle_lifecycle_viewmodel_savedstate_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_loader_loader_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_media_media_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_navigation_navigation_common_2_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_navigation_navigation_fragment_2_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_navigation_navigation_runtime_2_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_navigation_navigation_ui_2_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_print_print_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_recyclerview_recyclerview_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_test_core_1_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_test_espresso_espresso_core_3_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_test_espresso_espresso_idling_resource_3_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_test_ext_junit_1_1_2_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_test_monitor_1_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_test_runner_1_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_transition_transition_1_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_viewpager2_viewpager2_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_airbnb_android_lottie_3_4_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_android_volley_volley_1_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_github_bumptech_glide_annotations_4_10_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_github_bumptech_glide_disklrucache_4_10_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_github_bumptech_glide_gifdecoder_4_10_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_github_bumptech_glide_glide_4_10_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_github_d_max_spots_dialog_1_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_github_f0ris_sweetalert_library_1_5_6_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_github_firdausmaulan_GlideSlider_1_5_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_github_karanchuri_PermissionManager_0_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_github_manojbhadane_PaymentCardView_v1_3_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_github_mike14u_croperino_1_1_8_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_github_yehiahd_FastSave_Android_1_0_6_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_google_android_material_material_1_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_google_code_findbugs_jsr305_2_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_google_code_gson_gson_2_8_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_irozon_alertview_alertview_1_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_makeramen_roundedimageview_2_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_pnikosis_materialish_progress_1_7_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_squareup_javawriter_2_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__com_squareup_okio_okio_1_17_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__de_hdodenhof_circleimageview_3_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__in_codeshuffle_typewriterview_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__javax_inject_javax_inject_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__org_hamcrest_hamcrest_integration_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__org_jetbrains_annotations_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_2_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/libraries/._Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_2_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/modules/._Flight_Ticket_Booking.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/modules/._app" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/modules/app/._Flight_Ticket_Booking.app.androidTest.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/modules/app/._Flight_Ticket_Booking.app.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/modules/app/._Flight_Ticket_Booking.app.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/.idea/modules/app/._Flight_Ticket_Booking.app.unitTest.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/._.DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/._.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/._build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/._build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/._libs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/._proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/._src" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/._generated" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/._intermediates" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/._outputs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/._tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/generated/._ap_generated_sources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/generated/._res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/generated/._source" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/generated/ap_generated_sources/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/generated/res/._pngs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/generated/res/._resValues" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/generated/source/._buildConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._annotation_processor_list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._blame" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._bundle_manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._compatible_screen_manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._compile_and_runtime_not_namespaced_r_class_jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._data_binding_layout_info_type_merge" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._dex_archive_input_jar_hashes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._duplicate_classes_check" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._external_libs_dex_archive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._incremental" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._instant_app_manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._javac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._manifest_merge_blame_file" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._merged_assets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._merged_java_res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._merged_jni_libs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._merged_manifests" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._merged_native_libs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._merged_shaders" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._metadata_feature_manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._mixed_scope_dex_archive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._navigation_json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._processed_res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._project_dex_archive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._runtime_symbol_list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._sub_project_dex_archive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._symbol_list_with_package_name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/._validate_signing_config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/annotation_processor_list/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/blame/._res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/bundle_manifest/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/compatible_screen_manifest/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/data_binding_layout_info_type_merge/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/dex/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/dex_archive_input_jar_hashes/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/duplicate_classes_check/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/external_libs_dex_archive/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/incremental/._debug-mergeJavaRes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/incremental/._debug-mergeNativeLibs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/incremental/._packageDebug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/incremental/debug-mergeJavaRes/._merge-state" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/incremental/debug-mergeNativeLibs/._merge-state" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/javac/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/manifest_merge_blame_file/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/merged_assets/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/merged_java_res/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/merged_jni_libs/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/merged_native_libs/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/merged_shaders/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/metadata_feature_manifest/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/mixed_scope_dex_archive/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/navigation_json/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/processed_res/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/project_dex_archive/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/res/._merged" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/runtime_symbol_list/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/sub_project_dex_archive/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/symbol_list_with_package_name/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/intermediates/validate_signing_config/._debug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/outputs/._apk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/outputs/._logs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/build/tmp/._compileDebugJavaWithJavac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/._androidTest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/._main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/._test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/androidTest/._java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/androidTest/java/._com" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/androidTest/java/com/._maadi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/._AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/._java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/._res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/._com" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/._maadi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/._flightticketbooking" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/._MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/._Welcome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/._activities" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/._adapters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/._models" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/._utilities" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/._AboutUs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/._BookTicket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/._BookingHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/._ContactUs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/._Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/._MyBookingDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/._Profile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/._Register.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/._SearchVehical.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/._Splash.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/activities/._VehicleDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/adapters/._BookingAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/adapters/._CityAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/adapters/._PassengerAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/adapters/._VehicleAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/models/._Banner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/models/._City.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/models/._MyBooking.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/models/._PassengerModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/models/._User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/models/._Vehical.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/utilities/._ECONSTANT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/utilities/._EFastSaveInit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/utilities/._EHelpingFunctions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/java/com/maadi/flightticketbooking/utilities/._MyNetwork.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/._anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/._drawable" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/._drawable-v24" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/._font" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/._layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/._menu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/._mipmap-anydpi-v26" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/._mipmap-hdpi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/._mipmap-mdpi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/._mipmap-xhdpi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/._mipmap-xxhdpi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/._mipmap-xxxhdpi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/._raw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/._values" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/anim/._bounce.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/anim/._bounce_text.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/anim/._go_down.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/anim/._go_up.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable-v24/._ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable-v24/._noavatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._abc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._address.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._bkline.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._blue_fill__rounded_color.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._btn_circle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._camera.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._cat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._cell.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._circle_arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._circle_bold.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._contacts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._counter_bg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._cu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._cursor_color.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._defaultcart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._email.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._grey_cursor_color.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._half_blue_roundshape.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._half_circle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._hexagone1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._hexagone2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._ic_add_circle_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._ic_baseline_arrow_drop_down_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._ic_baseline_book_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._ic_baseline_cancel_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._ic_baseline_person_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._ic_baseline_search_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._ic_do_not_disturb_on_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._ic_lock_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._inf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._logout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._movie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._noavatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._order.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._phone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._prof.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._rectangle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._reg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._right_arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._rounded_corner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._shapelogin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._shapelogin_red.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._side_nav_bar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._small_cicle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._ticket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._white_cursor_color.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._white_hexagone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/drawable/._white_rounded_corner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/font/._bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/font/._light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/font/._medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/font/._regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/font/._semi_bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/font/._semibold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._activity_about_us.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._activity_book_ticket.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._activity_booking_history.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._activity_contact_us.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._activity_cropper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._activity_login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._activity_my_booking_detail.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._activity_profile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._activity_register.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._activity_search_vehical.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._activity_splash.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._activity_vehicle_detail.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._activity_welcome.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._app_bar_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._city_dialog.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._content_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._nav_header_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._single_row_booking.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._single_row_city.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._single_row_passenger.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/layout/._single_row_vehicle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/menu/._menuf.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-anydpi-v26/._ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-hdpi/._about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-hdpi/._contac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-hdpi/._history.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-hdpi/._ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-hdpi/._pickimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-hdpi/._profi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-hdpi/._searchbus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-mdpi/._about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-mdpi/._contac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-mdpi/._history.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-mdpi/._ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-mdpi/._pickimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-mdpi/._profi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-mdpi/._searchbus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xhdpi/._about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xhdpi/._contac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xhdpi/._history.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xhdpi/._ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xhdpi/._pickimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xhdpi/._profi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xhdpi/._searchbus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxhdpi/._about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxhdpi/._contac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxhdpi/._history.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxhdpi/._ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxhdpi/._pickimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxhdpi/._profi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxhdpi/._searchbus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxxhdpi/._about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxxhdpi/._contac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxxhdpi/._history.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxxhdpi/._ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxxhdpi/._pickimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxxhdpi/._profi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/mipmap-xxxhdpi/._searchbus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/._delievered.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/._empty.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/._empty_box.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/._empty_cart.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/._in_progress.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/._loading.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/._no_test.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/._on_the_way.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/._order_empty.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/._packed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/raw/._packing.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/values/._colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/values/._dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/values/._strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/main/res/values/._themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/test/._java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/test/java/._com" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/app/src/test/java/com/._maadi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/gradle/._wrapper" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/gradle/wrapper/._gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/FlightTicketBooking/gradle/wrapper/._gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/._.DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/._addcontactus.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/._adddonation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/._addpas.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/._bookticket.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/._changepass.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/._db.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/._db1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/._getbanner.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/._getbookingid.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/._getcity.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/._getmybooking.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/._getpassengers.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/._images" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/._login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/._searchvehicle.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/._signup.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/images/._.DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/images/._banners" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/images/._user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/images/banners/._.DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/images/banners/._1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/images/banners/._1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/images/banners/._2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/images/banners/._3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/images/user/._54a7915f751ffbbb63ebf5cf4ed40db5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/images/user/._p2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__MACOSX/Flight Ticket Booking System Mini Project/flight_ticket_boooking_api/images/user/._t@mail.com.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[adb-R5CT90HW8KL-G6IFys._adb-tls-connect._tcp]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[e5cfdca8]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="resourceFile" />
-        <option value="layoutResourceFile_vertical" />
-        <option value="layoutResourceFile" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-33/data/res/layout/simple_list_item_1.xml" root0="FORCE_HIGHLIGHTING" />
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectId" id="2Q6ZRGwJdEbxgvh75rAqeJIazZL" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1gzb1kUOMt6DKI5FtnudZGFbFFz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -109,38 +962,59 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cidr.known.project.marker": "true",
-    "com.google.services.firebase.aqiPopupShown": "true",
-    "last_directory_selection": "C:/Users/ADMIN/Documents/GitHub/SE104/app/src/main/java",
-    "last_opened_file_path": "C:/Users/ADMIN/Documents/GitHub/SE104/Flight Ticket Booking System Mini Project",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.json.schema"
+    "last_opened_file_path": "D:/1.SCHOOL/Code/SE104"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="android.template.-1559378296">
+      <recent name="com.maadi.movieticketbooking.activities" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ADMIN\Documents\GitHub\SE104\app\src\main\res\layout" />
-      <recent name="C:\Users\ADMIN\Documents\GitHub\SE104\app\src\main\res\drawable" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/raw" />
+      <recent name="E:\Android\Projects\Booking\BusTicketBooking\app\src\main\res\layout" />
+      <recent name="E:\Android\Projects\Booking\BusTicketBooking\app\src\main\res\drawable" />
+      <recent name="E:\Android\Projects\Booking\BusTicketBooking\app\src\main\res\raw" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ADMIN\Documents\GitHub\SE104\app\src\main\res\drawable" />
+    <key name="android.template.1298036471">
+      <recent name="com.maadi.movieticketbooking.activities" />
     </key>
-    <key name="android.template.-182324052">
-      <recent name="search_flight" />
+    <key name="android.template.41929038">
+      <recent name="com.maadi.flightticketbooking" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.example.se104" />
+    <key name="android.template.-87826491">
+      <recent name="com.maadi.movieticketbooking.activities" />
+    </key>
+    <key name="android.template.-1185812727">
+      <recent name="com.maadi.busticketbooking.activities" />
+    </key>
+    <key name="android.template.-107619543">
+      <recent name="com.maadi.movieticketbooking.activities" />
+    </key>
+    <key name="android.template.-1060453185">
+      <recent name="com.maadi.movieticketbooking.activities" />
+    </key>
+    <key name="android.template.745733289">
+      <recent name="com.maadi.movieticketbooking.activities" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="search_flight" />
+      <recent name="com.maadi.busticketbooking.adapters" />
+      <recent name="com.maadi.busticketbooking.models" />
+      <recent name="com.maadi.busticketbooking" />
+      <recent name="com.maadi.movieticketbooking.models" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="SE104.app.main" />
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="Flight_Ticket_Booking.app.main" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -199,25 +1073,21 @@
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a0970eaa-e9e7-4137-a1c6-46ca7c9d0795" name="Changes" comment="" />
-      <created>1684675981782</created>
+      <changelist id="cf1012da-a279-4fbc-87d2-7015164e26bc" name="Default Changelist" comment="" />
+      <created>1599120157476</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1684675981782</updated>
+      <updated>1599120157476</updated>
     </task>
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
