@@ -168,18 +168,14 @@ public class fragment_home extends Fragment implements DatePickerDialog.OnDateSe
         lay_day_go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ck_day = 1;
-                DialogFragment datePicker = new fragment_datepicker();
-                datePicker.show(getFragmentManager(), "Date Picker");
+                bottom_navigation.choose_day_go_activity(tv_day_go);
             }
         });
 
         lay_day_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ck_day = 2;
-                DialogFragment datePicker = new fragment_datepicker();
-                datePicker.show(getFragmentManager(), "Date Picker");
+                bottom_navigation.choose_day_go_activity(tv_day_back);
             }
         });
         return view;
@@ -199,19 +195,5 @@ public class fragment_home extends Fragment implements DatePickerDialog.OnDateSe
 
     @Override
     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-        Calendar c = Calendar.getInstance();
-        c.set(Calendar.YEAR, year);
-        c.set(Calendar.MONTH, month);
-        c.set(Calendar.DAY_OF_MONTH, day);
-        String currentDateString = DateFormat.getDateInstance(DateFormat.DEFAULT).format(c.getTime());
-        if(ck_day == 2) {
-            tv_day_back.setText(currentDateString);
-            ck_day = 0;
-        }
-        else if(ck_day == 1) {
-            tv_day_go.setText(currentDateString);
-            ck_day = 0;
-        }
-
     }
 }
