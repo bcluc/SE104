@@ -68,7 +68,7 @@
                                 android:layout_weight="1"
                                 android:fontFamily="@font/bold"
                                 android:gravity="center"
-                                android:text="Search Vehicle"
+                                android:text="Tìm chuyến bay"
                                 android:textColor="#000"
                                 android:textSize="20sp" />
 
@@ -106,7 +106,7 @@
                                 android:fontFamily="@font/bold"
                                 android:gravity="center"
                                 android:maxLines="1"
-                                android:text="Booking History"
+                                android:text="Lịch sử đặt vé"
                                 android:textColor="#000"
                                 android:textSize="18sp" />
 
@@ -151,7 +151,7 @@
                                 android:layout_weight="1"
                                 android:fontFamily="@font/bold"
                                 android:gravity="center"
-                                android:text="My Profile"
+                                android:text="Tài khoản của tôi"
                                 android:textColor="#000"
                                 android:textSize="20sp" />
 
@@ -188,7 +188,7 @@
                                 android:layout_weight="1"
                                 android:fontFamily="@font/bold"
                                 android:gravity="center"
-                                android:text="Contact Us"
+                                android:text="Liên hệ"
                                 android:textColor="#000"
                                 android:textSize="20sp" />
 

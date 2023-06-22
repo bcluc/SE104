@@ -34,7 +34,7 @@
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/bold"
                     android:padding="2dp"
-                    android:text="P Name"
+                    android:text="Tên khách hàng"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
 
@@ -51,7 +51,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/semibold"
-                        android:text="Delhi"
+                        android:text="Điểm xuất phát"
                         android:textColor="@color/black" />
 
                     <TextView
@@ -60,7 +60,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/semibold"
                         android:gravity="center"
-                        android:text="TO"
+                        android:text="Tới"
                         android:textColor="@color/black" />
 
                     <TextView
@@ -70,7 +70,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/semibold"
                         android:gravity="right"
-                        android:text="Chennai"
+                        android:text="Điểm đêến"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
@@ -87,7 +87,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/semibold"
-                        android:text="Vehicle Name"
+                        android:text="Tên chuyến bay"
                         android:textColor="@color/black" />
 
                     <TextView
@@ -97,7 +97,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/semibold"
                         android:gravity="right"
-                        android:text="Class"
+                        android:text="Loại vé"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
@@ -109,7 +109,8 @@
                     android:fontFamily="@font/bold"
                     android:gravity="right"
                     android:textSize="16sp"
-                    android:text="6000"
+                    android:text="Giá: 1 600 000"
+                    android:background="@drawable/v_background"
                     android:textColor="@color/colorPrimary" />
             </LinearLayout>
         </LinearLayout>

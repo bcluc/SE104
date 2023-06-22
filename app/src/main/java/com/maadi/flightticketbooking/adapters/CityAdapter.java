@@ -32,6 +32,11 @@ public class CityAdapter extends ArrayAdapter<City> implements Filterable {
         this.filteredData = objects ;
         this.originalData = objects ;
     }
+    public CityAdapter(@NonNull Context context) {
+        super(context, 0);
+        this.context = context;
+    }
+
     public int getCount() {
         return filteredData.size();
     }

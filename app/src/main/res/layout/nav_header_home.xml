@@ -19,11 +19,9 @@
             android:id="@+id/loadingNavImage"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_centerHorizontal="true"
             android:layout_marginBottom="4dp"
             app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            />
+            app:lottie_loop="true" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/ivNavUser"
@@ -49,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bold"
-            android:text="Hammad ali"
+            android:text="Nguyễn Văn An"
             android:textColor="#fff"
             android:textSize="16sp" />
 
@@ -63,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="hammaddali143@gmail.com"
+        android:text="nvan2003@gmail.com"
         android:textColor="#fff"
         android:textSize="12sp" />
 

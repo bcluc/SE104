@@ -19,7 +19,7 @@
             android:paddingHorizontal="16dp"
             android:drawableTint="@color/colorAccent"
             android:layout_toLeftOf="@id/ivClose"
-            android:hint="Enter City Name" />
+            android:hint="Nhập tên thành phố" />
 
         <ImageView
             android:id="@+id/ivClose"

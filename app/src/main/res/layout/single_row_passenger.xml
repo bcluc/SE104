@@ -14,7 +14,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="6dp"
-            android:weightSum="2">
+            android:weightSum="2"
+            android:background="@drawable/p_background">
 
             <TextView
                 android:id="@+id/name"
@@ -24,8 +25,8 @@
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/semibold"
                 android:padding="2dp"
-                android:text="P Name"
-                android:textColor="@color/black" />
+                android:text="Tên khách hàng"
+                android:textColor="@color/white" />
             <TextView
                 android:id="@+id/age"
                 android:padding="2dp"
@@ -34,8 +35,8 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/semibold"
                 android:gravity="right"
-                android:text="age"
-                android:textColor="@color/black" />
+                android:text="Tuổi"
+                android:textColor="@color/white" />
         </LinearLayout>
 
         <LinearLayout
@@ -51,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/semibold"
-                android:text="gender"
+                android:text="Giới tính"
                 android:textColor="@color/black" />
 
             <TextView
@@ -61,7 +62,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/semibold"
                 android:gravity="right"
-                android:text="type"
+                android:text="Loại vé hành khách:"
                 android:textColor="@color/black" />
         </LinearLayout>
 

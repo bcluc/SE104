@@ -10,14 +10,16 @@
         android:layout_marginHorizontal="8dp"
         android:layout_marginVertical="4dp"
         android:elevation="4dp"
-        app:cardCornerRadius="8dp">
+        app:cardCornerRadius="8dp"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="4dp"
-            android:paddingTop="5dp">
+            android:paddingTop="5dp"
+            >
 
 
             <LinearLayout
@@ -33,7 +35,7 @@
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/bold"
                     android:padding="2dp"
-                    android:text="V Name"
+                    android:text="Tên chuyến bay"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
 
@@ -50,7 +52,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/semibold"
-                        android:text="Delhi"
+                        android:text="Điểm xuất phát"
                         android:textColor="@color/black" />
 
                     <TextView
@@ -59,7 +61,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/semibold"
                         android:gravity="center"
-                        android:text="TO"
+                        android:text="Tới"
                         android:textColor="@color/black" />
 
                     <TextView
@@ -69,7 +71,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/semibold"
                         android:gravity="right"
-                        android:text="Chennai"
+                        android:text="Điểm đến"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
@@ -86,7 +88,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/semibold"
-                        android:text="Delhi"
+                        android:text="Ngày"
                         android:textColor="@color/black" />
 
                     <TextView
@@ -96,7 +98,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/semibold"
                         android:gravity="right"
-                        android:text="Chennai"
+                        android:text="Loại vé"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
@@ -105,10 +107,11 @@
                     android:id="@+id/tvFare"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/v_background"
                     android:fontFamily="@font/bold"
                     android:gravity="right"
                     android:textSize="16sp"
-                    android:text="6000"
+                    android:text="Giá: 6000"
                     android:textColor="@color/colorPrimary" />
             </LinearLayout>
         </LinearLayout>
