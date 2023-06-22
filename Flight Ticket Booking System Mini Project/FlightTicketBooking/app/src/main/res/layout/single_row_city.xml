@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="50dp">
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="S"
+        android:layout_marginLeft="4dp"
+        android:fontFamily="@font/bold"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:id="@+id/etFl"
+        android:background="@drawable/blue_fill__rounded_color"
+        android:textColor="@color/white"
+        />
+    <TextView
+        android:id="@+id/etCName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Sahiwal"
+        android:gravity="center_vertical"
+        android:paddingLeft="18dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/semibold"
+        android:textColor="@color/text_color"
+        />
+
+</LinearLayout>

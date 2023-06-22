@@ -1,0 +1,95 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/drawable/half_blue_roundshape.xml" value="0.1315" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/drawable/half_circle.xml" value="0.1315" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/drawable/rectangle.xml" value="0.1315" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/drawable/small_cicle.xml" value="0.1315" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/layout/activity_add_donation.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/layout/activity_change_password.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/layout/activity_contact_us.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/layout/activity_login.xml" value="0.20102564102564102" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/layout/activity_my_donation.xml" value="0.19010416666666666" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/layout/activity_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/layout/activity_register.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/layout/activity_search_donor.xml" value="0.33" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/layout/activity_search_hospital.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/layout/blood_spinner.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/layout/content_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/layout/single_row_hospital.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/layout/single_row_my_donation.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/layout/single_row_search_donor.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/menu/donor_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Blood/BloodDonation/app/src/main/res/menu/patient_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/drawable/bkline.xml" value="0.1495" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/drawable/blue_fill__rounded_color.xml" value="0.1495" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/drawable/circle_bold.xml" value="0.1495" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/drawable/shapelogin_red.xml" value="0.1495" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/activity_about_us.xml" value="0.19010416666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/activity_book_ticket.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/activity_booking_history.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/activity_contact_us.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/activity_cropper.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/activity_my_booking_detail.xml" value="0.19010416666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/activity_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/activity_register.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/activity_search_vehical.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/activity_vehicle_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/activity_welcome.xml" value="0.21" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/app_bar_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/city_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/content_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/nav_header_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/single_row_booking.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/single_row_city.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/single_row_passenger.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/layout/single_row_vehicle.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/menu/activity_home_drawer_login.xml" value="0.19010416666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/menu/donor_menu.xml" value="0.19010416666666666" />
+        <entry key="..\:/Android/Projects/Booking/BusTicketBooking/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1495" />
+        <entry key="..\:/Android/Projects/Booking/FlightTicketBooking/app/src/main/res/layout/activity_book_ticket.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/FlightTicketBooking/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/FlightTicketBooking/app/src/main/res/layout/activity_my_booking_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/FlightTicketBooking/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Booking/FlightTicketBooking/app/src/main/res/layout/activity_welcome.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/drawable/circle.xml" value="0.1495" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/drawable/circle_bold.xml" value="0.1495" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/drawable/rectangle.xml" value="0.1495" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/activity_book_room.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/activity_book_ticket.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/activity_booking_history.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/activity_contact_us.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/activity_login.xml" value="0.3499308437067773" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/activity_my_booking_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/activity_register.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/activity_room_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/activity_rooms.xml" value="0.19010416666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/activity_search_vehical.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/activity_vehicle_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/app_bar_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/content_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/nav_header_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/single_row_booking.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/single_row_roomcat.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/single_row_rooms.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/layout/single_row_vehicle.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/menu/login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/menu/menuf.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Projects/Hotel Booking/HotelBookingSystem/app/src/main/res/menu/without_login.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="corretto-1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
