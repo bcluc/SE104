@@ -80,27 +80,24 @@ CREATE TABLE `city` (
 -- Dumping data for table `city`
 --
 
-INSERT INTO `city` (`city_id`, `city_name`) VALUES
-(1, 'Mumbai'),
-(2, 'Delhi'),
-(3, 'Chenai'),
-(4, 'Banglore'),
-(5, 'Varanasi'),
-(6, 'Kolkatta'),
-(7, 'Ghaziabad'),
-(8, 'Aligarh'),
-(9, 'Tundal'),
-(10, 'Kanpur'),
-(11, 'Allahabad'),
-(12, 'Mirzapur'),
-(13, 'Mughalsarai'),
-(14, 'Bhabua Road'),
-(15, 'Sasaram'),
-(16, 'Gaya'),
-(17, 'Howrah'),
-(18, 'Kodarma'),
-(19, 'Asansol'),
-(20, 'Dhanbad');
+    INSERT INTO `city` (`city_id`, `city_name`) VALUES
+(1, N'Hà Nội'),
+(2, N'Hải Phòng'),
+(3, N'Thanh Hoá'),
+(4, N'Vinh'),
+(5, N'Đồng Hới'),
+(6, N'Huế'),
+(7, N'Đà Nẵng'),
+(8, N'Quy Nhơn'),
+(9, N'Nha Trang'),
+(10, N'Tuy Hoà'),
+(11, N'Buôn Ma Thuột'),
+(12, N'Pleiku'),
+(13, N'Đắk Lắk'),
+(14, N'Tây Ninh'),
+(15, N'TP. Hồ Chí Minh'),
+(16, N'Cần Thơ'),
+(17, N'Cà Mau'),
 
 -- --------------------------------------------------------
 
