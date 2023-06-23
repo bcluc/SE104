@@ -18,8 +18,8 @@
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/loadingNavImage"
-            android:lottie_rawRes="@raw/loading_ava"
             android:layout_width="80dp"
+            app:lottie_rawRes="@raw/loading_ava"
             android:layout_height="80dp"
             android:layout_marginBottom="4dp"
             app:lottie_autoPlay="true"

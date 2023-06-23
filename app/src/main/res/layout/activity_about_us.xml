@@ -54,11 +54,15 @@
             android:gravity="center|start"
             android:textColor="@color/black"
             android:textSize="15sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:layout_gravity="end"
-            android:layout_marginStart="25dp"
             android:background="@drawable/btn_pay"
             android:id="@+id/btn_video_pay"/>
         <TextView
