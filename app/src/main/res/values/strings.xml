@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Flight Ticket Booking System</string>
+    <string name="app_name">Flight Booking App</string>
 
     <string name="title_activity_ehome">Home</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>

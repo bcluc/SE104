@@ -26,17 +26,17 @@
             android:layout_height="200dp"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/empty" />
+            app:lottie_rawRes="@raw/empty_cat" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:fontFamily="@font/semibold"
+            android:fontFamily="@font/montserrat_semibold"
             android:text="No Data Found according to this filter"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
     </LinearLayout>
 
 </LinearLayout>

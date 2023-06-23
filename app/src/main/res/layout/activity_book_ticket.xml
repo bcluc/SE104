@@ -17,13 +17,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:fontFamily="@font/bold"
+            android:fontFamily="@font/montserrat_bold"
             android:gravity="center"
-            android:text="Booking Detail"
-            android:textColor="@color/colorPrimary"
-            android:textSize="24sp" />
+            android:text="Chi tiết vé"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -32,10 +32,10 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
-            android:fontFamily="@font/medium"
-            android:text="Passenger Name:"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Họ tên:"
             android:textColor="#000"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/etBName"
@@ -45,10 +45,10 @@
             android:layout_marginTop="5dp"
             android:layout_marginRight="20dp"
             android:background="@android:color/transparent"
-            android:fontFamily="@font/regular"
+            android:fontFamily="@font/montserrat"
             android:gravity="bottom"
             android:inputType="textCapSentences"
-            android:textSize="16sp"
+            android:textSize="18sp"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <View
@@ -56,7 +56,7 @@
             android:layout_height="1dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:background="#7C7B7B" />
+            android:background="@color/black" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -65,7 +65,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:fontFamily="@font/medium"
+            android:fontFamily="@font/montserrat_medium"
             android:text="Passenger Type:"
             android:textColor="#000"
             android:textSize="16sp" />

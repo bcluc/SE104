@@ -5,7 +5,7 @@
 android:background="@drawable/intro_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:gravity="center|top"
     android:orientation="vertical">
 
 <!--    <ImageView-->
@@ -15,29 +15,56 @@ android:background="@drawable/intro_background"
 <!--        android:padding="8dp"-->
 <!--        android:src="@drawable/logo" />-->
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center|bottom"
+        android:layout_height="70dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/montserrat_extrabold"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/welcome"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textSize="22sp"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Your Journey Made"
         android:textColor="@color/black"
-        android:fontFamily="@font/bold"
-        android:layout_marginTop="250dp"
-        android:layout_marginBottom="100dp"
-        />
+        android:textSize="25sp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="Memory"
+        android:textColor="#3E6FEF"
+        android:layout_marginBottom="20dp"
+        android:textSize="25sp"/>
 
     <Button
         android:id="@+id/btnLog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-
+        android:layout_marginHorizontal="30dp"
         android:text="Đăng nhập"
         android:textColor="@color/white"
-        android:fontFamily="@font/bold"
+        android:fontFamily="@font/montserrat_bold"
         android:textAllCaps="false"
         android:textSize="20sp"
         android:background="@drawable/shapelogin"
+
         />
 
     <Button
@@ -45,14 +72,14 @@ android:background="@drawable/intro_background"
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-
+        android:layout_marginHorizontal="30dp"
         android:text="Đăng ký"
         android:textColor="@color/white"
-        android:fontFamily="@font/bold"
+        android:fontFamily="@font/montserrat_bold"
         android:textAllCaps="false"
         android:textSize="20sp"
         android:background="@drawable/shapelogin"
+
         />
 
 </LinearLayout>

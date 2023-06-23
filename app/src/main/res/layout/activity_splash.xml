@@ -21,6 +21,16 @@
 <!--            android:src="@drawable/logo"-->
 <!--            />-->
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat_extrabold"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:layout_marginBottom="20dp"
+            android:textSize="30sp" />
+
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/animOrder"
             android:layout_width="match_parent"
@@ -32,25 +42,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/bold"
-            android:text="@string/app_name"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:layout_marginBottom="20dp"
+            android:elevation="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:shadowColor="#B4C8C8C8"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="50"
+            android:text="Loading Data Please wait..."
+            android:textColor="@color/white"
+            android:textSize="22sp" />
 
 
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="@font/bold"
-        android:text="Loading Data Please wait..."
-        android:textColor="@color/black"
-        android:textSize="22sp" />
 
 
 </RelativeLayout>

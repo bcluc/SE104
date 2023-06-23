@@ -12,6 +12,7 @@
         <EditText
             android:layout_centerVertical="true"
             android:id="@+id/etCity"
+            android:fontFamily="@font/montserrat"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:drawableStart="@drawable/ic_baseline_search_24"
