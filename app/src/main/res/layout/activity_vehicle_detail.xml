@@ -7,14 +7,14 @@
     android:orientation="vertical">
 
     <TextView
-        android:text="Vehicle Details"
+        android:text="Chi tiết chuyến bay"
         android:textColor="@color/white"
         android:textSize="28sp"
         android:gravity="center"
         android:fontFamily="@font/bold"
         android:layout_width="match_parent"
         android:layout_height="110dp"
-        android:background="@color/colorAccent" />
+        android:background="@drawable/p_background" />
 
 
 
@@ -43,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/bold"
-                    android:text="Name: "
+                    android:text="Tên chuyến bay:"
                     android:textColor="@color/colorAccent"
                     android:textSize="14dp"
                     android:textStyle="bold" />
@@ -74,7 +74,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/bold"
-                    android:text="From City : "
+                    android:text="Điểm xuất phát:"
                     android:textColor="@color/colorAccent"
                     android:textSize="14dp"
                     android:textStyle="bold" />
@@ -104,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/bold"
-                    android:text="To City : "
+                    android:text="Điểm đến: "
                     android:textColor="@color/colorAccent"
                     android:textSize="14dp"
                     android:textStyle="bold" />
@@ -134,7 +134,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/bold"
-                    android:text="Departure Time : "
+                    android:text="Thời gian cất cánh "
                     android:textColor="@color/colorAccent"
                     android:textSize="14dp"
                     android:textStyle="bold" />
@@ -164,7 +164,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/bold"
-                    android:text="Arrival Time : "
+                    android:text="Thời gian hạ cánh:"
                     android:textColor="@color/colorAccent"
                     android:textSize="14dp"
                     android:textStyle="bold" />
@@ -194,7 +194,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/bold"
-                    android:text="Economy Class Fare : "
+                    android:text="Giá Economy Class:"
                     android:textColor="@color/colorAccent"
                     android:textSize="14dp"
                     android:textStyle="bold" />
@@ -224,7 +224,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/bold"
-                    android:text="Business Class Fare : "
+                    android:text="Giá Business Class: "
                     android:textColor="@color/colorAccent"
                     android:textSize="14dp"
                     android:textStyle="bold" />
@@ -253,7 +253,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/bold"
-                    android:text="Travel Time Duration : "
+                    android:text="Thời gian di chuyển: "
                     android:textColor="@color/colorAccent"
                     android:textSize="14dp"
                     android:textStyle="bold" />
@@ -279,7 +279,7 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/shapelogin_red"
-                android:text="Book Seat"
+                android:text="Đặt vé"
                 android:textAllCaps="false"
                 android:textColor="#fff" />
         </LinearLayout>
