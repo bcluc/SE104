@@ -38,7 +38,7 @@ android:background="@drawable/intro_background"
         android:fontFamily="@font/montserrat_bold"
         android:layout_marginTop="30dp"
         android:gravity="center"
-        android:text="Your Journey Made"
+        android:text="Luôn cùng bạn trên mọi"
         android:textColor="@color/black"
         android:textSize="25sp"/>
 
@@ -48,7 +48,7 @@ android:background="@drawable/intro_background"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
-        android:text="Memory"
+        android:text="Hành trình"
         android:textColor="#3E6FEF"
         android:layout_marginBottom="20dp"
         android:textSize="25sp"/>

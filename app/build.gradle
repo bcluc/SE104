@@ -46,6 +46,7 @@ dependencies {
     //implementation 'com.irozon.alertview:alertview:1.0.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
 
+    implementation 'io.alterac.blurkit:blurkit:1.1.0'
     implementation 'com.makeramen:roundedimageview:2.3.0'
     implementation 'com.airbnb.android:lottie:3.4.0'
     implementation 'com.github.manojbhadane:PaymentCardView:v1.3'
