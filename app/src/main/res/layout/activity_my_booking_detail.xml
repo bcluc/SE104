@@ -9,7 +9,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="80dp"
         android:background="@drawable/p_background"
         android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
@@ -90,20 +90,22 @@
                     android:textSize="16dp" />
 
                 <ImageView
-                    android:background="@drawable/line_vector"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                    android:background="@drawable/line_straight"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_width="1dp"
+                    android:layout_gravity="center"
+                    android:layout_height="20dp"/>
                 <TextView
                     android:id="@+id/detail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-
                     android:fontFamily="@font/montserrat_medium"
                     android:padding="4dp"
-                    android:text="Class:"
+                    android:text="Class"
                     android:textColor="@color/colorAccent"
                     android:textSize="16dp" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -154,6 +156,7 @@
         android:layout_marginRight="20dp"
         android:fontFamily="@font/bold"
         android:text="Thông tin hành khách:"
+        android:layout_marginBottom="20dp"
         android:textColor="#000"
         android:textSize="18sp" />
     <ListView
