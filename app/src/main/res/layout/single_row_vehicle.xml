@@ -18,14 +18,14 @@
             android:orientation="horizontal"
             android:padding="4dp"
             android:paddingTop="5dp"
-            android:weightSum="6">
+            android:weightSum="3">
 
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_weight="5">
+                android:layout_weight="2">
 
                 <TextView
 
@@ -81,30 +81,24 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:paddingHorizontal="6dp"
-                    android:weightSum="3">
+                    android:weightSum="2">
 
                     <TextView
                         android:id="@+id/tvDep"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:paddingBottom="10dp"
                         android:fontFamily="@font/montserrat_semibold"
                         android:text="Thời gian xuất phát"
                         android:textColor="@color/black" />
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/montserrat_light"
-                        android:gravity="center"
-                        android:text="Chi tiết"
-                        android:textColor="@color/black" />
 
                     <TextView
                         android:id="@+id/tvArival"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_semibold"
                         android:gravity="right"
@@ -113,18 +107,19 @@
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
             <TextView
                 android:padding="6dp"
                 android:id="@+id/tvFare"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/montserrat_semibold"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="16sp"
+
                 android:text="Giá: 1 600 000"
                 android:background="@drawable/v_background"
                 android:textColor="@color/colorPrimary" />

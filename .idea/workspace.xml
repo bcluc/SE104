@@ -14,10 +14,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cf1012da-a279-4fbc-87d2-7015164e26bc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/SearchVehical.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/SearchVehical.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/adapters/VehicleAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/adapters/VehicleAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_book_ticket.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_book_ticket.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_vehical.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_vehical.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_row_booking.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_row_booking.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_row_vehicle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_row_vehicle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687588097989</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update_font_2">
+      <created>1687591468628</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1687591468629</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -240,6 +247,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <MESSAGE value="update_font" />
-    <option name="LAST_COMMIT_MESSAGE" value="update_font" />
+    <MESSAGE value="update_font_2" />
+    <option name="LAST_COMMIT_MESSAGE" value="update_font_2" />
   </component>
 </project>

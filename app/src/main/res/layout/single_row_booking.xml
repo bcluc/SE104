@@ -90,6 +90,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_semibold"
                         android:text="Tên chuyến bay"
+                        android:paddingBottom="10dp"
                         android:textColor="@color/black" />
 
                     <TextView
@@ -100,13 +101,14 @@
                         android:fontFamily="@font/montserrat_semibold"
                         android:gravity="right"
                         android:text="Loại vé"
+                        android:paddingBottom="10dp"
                         android:textColor="@color/black" />
                 </LinearLayout>
             </LinearLayout>
 
             <TextView
                 android:id="@+id/tvFare"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/v_background"
