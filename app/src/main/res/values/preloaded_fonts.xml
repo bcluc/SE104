@@ -7,6 +7,7 @@
         <item>@font/montserrat_italic</item>
         <item>@font/montserrat_light</item>
         <item>@font/montserrat_medium</item>
+        <item>@font/montserrat_medium_italic</item>
         <item>@font/montserrat_semibold</item>
     </array>
 </resources>

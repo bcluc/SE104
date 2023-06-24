@@ -14,18 +14,24 @@
   <component name="ChangeListManager">
     <list default="true" id="cf1012da-a279-4fbc-87d2-7015164e26bc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/SearchVehical.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/SearchVehical.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/adapters/VehicleAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/adapters/VehicleAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_book_ticket.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_book_ticket.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_vehical.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_vehical.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserrat.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserrat_bold.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserrat_extrabold.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserrat_italic.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserrat_light.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserrat_medium.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/font/montserrat_semibold.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_row_vehicle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_row_vehicle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/preloaded_fonts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/preloaded_fonts.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R5CT21AR8PN]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[e5cfdca8]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -63,7 +69,9 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="1gzb1kUOMt6DKI5FtnudZGFbFFz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
