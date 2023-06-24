@@ -40,8 +40,8 @@ public class VehicleDetail extends AppCompatActivity {
         ((TextView) findViewById(R.id.phone)).setText(vehical.getTocity());
         ((TextView) findViewById(R.id.city)).setText(vehical.getDeptime());
         ((TextView) findViewById(R.id.detail)).setText(vehical.getArivaltime());
-        ((TextView) findViewById(R.id.date)).setText(vehical.getEfare());
-        ((TextView) findViewById(R.id.bfate)).setText(vehical.getBfare());
+        ((TextView) findViewById(R.id.date)).setText(vehical.getEfare() + " VND");
+        ((TextView) findViewById(R.id.bfate)).setText(vehical.getBfare()+ " VND");
         ((TextView) findViewById(R.id.duration)).setText(vehical.getDuration());
 
         findViewById(R.id.btncc).setOnClickListener(new View.OnClickListener() {

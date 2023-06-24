@@ -37,26 +37,27 @@
                 android:weightSum="2">
 
                 <TextView
-                    android:background="@drawable/bkline"
-                    android:padding="4dp"
+
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/bold"
-                    android:text="Tên chuyến bay:"
+                    android:fontFamily="@font/montserrat_light"
+                    android:padding="4dp"
+                    android:text="Tên hãng hàng không:"
                     android:textColor="@color/colorAccent"
-                    android:textSize="14dp"
-                    android:textStyle="bold" />
+                    android:textSize="15dp" />
 
                 <TextView
                     android:id="@+id/tvname"
-                    android:background="@drawable/bkline"
+                    android:textColor="@color/colorAccent"
+                    android:text="tên chuyến bay"
+
                     android:padding="4dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/regular"
-                    android:textSize="14dp" />
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="20dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -64,149 +65,153 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:weightSum="2">
-
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/plane_take_off_vector"/>
                 <TextView
-                    android:layout_width="0dp"
-                    android:background="@drawable/bkline"
+                    android:layout_width="wrap_content"
+
                     android:padding="4dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/bold"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/montserrat_bold"
                     android:text="Điểm xuất phát:"
-                    android:textColor="@color/colorAccent"
+
                     android:textSize="14dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/bgrp"
-                    android:padding="4dp"
-                    android:background="@drawable/bkline"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/regular"
-                    android:textSize="14dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <TextView
-                    android:padding="4dp"
-                    android:background="@drawable/bkline"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/bold"
-                    android:text="Điểm đến: "
-                    android:textColor="@color/colorAccent"
-                    android:textSize="14dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/phone"
-                    android:padding="4dp"
-                    android:background="@drawable/bkline"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/regular"
-                    android:textSize="14dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <TextView
-                    android:padding="4dp"
-                    android:background="@drawable/bkline"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/bold"
-                    android:text="Thời gian cất cánh "
-                    android:textColor="@color/colorAccent"
-                    android:textSize="14dp"
-                    android:textStyle="bold" />
-
+                     />
+                </LinearLayout>
                 <TextView
                     android:id="@+id/city"
                     android:padding="4dp"
-                    android:background="@drawable/bkline"
-                    android:layout_width="0dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/regular"
+                    android:textColor="@color/colorAccent"
+                    android:text="Giờ bay"
+                    android:fontFamily="@font/montserrat_semibold"
                     android:textSize="14dp" />
+                <TextView
+                    android:id="@+id/bgrp"
+                    android:padding="4dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:textColor="@color/colorAccent"
+                    android:text="Điểm xuất phát"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textSize="14dp" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:weightSum="2">
-
-                <TextView
-                    android:padding="4dp"
-                    android:background="@drawable/bkline"
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/bold"
-                    android:text="Thời gian hạ cánh:"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="14dp"
-                    android:textStyle="bold" />
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/plane_land_vector"/>
+                    <TextView
+                        android:padding="4dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Điểm đến: "
+
+                        android:textSize="14dp"
+                        />
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/detail"
                     android:padding="4dp"
-                    android:background="@drawable/bkline"
-                    android:layout_width="0dp"
+                    android:layout_marginLeft="40dp"
+
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/regular"
+                    android:text="Giờ hạ cánh"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:padding="4dp"
+                    android:text="Điểm đến"
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/montserrat_semibold"
                     android:textSize="14dp" />
             </LinearLayout>
 
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+
+    android:background="@drawable/line_vector"/>
+
+<LinearLayout
+    android:layout_marginTop="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginHorizontal="10dp"
+    android:weightSum="3">
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:orientation="horizontal"
+                android:layout_marginHorizontal="5dp"
+                android:orientation="vertical"
+
                 android:weightSum="2">
 
                 <TextView
                     android:padding="4dp"
-                    android:background="@drawable/bkline"
-                    android:layout_width="0dp"
+
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/bold"
-                    android:text="Giá Economy Class:"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Economy Class:"
                     android:textColor="@color/colorAccent"
                     android:textSize="14dp"
-                    android:textStyle="bold" />
+                     />
 
                 <TextView
                     android:id="@+id/date"
                     android:padding="4dp"
-                    android:background="@drawable/bkline"
-                    android:layout_width="0dp"
+
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="Giá Economy"
                     android:layout_weight="1"
-                    android:fontFamily="@font/regular"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/montserrat_semibold"
                     android:textSize="14dp" />
             </LinearLayout>
 
@@ -214,60 +219,64 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:weightSum="2">
 
                 <TextView
                     android:padding="4dp"
-                    android:background="@drawable/bkline"
-                    android:layout_width="0dp"
+
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/bold"
-                    android:text="Giá Business Class: "
+                    android:fontFamily="@font/montserrat"
+                    android:text="Business Class: "
                     android:textColor="@color/colorAccent"
                     android:textSize="14dp"
-                    android:textStyle="bold" />
+                     />
 
                 <TextView
                     android:id="@+id/bfate"
                     android:padding="4dp"
-                    android:background="@drawable/bkline"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/regular"
+                    android:text="Giá Business"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/montserrat_semibold"
                     android:textSize="14dp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:weightSum="2">
 
                 <TextView
                     android:padding="4dp"
-                    android:background="@drawable/bkline"
-                    android:layout_width="0dp"
+
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/bold"
-                    android:text="Thời gian di chuyển: "
+                    android:fontFamily="@font/montserrat"
+                    android:text="Time: "
                     android:textColor="@color/colorAccent"
                     android:textSize="14dp"
-                    android:textStyle="bold" />
+                     />
 
                 <TextView
                     android:id="@+id/duration"
                     android:padding="4dp"
-                    android:background="@drawable/bkline"
-                    android:layout_width="0dp"
+
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="@font/regular"
+                    android:textColor="@color/colorAccent"
+                    android:text="Thời gian di chuyển"
+                    android:fontFamily="@font/montserrat_semibold"
                     android:textSize="14dp" />
             </LinearLayout>
+</LinearLayout>
 
             <Button
                 android:id="@+id/btncc"
