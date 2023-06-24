@@ -1,0 +1,710 @@
+Index: app/src/main/java/com/maadi/flightticketbooking/activities/BookTicket.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.maadi.flightticketbooking.activities;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.util.Log;\r\nimport android.view.View;\r\nimport android.widget.ArrayAdapter;\r\nimport android.widget.DatePicker;\r\nimport android.widget.EditText;\r\nimport android.widget.ListView;\r\nimport android.widget.RadioButton;\r\nimport android.widget.Spinner;\r\nimport android.widget.TextView;\r\nimport android.widget.Toast;\r\n\r\nimport com.android.volley.Request;\r\nimport com.android.volley.Response;\r\nimport com.android.volley.VolleyError;\r\nimport com.android.volley.toolbox.JsonObjectRequest;\r\nimport com.maadi.flightticketbooking.MainActivity;\r\nimport com.maadi.flightticketbooking.R;\r\nimport com.maadi.flightticketbooking.adapters.PassengerAdapter;\r\nimport com.maadi.flightticketbooking.models.PassengerModel;\r\nimport com.maadi.flightticketbooking.models.Vehical;\r\nimport com.maadi.flightticketbooking.utilities.ECONSTANT;\r\nimport com.maadi.flightticketbooking.utilities.EHelpingFunctions;\r\nimport com.maadi.flightticketbooking.utilities.MyNetwork;\r\nimport com.manojbhadane.PaymentCardView;\r\n\r\nimport org.json.JSONException;\r\nimport org.json.JSONObject;\r\n\r\nimport java.util.ArrayList;\r\n\r\nimport cn.pedant.SweetAlert.SweetAlertDialog;\r\n\r\npublic class BookTicket extends AppCompatActivity {\r\n\r\n    private static final String TAG = \"TAG\";\r\n    EditText etBName, etBAge;\r\n    Spinner spType;\r\n    String PassengerType = \"\", gender = \"\", Fare, SeatType, travelDate, cardMonth, cardYear, cardNum, cardCvv;\r\n    RadioButton radioEco, radioBusi;\r\n    DatePicker datePicker;\r\n    PaymentCardView creditCard;\r\n     Vehical vehical;\r\n     ListView ListP;\r\n     int bookingID = 0;\r\n\r\n     ArrayList<PassengerModel> passengerModelList ;\r\n     PassengerAdapter passengerAdapter;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_book_ticket);\r\n        ListP = findViewById(R.id.ListP);\r\n        cardMonth= cardYear= cardNum= cardCvv = \"\";\r\n        spType = (Spinner) findViewById(R.id.spType);\r\n        Intent intent = getIntent();\r\n        passengerModelList = new ArrayList<>();\r\n         vehical = (Vehical) intent.getSerializableExtra(\"D\");\r\n        bookingID = intent.getIntExtra(\"BID\", -1);\r\n        Toast.makeText(this, \"\" + bookingID,\r\n                Toast.LENGTH_SHORT).show();\r\n        String[] typeArray = new String[]{\r\n                \"Trẻ em (2-12 tuổi)\",\r\n                \"Trẻ em (Dưới 2 tuổi) \",\r\n                \"Người lớm (Trên 12 tuổi)\"};\r\n        ArrayAdapter<String> adapterT = new ArrayAdapter<String>(this,\r\n                android.R.layout.simple_spinner_dropdown_item, typeArray);\r\n        adapterT.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);\r\n        spType.setAdapter(adapterT);\r\n        creditCard = (PaymentCardView) findViewById(R.id.creditCard);\r\n\r\n        datePicker = ((DatePicker) findViewById(R.id.date_picker));\r\n        etBName = findViewById(R.id.etBName);\r\n        etBAge = findViewById(R.id.etBAge);\r\n        radioEco = findViewById(R.id.radioEco);\r\n        radioBusi = (RadioButton) findViewById(R.id.radioBusi);\r\n        ((TextView)  findViewById(R.id.tvOPrice)).setText(vehical.getEfare());\r\n        radioEco.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                ((TextView)  findViewById(R.id.tvOPrice)).setText(String.valueOf(passengerModelList.size() * Integer.parseInt(vehical.getEfare())));\r\n            }\r\n        });\r\n\r\n        radioBusi.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                ((TextView)  findViewById(R.id.tvOPrice)).setText(String.valueOf(passengerModelList.size() * Integer.parseInt(vehical.getBfare())));\r\n\r\n            }\r\n        });\r\n\r\n        findViewById(R.id.btnAddP).setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                if(etBName.getText().toString().isEmpty()){\r\n                    etBName.setError(\"Bạn chưa điền đủ thông tin\");\r\n                    etBName.requestFocus();\r\n                    return;\r\n                }\r\n                if(etBAge.getText().toString().isEmpty()){\r\n                    etBAge.setError(\"Bạn chưa điền đủ thông tin\");\r\n                    etBAge.requestFocus();\r\n                    return;\r\n                }\r\n                PassengerType = spType.getSelectedItem().toString();\r\n                if(((RadioButton)findViewById(R.id.radioMaleB)).isChecked()){\r\n                    gender = \"Nam\";\r\n                }\r\n                else{\r\n                    gender = \"Nữ\";\r\n                }\r\n                EHelpingFunctions.showLoading(BookTicket.this);\r\n                addPassenger();\r\n            }\r\n        });\r\n\r\n        creditCard.setOnPaymentCardEventListener(new PaymentCardView.OnPaymentCardEventListener() {\r\n            @Override\r\n            public void onCardDetailsSubmit(String month, String year, String cardNumber, String cvv) {\r\n                cardMonth = month;\r\n                cardYear = year;\r\n                cardNum = cardNumber;\r\n                cardCvv = cvv;\r\n\r\n                if(radioEco.isChecked())\r\n                {\r\n                    Fare = vehical.getEfare();\r\n                    SeatType = \"Economy\";\r\n                }\r\n                else{\r\n                    Fare = vehical.getBfare();\r\n                    SeatType = \"Business\";\r\n                }\r\n                Fare = ((TextView)findViewById(R.id.tvOPrice)).getText().toString();\r\n                String m = String.valueOf(datePicker.getMonth());\r\n                String d =  String.valueOf(datePicker.getDayOfMonth());\r\n                String y =String.valueOf(datePicker.getYear());\r\n\r\n                travelDate = y + \":\" + m + \":\" + d;\r\n                if(cardNum.isEmpty() || cardYear.isEmpty() || cardMonth.isEmpty() || cardCvv.isEmpty())\r\n                {\r\n                    EHelpingFunctions.showError(BookTicket.this, \"Error\", \"Bạn chưa điền đủ thông tin thẻ\");\r\n                    return;\r\n                }\r\n                EHelpingFunctions.showLoading(BookTicket.this);\r\n                bookTicket();\r\n\r\n            }\r\n\r\n            @Override\r\n            public void onError(String error) {\r\n                Toast.makeText(BookTicket.this, \"Error : \"+error.toString(), Toast.LENGTH_SHORT).show();\r\n            }\r\n\r\n            @Override\r\n            public void onCancelClick() {\r\n\r\n            }\r\n        });\r\n\r\n\r\n    }\r\n\r\n    private void bookTicket() {\r\n        try {\r\n            JSONObject loginCredential = new JSONObject();\r\n            loginCredential.put(\"seattype\", SeatType);\r\n            loginCredential.put(\"traveldate\", travelDate);\r\n            loginCredential.put(\"fare\", Fare);\r\n            loginCredential.put(\"userid\", ECONSTANT.logedUser.getUser_id());\r\n            loginCredential.put(\"routeid\",vehical.getRid());\r\n            loginCredential.put(\"cardnum\",cardNum);\r\n            loginCredential.put(\"year\",cardYear);\r\n            loginCredential.put(\"month\",cardMonth);\r\n            loginCredential.put(\"cvv\",cardCvv);\r\n            loginCredential.put(\"bid\",bookingID);\r\n            JsonObjectRequest insertRequest = new JsonObjectRequest(Request.Method.POST,\r\n                    ECONSTANT.URL_Book_TICKET,\r\n                    loginCredential,\r\n                    new Response.Listener<JSONObject>() {\r\n                        @Override\r\n                        public void onResponse(JSONObject response) {\r\n                            EHelpingFunctions.stopLoading();\r\n                            Log.e(TAG, \"onResponse: \" + response.toString());\r\n                            try {\r\n                                if (response.getBoolean(\"data\")) {\r\n\r\n                                    new SweetAlertDialog(BookTicket.this, SweetAlertDialog.SUCCESS_TYPE)\r\n                                            .setTitleText(\"Thành công\")\r\n                                            .setContentText(\"Vé của bạn đã được đặt!\")\r\n\r\n                                            .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {\r\n                                                @Override\r\n                                                public void onClick(SweetAlertDialog sweetAlertDialog) {\r\n                                                    sweetAlertDialog.dismissWithAnimation();\r\n                                                    startActivity(new Intent(BookTicket.this, BookingHistory.class));\r\n                                                    finishAffinity();\r\n                                                }\r\n                                            })\r\n                                            .show();\r\n\r\n                                } else {\r\n                                    new SweetAlertDialog(BookTicket.this, SweetAlertDialog.ERROR_TYPE)\r\n                                            .setTitleText(\"Oops...\")\r\n                                            .setContentText(\"Quá trình đặt vé thất bại!\")\r\n                                            .show();\r\n                                }\r\n                            } catch (JSONException e) {\r\n                                new SweetAlertDialog(BookTicket.this, SweetAlertDialog.ERROR_TYPE)\r\n                                        .setTitleText(\"Oops...\")\r\n                                        .setContentText(\"\" + e.toString())\r\n                                        .show();\r\n                                Log.e(TAG, \"onResponse: EXP: \" + e.toString());\r\n                            }\r\n                        }\r\n                    },\r\n                    new Response.ErrorListener() {\r\n                        @Override\r\n                        public void onErrorResponse(VolleyError error) {\r\n                            Log.e(TAG, \"onErrorResponse: \" + error.toString());\r\n                            EHelpingFunctions.stopLoading();\r\n                            new SweetAlertDialog(BookTicket.this, SweetAlertDialog.ERROR_TYPE)\r\n                                    .setTitleText(\"Oops...\")\r\n                                    .setContentText(\"\" + error.toString())\r\n                                    .show();\r\n                        }\r\n                    });\r\n            MyNetwork.getInstance(BookTicket.this).addToRequestQueue(insertRequest);\r\n\r\n        } catch (Exception ex) {\r\n            Log.e(TAG, \"insertUserRecord: \" + ex.toString());\r\n        }\r\n    }\r\n\r\n\r\n    private void addPassenger() {\r\n        try {\r\n            JSONObject loginCredential = new JSONObject();\r\n            loginCredential.put(\"name\", etBName.getText().toString());\r\n            loginCredential.put(\"type\", PassengerType);\r\n            loginCredential.put(\"gender\", gender);\r\n            loginCredential.put(\"age\", etBAge.getText().toString());\r\n            loginCredential.put(\"id\", bookingID);\r\n\r\n            JsonObjectRequest insertRequest = new JsonObjectRequest(Request.Method.POST,\r\n                    ECONSTANT.URL_ADDP,\r\n                    loginCredential,\r\n                    new Response.Listener<JSONObject>() {\r\n                        @Override\r\n                        public void onResponse(JSONObject response) {\r\n                            EHelpingFunctions.stopLoading();\r\n                            Log.e(TAG, \"onResponse: \" + response.toString());\r\n                            try {\r\n                                if (response.getBoolean(\"data\")) {\r\n\r\n\r\n                                    PassengerModel passengerModel = new PassengerModel(etBName.getText().toString(),\r\n                                            etBAge.getText().toString(),\r\n                                            gender,\r\n                                            PassengerType);\r\n                                    passengerModelList.add(passengerModel);\r\n                                    passengerAdapter = new PassengerAdapter(BookTicket.this, passengerModelList);\r\n                                    ListP.setAdapter(passengerAdapter);\r\n                                    etBName.setText(\"\");\r\n                                    etBAge.setText(\"\");\r\n                                    spType.setSelection(0);\r\n                                    if(radioEco.isChecked())\r\n                                    {\r\n                                        ((TextView)  findViewById(R.id.tvOPrice)).setText(String.valueOf(passengerModelList.size() * Integer.parseInt(vehical.getEfare())));\r\n                                    }\r\n                                    else{\r\n                                        ((TextView)  findViewById(R.id.tvOPrice)).setText(String.valueOf(passengerModelList.size() * Integer.parseInt(vehical.getBfare())));\r\n                                    }\r\n\r\n                                    new SweetAlertDialog(BookTicket.this, SweetAlertDialog.SUCCESS_TYPE)\r\n                                            .setTitleText(\"Thành công!\")\r\n                                            .setContentText(\"Hành khách đã được thêm vào danh sách\")\r\n                                            .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {\r\n                                                @Override\r\n                                                public void onClick(SweetAlertDialog sweetAlertDialog) {\r\n                                                    sweetAlertDialog.dismissWithAnimation();\r\n                                                }\r\n                                            })\r\n                                            .show();\r\n\r\n                                } else {\r\n                                    new SweetAlertDialog(BookTicket.this, SweetAlertDialog.ERROR_TYPE)\r\n                                            .setTitleText(\"Oops...\")\r\n                                            .setContentText(\"Quá trình thêm hành khách đã thất bại\")\r\n                                            .show();\r\n                                }\r\n                            } catch (JSONException e) {\r\n                                new SweetAlertDialog(BookTicket.this, SweetAlertDialog.ERROR_TYPE)\r\n                                        .setTitleText(\"Oops...\")\r\n                                        .setContentText(\"\" + e.toString())\r\n                                        .show();\r\n                                Log.e(TAG, \"onResponse: EXP: \" + e.toString());\r\n                            }\r\n                        }\r\n                    },\r\n                    new Response.ErrorListener() {\r\n                        @Override\r\n                        public void onErrorResponse(VolleyError error) {\r\n                            Log.e(TAG, \"onErrorResponse: \" + error.toString());\r\n                            EHelpingFunctions.stopLoading();\r\n                            new SweetAlertDialog(BookTicket.this, SweetAlertDialog.ERROR_TYPE)\r\n                                    .setTitleText(\"Oops...\")\r\n                                    .setContentText(\"\" + error.toString())\r\n                                    .show();\r\n                        }\r\n                    });\r\n            MyNetwork.getInstance(BookTicket.this).addToRequestQueue(insertRequest);\r\n\r\n        } catch (Exception ex) {\r\n            Log.e(TAG, \"insertUserRecord: \" + ex.toString());\r\n        }\r\n    }\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/maadi/flightticketbooking/activities/BookTicket.java b/app/src/main/java/com/maadi/flightticketbooking/activities/BookTicket.java
+--- a/app/src/main/java/com/maadi/flightticketbooking/activities/BookTicket.java	(revision 2a21160ad86e0865a65cf626487f1d0d1e72f533)
++++ b/app/src/main/java/com/maadi/flightticketbooking/activities/BookTicket.java	(date 1687616363332)
+@@ -68,7 +68,7 @@
+         String[] typeArray = new String[]{
+                 "Trẻ em (2-12 tuổi)",
+                 "Trẻ em (Dưới 2 tuổi) ",
+-                "Người lớm (Trên 12 tuổi)"};
++                "Người lớn (Trên 12 tuổi)"};
+         ArrayAdapter<String> adapterT = new ArrayAdapter<String>(this,
+                 android.R.layout.simple_spinner_dropdown_item, typeArray);
+         adapterT.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+Index: app/src/main/java/com/maadi/flightticketbooking/activities/BookingHistory.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.maadi.flightticketbooking.activities;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.util.Log;\r\nimport android.view.View;\r\nimport android.widget.AdapterView;\r\nimport android.widget.LinearLayout;\r\nimport android.widget.ListView;\r\n\r\nimport com.android.volley.Request;\r\nimport com.android.volley.Response;\r\nimport com.android.volley.VolleyError;\r\nimport com.android.volley.toolbox.JsonObjectRequest;\r\nimport com.google.gson.Gson;\r\nimport com.maadi.flightticketbooking.R;\r\nimport com.maadi.flightticketbooking.adapters.BookingAdapter;\r\nimport com.maadi.flightticketbooking.models.MyBooking;\r\nimport com.maadi.flightticketbooking.utilities.ECONSTANT;\r\nimport com.maadi.flightticketbooking.utilities.EHelpingFunctions;\r\nimport com.maadi.flightticketbooking.utilities.MyNetwork;\r\n\r\nimport org.json.JSONObject;\r\n\r\nimport cn.pedant.SweetAlert.SweetAlertDialog;\r\n\r\npublic class BookingHistory extends AppCompatActivity {\r\n    ListView lvSearch;\r\n    String TAG = \"TAG\";\r\n    BookingAdapter bookingAdapter;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_booking_history);\r\n        lvSearch = (ListView) findViewById(R.id.lvSearch);\r\n        setTitle(\"My Bookings\");\r\n        lvSearch.setOnItemClickListener(new AdapterView.OnItemClickListener() {\r\n            @Override\r\n            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {\r\n                final MyBooking model = bookingAdapter.getItem(position);\r\n                Intent intent = new Intent(BookingHistory.this, MyBookingDetail.class);\r\n                intent.putExtra(\"MES\", model);\r\n                startActivity(intent);\r\n            }\r\n        });\r\n        EHelpingFunctions.showLoading(BookingHistory.this);\r\n        myBooking();\r\n    }\r\n\r\n    private void myBooking() {\r\n        try {\r\n            JSONObject loginCredential = new JSONObject();\r\n            loginCredential.put(\"userid\", ECONSTANT.logedUser.getUser_id());\r\n\r\n            JsonObjectRequest insertRequest = new JsonObjectRequest(Request.Method.POST,\r\n                    ECONSTANT.URL_BOOKING,\r\n                    loginCredential,\r\n                    new Response.Listener<JSONObject>() {\r\n                        @Override\r\n                        public void onResponse(JSONObject response) {\r\n                            EHelpingFunctions.stopLoading();\r\n                            final Gson gson = new Gson();\r\n                            Log.e(TAG, \"onResponse: \" + response.toString());\r\n                            try {\r\n                                if (response.getBoolean(\"status\") == true) {\r\n                                    lvSearch.setVisibility(View.VISIBLE);\r\n                                    ((LinearLayout) findViewById(R.id.LayoutData)).setVisibility(View.GONE);\r\n\r\n                                    MyBooking[] model1 = gson.fromJson(String.valueOf(\r\n                                                    response.getJSONArray(\"data\")),\r\n                                            MyBooking[].class);\r\n                                    bookingAdapter = new\r\n                                            BookingAdapter(\r\n                                            BookingHistory.this,\r\n                                            model1);\r\n                                    lvSearch.setAdapter(bookingAdapter);\r\n\r\n\r\n                                } else {\r\n\r\n                                    lvSearch.setVisibility(View.GONE);\r\n                                    ((LinearLayout) findViewById(R.id.LayoutData)).setVisibility(View.VISIBLE);\r\n                                }\r\n                            } catch (Exception e) {\r\n                                new SweetAlertDialog(BookingHistory.this, SweetAlertDialog.ERROR_TYPE)\r\n                                        .setTitleText(\"Oops...\")\r\n                                        .setContentText(\"\" + e.toString())\r\n                                        .show();\r\n                                Log.e(TAG, \"onResponse: EXP: \" + e.toString());\r\n                            }\r\n                        }\r\n                    },\r\n                    new Response.ErrorListener() {\r\n                        @Override\r\n                        public void onErrorResponse(VolleyError error) {\r\n                            Log.e(TAG, \"onErrorResponse: \" + error.toString());\r\n                            EHelpingFunctions.stopLoading();\r\n                            new SweetAlertDialog(BookingHistory.this, SweetAlertDialog.ERROR_TYPE)\r\n                                    .setTitleText(\"Oops...\")\r\n                                    .setContentText(\"\" + error.toString())\r\n                                    .show();\r\n                        }\r\n                    });\r\n            MyNetwork.getInstance(BookingHistory.this).addToRequestQueue(insertRequest);\r\n\r\n        } catch (Exception ex) {\r\n            EHelpingFunctions.stopLoading();\r\n            Log.e(TAG, \"insertUserRecord: \" + ex.toString());\r\n        }\r\n\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/maadi/flightticketbooking/activities/BookingHistory.java b/app/src/main/java/com/maadi/flightticketbooking/activities/BookingHistory.java
+--- a/app/src/main/java/com/maadi/flightticketbooking/activities/BookingHistory.java	(revision 2a21160ad86e0865a65cf626487f1d0d1e72f533)
++++ b/app/src/main/java/com/maadi/flightticketbooking/activities/BookingHistory.java	(date 1687614570207)
+@@ -36,7 +36,7 @@
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_booking_history);
+         lvSearch = (ListView) findViewById(R.id.lvSearch);
+-        setTitle("My Bookings");
++        setTitle("Các vé đã đặt:");
+         lvSearch.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+             @Override
+             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+Index: app/src/main/res/layout/activity_my_booking_detail.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\">\r\n\r\n    <TextView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"110dp\"\r\n        android:background=\"@color/colorAccent\"\r\n        android:fontFamily=\"@font/bold\"\r\n        android:gravity=\"center\"\r\n        android:text=\"My Booking Details\"\r\n        android:textColor=\"@color/white\"\r\n        android:textSize=\"28sp\" />\r\n\r\n        <LinearLayout\r\n            android:layout_marginTop=\"10dp\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:orientation=\"vertical\">\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_marginHorizontal=\"8dp\"\r\n                android:layout_marginTop=\"10dp\"\r\n                android:orientation=\"horizontal\"\r\n                android:visibility=\"gone\"\r\n                android:weightSum=\"2\">\r\n\r\n                <TextView\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1\"\r\n                    android:background=\"@drawable/bkline\"\r\n                    android:fontFamily=\"@font/bold\"\r\n                    android:padding=\"4dp\"\r\n                    android:text=\"Total Fare: \"\r\n                    android:textColor=\"@color/colorAccent\"\r\n                    android:textSize=\"16dp\"\r\n                    android:textStyle=\"bold\" />\r\n\r\n                <TextView\r\n                    android:id=\"@+id/tvname\"\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1\"\r\n                    android:background=\"@drawable/bkline\"\r\n                    android:fontFamily=\"@font/regular\"\r\n                    android:padding=\"4dp\"\r\n                    android:textSize=\"16dp\" />\r\n            </LinearLayout>\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_marginHorizontal=\"8dp\"\r\n                android:orientation=\"horizontal\"\r\n                android:weightSum=\"2\">\r\n\r\n                <TextView\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1\"\r\n                    android:background=\"@drawable/bkline\"\r\n                    android:fontFamily=\"@font/bold\"\r\n                    android:padding=\"4dp\"\r\n                    android:text=\"From City : \"\r\n                    android:textColor=\"@color/colorAccent\"\r\n                    android:textSize=\"16dp\"\r\n                    android:textStyle=\"bold\" />\r\n\r\n                <TextView\r\n                    android:id=\"@+id/bgrp\"\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1\"\r\n                    android:background=\"@drawable/bkline\"\r\n                    android:fontFamily=\"@font/regular\"\r\n                    android:padding=\"4dp\"\r\n                    android:textSize=\"16dp\" />\r\n            </LinearLayout>\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_marginHorizontal=\"8dp\"\r\n                android:orientation=\"horizontal\"\r\n\r\n                android:weightSum=\"2\">\r\n\r\n                <TextView\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1\"\r\n                    android:background=\"@drawable/bkline\"\r\n                    android:fontFamily=\"@font/bold\"\r\n                    android:padding=\"4dp\"\r\n                    android:text=\"To City : \"\r\n                    android:textColor=\"@color/colorAccent\"\r\n                    android:textSize=\"16dp\"\r\n                    android:textStyle=\"bold\" />\r\n\r\n                <TextView\r\n                    android:id=\"@+id/phone\"\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1\"\r\n                    android:background=\"@drawable/bkline\"\r\n                    android:fontFamily=\"@font/regular\"\r\n                    android:padding=\"4dp\"\r\n                    android:textSize=\"16dp\" />\r\n            </LinearLayout>\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_marginHorizontal=\"8dp\"\r\n                android:orientation=\"horizontal\"\r\n                android:weightSum=\"2\">\r\n\r\n                <TextView\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1\"\r\n                    android:background=\"@drawable/bkline\"\r\n                    android:fontFamily=\"@font/bold\"\r\n                    android:padding=\"4dp\"\r\n                    android:text=\"Travel Date : \"\r\n                    android:textColor=\"@color/colorAccent\"\r\n                    android:textSize=\"16dp\"\r\n                    android:textStyle=\"bold\" />\r\n\r\n                <TextView\r\n                    android:id=\"@+id/city\"\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1\"\r\n                    android:background=\"@drawable/bkline\"\r\n                    android:fontFamily=\"@font/regular\"\r\n                    android:padding=\"4dp\"\r\n                    android:textSize=\"16dp\" />\r\n            </LinearLayout>\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_marginHorizontal=\"8dp\"\r\n                android:orientation=\"horizontal\"\r\n                android:weightSum=\"2\">\r\n\r\n                <TextView\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1\"\r\n                    android:background=\"@drawable/bkline\"\r\n                    android:fontFamily=\"@font/bold\"\r\n                    android:padding=\"4dp\"\r\n                    android:text=\"Vehicle Class : \"\r\n                    android:textColor=\"@color/colorAccent\"\r\n                    android:textSize=\"16dp\"\r\n                    android:textStyle=\"bold\" />\r\n\r\n                <TextView\r\n                    android:id=\"@+id/detail\"\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1\"\r\n                    android:background=\"@drawable/bkline\"\r\n                    android:fontFamily=\"@font/regular\"\r\n                    android:padding=\"4dp\"\r\n                    android:textSize=\"16dp\" />\r\n            </LinearLayout>\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_marginHorizontal=\"8dp\"\r\n                android:orientation=\"horizontal\"\r\n                android:visibility=\"visible\"\r\n                android:weightSum=\"2\">\r\n\r\n                <TextView\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1\"\r\n                    android:background=\"@drawable/bkline\"\r\n                    android:fontFamily=\"@font/bold\"\r\n                    android:padding=\"4dp\"\r\n                    android:text=\"Total Fare : \"\r\n                    android:textColor=\"@color/colorAccent\"\r\n                    android:textSize=\"16dp\"\r\n                    android:textStyle=\"bold\" />\r\n\r\n                <TextView\r\n                    android:id=\"@+id/fare\"\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1\"\r\n                    android:background=\"@drawable/bkline\"\r\n                    android:fontFamily=\"@font/regular\"\r\n                    android:padding=\"4dp\"\r\n                    android:textSize=\"16dp\" />\r\n            </LinearLayout>\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_marginHorizontal=\"8dp\"\r\n                android:orientation=\"horizontal\"\r\n                android:visibility=\"gone\"\r\n                android:weightSum=\"2\">\r\n\r\n                <TextView\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1\"\r\n                    android:background=\"@drawable/bkline\"\r\n                    android:fontFamily=\"@font/bold\"\r\n                    android:padding=\"4dp\"\r\n                    android:text=\"Passenger Gender : \"\r\n                    android:textColor=\"@color/colorAccent\"\r\n                    android:textSize=\"16dp\"\r\n                    android:textStyle=\"bold\" />\r\n\r\n                <TextView\r\n                    android:id=\"@+id/bfate\"\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1\"\r\n                    android:background=\"@drawable/bkline\"\r\n                    android:fontFamily=\"@font/regular\"\r\n                    android:padding=\"4dp\"\r\n                    android:textSize=\"16dp\" />\r\n            </LinearLayout>\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_marginHorizontal=\"8dp\"\r\n                android:orientation=\"horizontal\"\r\n                android:visibility=\"gone\"\r\n                android:weightSum=\"2\">\r\n\r\n                <TextView\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1\"\r\n                    android:background=\"@drawable/bkline\"\r\n                    android:fontFamily=\"@font/bold\"\r\n                    android:padding=\"4dp\"\r\n                    android:text=\"Passenger Type : \"\r\n                    android:textColor=\"@color/colorAccent\"\r\n                    android:textSize=\"16dp\"\r\n                    android:textStyle=\"bold\" />\r\n\r\n                <TextView\r\n                    android:id=\"@+id/duration\"\r\n                    android:layout_width=\"0dp\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1\"\r\n                    android:background=\"@drawable/bkline\"\r\n                    android:fontFamily=\"@font/regular\"\r\n                    android:padding=\"4dp\"\r\n                    android:textSize=\"16dp\" />\r\n            </LinearLayout>\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_marginVertical=\"5dp\"\r\n                android:layout_marginLeft=\"20dp\"\r\n                android:layout_marginRight=\"20dp\"\r\n                android:orientation=\"horizontal\"\r\n                android:visibility=\"gone\"\r\n                android:weightSum=\"2\">\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_marginRight=\"8dp\"\r\n                    android:layout_weight=\".05\"\r\n                    android:fontFamily=\"@font/bold\"\r\n                    android:text=\"Payment Card Num : \"\r\n                    android:textColor=\"@color/colorAccent\"\r\n                    android:textSize=\"16dp\"\r\n                    android:textStyle=\"bold\" />\r\n\r\n                <TextView\r\n                    android:id=\"@+id/cardnumbers\"\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1.8\"\r\n                    android:fontFamily=\"@font/regular\"\r\n                    android:textSize=\"16dp\" />\r\n            </LinearLayout>\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_marginVertical=\"5dp\"\r\n                android:layout_marginLeft=\"20dp\"\r\n                android:layout_marginRight=\"20dp\"\r\n                android:orientation=\"horizontal\"\r\n                android:visibility=\"gone\"\r\n                android:weightSum=\"2\">\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_marginRight=\"8dp\"\r\n                    android:layout_weight=\".05\"\r\n                    android:fontFamily=\"@font/bold\"\r\n                    android:text=\"Payment Card year : \"\r\n                    android:textColor=\"@color/colorAccent\"\r\n                    android:textSize=\"16dp\"\r\n                    android:textStyle=\"bold\" />\r\n\r\n                <TextView\r\n                    android:id=\"@+id/cardyear\"\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1.8\"\r\n                    android:fontFamily=\"@font/regular\"\r\n                    android:textSize=\"16dp\" />\r\n            </LinearLayout>\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_marginVertical=\"5dp\"\r\n                android:layout_marginLeft=\"20dp\"\r\n                android:layout_marginRight=\"20dp\"\r\n                android:orientation=\"horizontal\"\r\n                android:visibility=\"gone\"\r\n                android:weightSum=\"2\">\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_marginRight=\"8dp\"\r\n                    android:layout_weight=\".05\"\r\n                    android:fontFamily=\"@font/bold\"\r\n                    android:text=\"Payment card Month : \"\r\n                    android:textColor=\"@color/colorAccent\"\r\n                    android:textSize=\"16dp\"\r\n                    android:textStyle=\"bold\" />\r\n\r\n                <TextView\r\n                    android:id=\"@+id/cardm\"\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1.8\"\r\n                    android:fontFamily=\"@font/regular\"\r\n                    android:textSize=\"16dp\" />\r\n            </LinearLayout>\r\n\r\n            <LinearLayout\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_marginVertical=\"5dp\"\r\n                android:layout_marginLeft=\"20dp\"\r\n                android:layout_marginRight=\"20dp\"\r\n                android:orientation=\"horizontal\"\r\n                android:visibility=\"gone\"\r\n                android:weightSum=\"2\">\r\n\r\n                <TextView\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_marginRight=\"8dp\"\r\n                    android:layout_weight=\".05\"\r\n                    android:fontFamily=\"@font/bold\"\r\n                    android:text=\"Payment card CVV : \"\r\n                    android:textColor=\"@color/colorAccent\"\r\n                    android:textSize=\"16dp\"\r\n                    android:textStyle=\"bold\" />\r\n\r\n                <TextView\r\n                    android:id=\"@+id/cardcvv\"\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_weight=\"1.8\"\r\n                    android:fontFamily=\"@font/regular\"\r\n                    android:textSize=\"16dp\" />\r\n            </LinearLayout>\r\n\r\n\r\n        </LinearLayout>\r\n    <TextView\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_gravity=\"start\"\r\n        android:layout_marginLeft=\"8dp\"\r\n        android:layout_marginTop=\"20dp\"\r\n        android:layout_marginRight=\"20dp\"\r\n        android:fontFamily=\"@font/bold\"\r\n        android:text=\"Passengers:\"\r\n        android:textColor=\"#000\"\r\n        android:textSize=\"18sp\" />\r\n    <ListView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:id=\"@+id/ListPe\"/>\r\n</LinearLayout>\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_my_booking_detail.xml b/app/src/main/res/layout/activity_my_booking_detail.xml
+--- a/app/src/main/res/layout/activity_my_booking_detail.xml	(revision 2a21160ad86e0865a65cf626487f1d0d1e72f533)
++++ b/app/src/main/res/layout/activity_my_booking_detail.xml	(date 1687619102494)
+@@ -4,15 +4,16 @@
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+-    android:orientation="vertical">
++    android:orientation="vertical"
++    android:background="@drawable/bg_home">
+ 
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="110dp"
+-        android:background="@color/colorAccent"
+-        android:fontFamily="@font/bold"
++        android:background="@drawable/p_background"
++        android:fontFamily="@font/montserrat_bold"
+         android:gravity="center"
+-        android:text="My Booking Details"
++        android:text="Chi tiết vé đã đặt:"
+         android:textColor="@color/white"
+         android:textSize="28sp" />
+ 
+@@ -22,160 +23,91 @@
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+ 
++
++
+             <LinearLayout
++                android:padding="5dp"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginHorizontal="8dp"
+-                android:layout_marginTop="10dp"
+                 android:orientation="horizontal"
+-                android:visibility="gone"
+-                android:weightSum="2">
++                android:weightSum="3">
++
+ 
+                 <TextView
+-                    android:layout_width="0dp"
++                    android:id="@+id/bgrp"
++                    android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+-                    android:layout_weight="1"
+-                    android:background="@drawable/bkline"
+-                    android:fontFamily="@font/bold"
++
++                    android:fontFamily="@font/montserrat_medium"
+                     android:padding="4dp"
+-                    android:text="Total Fare: "
++                    android:layout_marginLeft="10dp"
+                     android:textColor="@color/colorAccent"
+-                    android:textSize="16dp"
+-                    android:textStyle="bold" />
++                    android:text="Điểm xuất phát"
++                    android:textSize="20dp" />
+ 
+-                <TextView
+-                    android:id="@+id/tvname"
+-                    android:layout_width="0dp"
+-                    android:layout_height="wrap_content"
+-                    android:layout_weight="1"
+-                    android:background="@drawable/bkline"
+-                    android:fontFamily="@font/regular"
++                <ImageView
++                    android:layout_marginTop="16dp"
+                     android:padding="4dp"
+-                    android:textSize="16dp" />
+-            </LinearLayout>
+-
+-            <LinearLayout
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:layout_marginHorizontal="8dp"
+-                android:orientation="horizontal"
+-                android:weightSum="2">
++                    android:background="@drawable/arrow_vector"
++                     android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    />
++
+ 
+                 <TextView
+-                    android:layout_width="0dp"
++                    android:id="@+id/phone"
++                    android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+-                    android:background="@drawable/bkline"
+-                    android:fontFamily="@font/bold"
++                    android:fontFamily="@font/montserrat_medium"
+                     android:padding="4dp"
+-                    android:text="From City : "
++                    android:text="Điếm đến"
+                     android:textColor="@color/colorAccent"
+-                    android:textSize="16dp"
+-                    android:textStyle="bold" />
+-
+-                <TextView
+-                    android:id="@+id/bgrp"
+-                    android:layout_width="0dp"
+-                    android:layout_height="wrap_content"
+-                    android:layout_weight="1"
+-                    android:background="@drawable/bkline"
+-                    android:fontFamily="@font/regular"
+-                    android:padding="4dp"
+-                    android:textSize="16dp" />
++                    android:textSize="20dp" />
+             </LinearLayout>
+ 
+             <LinearLayout
++                android:padding="5dp"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginHorizontal="8dp"
+                 android:orientation="horizontal"
++                >
+ 
+-                android:weightSum="2">
+ 
+                 <TextView
+-                    android:layout_width="0dp"
++                    android:id="@+id/city"
++                    android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+-                    android:layout_weight="1"
+-                    android:background="@drawable/bkline"
+-                    android:fontFamily="@font/bold"
++
++
++                    android:fontFamily="@font/montserrat_medium"
+                     android:padding="4dp"
+-                    android:text="To City : "
++                    android:text="Ngày "
++                    android:layout_marginLeft="10dp"
+                     android:textColor="@color/colorAccent"
+-                    android:textSize="16dp"
+-                    android:textStyle="bold" />
+-
+-                <TextView
+-                    android:id="@+id/phone"
+-                    android:layout_width="0dp"
+-                    android:layout_height="wrap_content"
+-                    android:layout_weight="1"
+-                    android:background="@drawable/bkline"
+-                    android:fontFamily="@font/regular"
+-                    android:padding="4dp"
+                     android:textSize="16dp" />
+-            </LinearLayout>
+ 
+-            <LinearLayout
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:layout_marginHorizontal="8dp"
+-                android:orientation="horizontal"
+-                android:weightSum="2">
+-
++                <ImageView
++                    android:background="@drawable/line_vector"
++                    android:layout_width="wrap_content"
++                    android:layout_height="match_parent"/>
+                 <TextView
+-                    android:layout_width="0dp"
++                    android:id="@+id/detail"
++                    android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+-                    android:layout_weight="1"
+-                    android:background="@drawable/bkline"
+-                    android:fontFamily="@font/bold"
++
++
++                    android:fontFamily="@font/montserrat_medium"
+                     android:padding="4dp"
+-                    android:text="Travel Date : "
++                    android:text="Class:"
+                     android:textColor="@color/colorAccent"
+-                    android:textSize="16dp"
+-                    android:textStyle="bold" />
+-
+-                <TextView
+-                    android:id="@+id/city"
+-                    android:layout_width="0dp"
+-                    android:layout_height="wrap_content"
+-                    android:layout_weight="1"
+-                    android:background="@drawable/bkline"
+-                    android:fontFamily="@font/regular"
+-                    android:padding="4dp"
+                     android:textSize="16dp" />
+             </LinearLayout>
+ 
+             <LinearLayout
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:layout_marginHorizontal="8dp"
+-                android:orientation="horizontal"
+-                android:weightSum="2">
+-
+-                <TextView
+-                    android:layout_width="0dp"
+-                    android:layout_height="wrap_content"
+-                    android:layout_weight="1"
+-                    android:background="@drawable/bkline"
+-                    android:fontFamily="@font/bold"
+-                    android:padding="4dp"
+-                    android:text="Vehicle Class : "
+-                    android:textColor="@color/colorAccent"
+-                    android:textSize="16dp"
+-                    android:textStyle="bold" />
+-
+-                <TextView
+-                    android:id="@+id/detail"
+-                    android:layout_width="0dp"
+-                    android:layout_height="wrap_content"
+-                    android:layout_weight="1"
+-                    android:background="@drawable/bkline"
+-                    android:fontFamily="@font/regular"
+-                    android:padding="4dp"
+-                    android:textSize="16dp" />
+-            </LinearLayout>
+-
+-            <LinearLayout
++                android:padding="5dp"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginHorizontal="8dp"
+@@ -184,13 +116,13 @@
+                 android:weightSum="2">
+ 
+                 <TextView
+-                    android:layout_width="0dp"
++                    android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+-                    android:layout_weight="1"
+-                    android:background="@drawable/bkline"
+-                    android:fontFamily="@font/bold"
++                    android:layout_marginLeft="10dp"
++
++                    android:fontFamily="@font/montserrat_light"
+                     android:padding="4dp"
+-                    android:text="Total Fare : "
++                    android:text="Tổng tiền:  "
+                     android:textColor="@color/colorAccent"
+                     android:textSize="16dp"
+                     android:textStyle="bold" />
+@@ -200,193 +132,16 @@
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+-                    android:background="@drawable/bkline"
+-                    android:fontFamily="@font/regular"
++
++                    android:fontFamily="@font/montserrat_bold"
+                     android:padding="4dp"
+-                    android:textSize="16dp" />
+-            </LinearLayout>
+-
+-            <LinearLayout
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:layout_marginHorizontal="8dp"
+-                android:orientation="horizontal"
+-                android:visibility="gone"
+-                android:weightSum="2">
+-
+-                <TextView
+-                    android:layout_width="0dp"
+-                    android:layout_height="wrap_content"
+-                    android:layout_weight="1"
+-                    android:background="@drawable/bkline"
+-                    android:fontFamily="@font/bold"
+-                    android:padding="4dp"
+-                    android:text="Passenger Gender : "
+-                    android:textColor="@color/colorAccent"
+-                    android:textSize="16dp"
+-                    android:textStyle="bold" />
+-
+-                <TextView
+-                    android:id="@+id/bfate"
+-                    android:layout_width="0dp"
+-                    android:layout_height="wrap_content"
+-                    android:layout_weight="1"
+-                    android:background="@drawable/bkline"
+-                    android:fontFamily="@font/regular"
+-                    android:padding="4dp"
+-                    android:textSize="16dp" />
+-            </LinearLayout>
+-
+-            <LinearLayout
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:layout_marginHorizontal="8dp"
+-                android:orientation="horizontal"
+-                android:visibility="gone"
+-                android:weightSum="2">
+-
+-                <TextView
+-                    android:layout_width="0dp"
+-                    android:layout_height="wrap_content"
+-                    android:layout_weight="1"
+-                    android:background="@drawable/bkline"
+-                    android:fontFamily="@font/bold"
+-                    android:padding="4dp"
+-                    android:text="Passenger Type : "
+-                    android:textColor="@color/colorAccent"
+-                    android:textSize="16dp"
+-                    android:textStyle="bold" />
+-
+-                <TextView
+-                    android:id="@+id/duration"
+-                    android:layout_width="0dp"
+-                    android:layout_height="wrap_content"
+-                    android:layout_weight="1"
+-                    android:background="@drawable/bkline"
+-                    android:fontFamily="@font/regular"
+-                    android:padding="4dp"
+-                    android:textSize="16dp" />
+-            </LinearLayout>
+-
+-            <LinearLayout
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:layout_marginVertical="5dp"
+-                android:layout_marginLeft="20dp"
+-                android:layout_marginRight="20dp"
+-                android:orientation="horizontal"
+-                android:visibility="gone"
+-                android:weightSum="2">
+-
+-                <TextView
+-                    android:layout_width="wrap_content"
+-                    android:layout_height="wrap_content"
+-                    android:layout_marginRight="8dp"
+-                    android:layout_weight=".05"
+-                    android:fontFamily="@font/bold"
+-                    android:text="Payment Card Num : "
+-                    android:textColor="@color/colorAccent"
+-                    android:textSize="16dp"
+-                    android:textStyle="bold" />
+-
+-                <TextView
+-                    android:id="@+id/cardnumbers"
+-                    android:layout_width="wrap_content"
+-                    android:layout_height="wrap_content"
+-                    android:layout_weight="1.8"
+-                    android:fontFamily="@font/regular"
+-                    android:textSize="16dp" />
+-            </LinearLayout>
+-
+-            <LinearLayout
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:layout_marginVertical="5dp"
+-                android:layout_marginLeft="20dp"
+-                android:layout_marginRight="20dp"
+-                android:orientation="horizontal"
+-                android:visibility="gone"
+-                android:weightSum="2">
+-
+-                <TextView
+-                    android:layout_width="wrap_content"
+-                    android:layout_height="wrap_content"
+-                    android:layout_marginRight="8dp"
+-                    android:layout_weight=".05"
+-                    android:fontFamily="@font/bold"
+-                    android:text="Payment Card year : "
++                    android:text="Tổng Tiền"
+                     android:textColor="@color/colorAccent"
+-                    android:textSize="16dp"
+-                    android:textStyle="bold" />
+-
+-                <TextView
+-                    android:id="@+id/cardyear"
+-                    android:layout_width="wrap_content"
+-                    android:layout_height="wrap_content"
+-                    android:layout_weight="1.8"
+-                    android:fontFamily="@font/regular"
+                     android:textSize="16dp" />
+             </LinearLayout>
+ 
+-            <LinearLayout
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:layout_marginVertical="5dp"
+-                android:layout_marginLeft="20dp"
+-                android:layout_marginRight="20dp"
+-                android:orientation="horizontal"
+-                android:visibility="gone"
+-                android:weightSum="2">
+ 
+-                <TextView
+-                    android:layout_width="wrap_content"
+-                    android:layout_height="wrap_content"
+-                    android:layout_marginRight="8dp"
+-                    android:layout_weight=".05"
+-                    android:fontFamily="@font/bold"
+-                    android:text="Payment card Month : "
+-                    android:textColor="@color/colorAccent"
+-                    android:textSize="16dp"
+-                    android:textStyle="bold" />
+ 
+-                <TextView
+-                    android:id="@+id/cardm"
+-                    android:layout_width="wrap_content"
+-                    android:layout_height="wrap_content"
+-                    android:layout_weight="1.8"
+-                    android:fontFamily="@font/regular"
+-                    android:textSize="16dp" />
+-            </LinearLayout>
+-
+-            <LinearLayout
+-                android:layout_width="match_parent"
+-                android:layout_height="wrap_content"
+-                android:layout_marginVertical="5dp"
+-                android:layout_marginLeft="20dp"
+-                android:layout_marginRight="20dp"
+-                android:orientation="horizontal"
+-                android:visibility="gone"
+-                android:weightSum="2">
+-
+-                <TextView
+-                    android:layout_width="wrap_content"
+-                    android:layout_height="wrap_content"
+-                    android:layout_marginRight="8dp"
+-                    android:layout_weight=".05"
+-                    android:fontFamily="@font/bold"
+-                    android:text="Payment card CVV : "
+-                    android:textColor="@color/colorAccent"
+-                    android:textSize="16dp"
+-                    android:textStyle="bold" />
+-
+-                <TextView
+-                    android:id="@+id/cardcvv"
+-                    android:layout_width="wrap_content"
+-                    android:layout_height="wrap_content"
+-                    android:layout_weight="1.8"
+-                    android:fontFamily="@font/regular"
+-                    android:textSize="16dp" />
+-            </LinearLayout>
+ 
+ 
+         </LinearLayout>
+@@ -398,7 +153,7 @@
+         android:layout_marginTop="20dp"
+         android:layout_marginRight="20dp"
+         android:fontFamily="@font/bold"
+-        android:text="Passengers:"
++        android:text="Thông tin hành khách:"
+         android:textColor="#000"
+         android:textSize="18sp" />
+     <ListView
+Index: app/src/main/java/com/maadi/flightticketbooking/activities/MyBookingDetail.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.maadi.flightticketbooking.activities;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.util.Log;\r\nimport android.view.View;\r\nimport android.widget.ListView;\r\nimport android.widget.TextView;\r\n\r\nimport com.android.volley.Request;\r\nimport com.android.volley.Response;\r\nimport com.android.volley.VolleyError;\r\nimport com.android.volley.toolbox.JsonObjectRequest;\r\nimport com.google.gson.Gson;\r\nimport com.maadi.flightticketbooking.R;\r\nimport com.maadi.flightticketbooking.adapters.PassengerAdapter;\r\nimport com.maadi.flightticketbooking.models.MyBooking;\r\nimport com.maadi.flightticketbooking.models.PassengerModel;\r\nimport com.maadi.flightticketbooking.utilities.ECONSTANT;\r\nimport com.maadi.flightticketbooking.utilities.EHelpingFunctions;\r\nimport com.maadi.flightticketbooking.utilities.MyNetwork;\r\n\r\nimport org.json.JSONArray;\r\nimport org.json.JSONObject;\r\n\r\nimport java.util.ArrayList;\r\n\r\nimport cn.pedant.SweetAlert.SweetAlertDialog;\r\n\r\npublic class MyBookingDetail extends AppCompatActivity {\r\n    private static final String TAG = \"TAG\";\r\n    MyBooking data;\r\n    ListView ListPe;\r\n    PassengerAdapter passengerAdapter;\r\n    ArrayList<PassengerModel> listPessenger = new ArrayList<>();\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_my_booking_detail);\r\n\r\n        Intent intent = getIntent();\r\n         data = (MyBooking) intent.getSerializableExtra(\"MES\");\r\n        ListPe = findViewById(R.id.ListPe);\r\n//        ((TextView) findViewById(R.id.tvname)).setText(data.getName());\r\n        ((TextView) findViewById(R.id.bgrp)).setText(data.getFromcity());\r\n        ((TextView) findViewById(R.id.phone)).setText(data.getTocity());\r\n        ((TextView) findViewById(R.id.city)).setText(data.getTraveldate());\r\n        ((TextView) findViewById(R.id.detail)).setText(data.getVclass());\r\n        ((TextView) findViewById(R.id.fare)).setText(data.getFare());\r\n//        ((TextView) findViewById(R.id.bfate)).setText(data.getGender());\r\n//        ((TextView) findViewById(R.id.duration)).setText(data.getType());\r\n//        ((TextView) findViewById(R.id.cardnumbers)).setText(data.getCardnum().toString());\r\n//        ((TextView) findViewById(R.id.cardyear)).setText(data.getYear());\r\n//        ((TextView) findViewById(R.id.cardm)).setText(data.getMonth());\r\n//        ((TextView) findViewById(R.id.cardcvv)).setText(data.getCvv());\r\n\r\n        EHelpingFunctions.showLoading(MyBookingDetail.this);\r\n        passenger();\r\n    }\r\n\r\n    private void passenger() {\r\n        try {\r\n            JSONObject loginCredential = new JSONObject();\r\n            loginCredential.put(\"bid\", data.getId());\r\n\r\n            JsonObjectRequest insertRequest = new JsonObjectRequest(Request.Method.POST,\r\n                    ECONSTANT.URL_GETPAS,\r\n                    loginCredential,\r\n                    new Response.Listener<JSONObject>() {\r\n                        @Override\r\n                        public void onResponse(JSONObject response) {\r\n                            EHelpingFunctions.stopLoading();\r\n                            final Gson gson = new Gson();\r\n                            Log.e(TAG, \"onResponse: \" + response.toString());\r\n                            try {\r\n                                if (response.getBoolean(\"status\") == true) {\r\n                                    ListPe.setVisibility(View.VISIBLE);\r\n                                    JSONArray s = response.getJSONArray(\"data\");\r\n                                    for (int i = 0; i < s.length(); i++) {\r\n                                        PassengerModel c = new PassengerModel();\r\n                                        c.setAge((s.getJSONObject(i).getString(\"age\")));\r\n                                        c.setGender(s.getJSONObject(i).getString(\"gender\"));\r\n                                        c.setName(s.getJSONObject(i).getString(\"name\"));\r\n                                        c.setType(s.getJSONObject(i).getString(\"type\"));\r\n                                        listPessenger.add(c);\r\n                                    }\r\n\r\n                                    passengerAdapter = new\r\n                                            PassengerAdapter(\r\n                                            MyBookingDetail.this,\r\n                                            listPessenger);\r\n                                    ListPe.setAdapter(passengerAdapter);\r\n\r\n\r\n                                } else {\r\n\r\n\r\n                                }\r\n                            } catch (Exception e) {\r\n                                new SweetAlertDialog(MyBookingDetail.this, SweetAlertDialog.ERROR_TYPE)\r\n                                        .setTitleText(\"Oops...\")\r\n                                        .setContentText(\"\" + e.toString())\r\n                                        .show();\r\n                                Log.e(TAG, \"onResponse: EXP: \" + e.toString());\r\n                            }\r\n                        }\r\n                    },\r\n                    new Response.ErrorListener() {\r\n                        @Override\r\n                        public void onErrorResponse(VolleyError error) {\r\n                            Log.e(TAG, \"onErrorResponse: \" + error.toString());\r\n                            EHelpingFunctions.stopLoading();\r\n                            new SweetAlertDialog(MyBookingDetail.this, SweetAlertDialog.ERROR_TYPE)\r\n                                    .setTitleText(\"Oops...\")\r\n                                    .setContentText(\"\" + error.toString())\r\n                                    .show();\r\n                        }\r\n                    });\r\n            MyNetwork.getInstance(MyBookingDetail.this).addToRequestQueue(insertRequest);\r\n\r\n        } catch (Exception ex) {\r\n            EHelpingFunctions.stopLoading();\r\n            Log.e(TAG, \"insertUserRecord: \" + ex.toString());\r\n        }\r\n\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/maadi/flightticketbooking/activities/MyBookingDetail.java b/app/src/main/java/com/maadi/flightticketbooking/activities/MyBookingDetail.java
+--- a/app/src/main/java/com/maadi/flightticketbooking/activities/MyBookingDetail.java	(revision 2a21160ad86e0865a65cf626487f1d0d1e72f533)
++++ b/app/src/main/java/com/maadi/flightticketbooking/activities/MyBookingDetail.java	(date 1687618210646)
+@@ -47,7 +47,7 @@
+         ((TextView) findViewById(R.id.bgrp)).setText(data.getFromcity());
+         ((TextView) findViewById(R.id.phone)).setText(data.getTocity());
+         ((TextView) findViewById(R.id.city)).setText(data.getTraveldate());
+-        ((TextView) findViewById(R.id.detail)).setText(data.getVclass());
++        ((TextView) findViewById(R.id.detail)).setText(data.getVclass() + " Class");
+         ((TextView) findViewById(R.id.fare)).setText(data.getFare());
+ //        ((TextView) findViewById(R.id.bfate)).setText(data.getGender());
+ //        ((TextView) findViewById(R.id.duration)).setText(data.getType());
+Index: app/src/main/java/com/maadi/flightticketbooking/adapters/PassengerAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.maadi.flightticketbooking.adapters;\r\n\r\nimport android.content.Context;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.ArrayAdapter;\r\nimport android.widget.TextView;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.annotation.Nullable;\r\n\r\nimport com.maadi.flightticketbooking.R;\r\nimport com.maadi.flightticketbooking.models.PassengerModel;\r\n\r\nimport java.util.ArrayList;\r\n\r\n\r\npublic class PassengerAdapter extends ArrayAdapter<PassengerModel>  {\r\n    Context context;\r\n    public PassengerAdapter(@NonNull Context context, @NonNull ArrayList<PassengerModel> objects) {\r\n        super(context, 0, objects);\r\n        this.context = context;\r\n    }\r\n\r\n    public long getItemId(int position) {\r\n        return position;\r\n    }\r\n    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {\r\n        View userView = convertView;\r\n        if (convertView == null) {\r\n            userView = LayoutInflater.from(context).inflate(R.layout.single_row_passenger,\r\n                    parent, false);\r\n        }\r\n\r\n        final PassengerModel user = getItem(position);\r\n\r\n        TextView title = userView.findViewById(R.id.name);\r\n        title.setText(user.getName());\r\n        ((TextView)userView.findViewById(R.id.age)).setText(user.getAge() + \" Years\");\r\n        ((TextView)userView.findViewById(R.id.gender)).setText(\"\" + user.getGender());\r\n        ((TextView)userView.findViewById(R.id.type)).setText(\"\" +user.getType());\r\n\r\n        return userView;\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/maadi/flightticketbooking/adapters/PassengerAdapter.java b/app/src/main/java/com/maadi/flightticketbooking/adapters/PassengerAdapter.java
+--- a/app/src/main/java/com/maadi/flightticketbooking/adapters/PassengerAdapter.java	(revision 2a21160ad86e0865a65cf626487f1d0d1e72f533)
++++ b/app/src/main/java/com/maadi/flightticketbooking/adapters/PassengerAdapter.java	(date 1687618029686)
+@@ -37,7 +37,7 @@
+ 
+         TextView title = userView.findViewById(R.id.name);
+         title.setText(user.getName());
+-        ((TextView)userView.findViewById(R.id.age)).setText(user.getAge() + " Years");
++        ((TextView)userView.findViewById(R.id.age)).setText(user.getAge() + " tuổi");
+         ((TextView)userView.findViewById(R.id.gender)).setText("" + user.getGender());
+         ((TextView)userView.findViewById(R.id.type)).setText("" +user.getType());
+ 
+Index: app/src/main/java/com/maadi/flightticketbooking/adapters/BookingAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.maadi.flightticketbooking.adapters;\r\n\r\nimport android.content.Context;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.ArrayAdapter;\r\nimport android.widget.TextView;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.annotation.Nullable;\r\n\r\nimport com.maadi.flightticketbooking.R;\r\nimport com.maadi.flightticketbooking.models.MyBooking;\r\n\r\n\r\npublic class BookingAdapter extends ArrayAdapter<MyBooking>  {\r\n    Context context;\r\n    public BookingAdapter(@NonNull Context context, @NonNull MyBooking[]  objects) {\r\n        super(context, 0, objects);\r\n        this.context = context;\r\n    }\r\n\r\n    public long getItemId(int position) {\r\n        return position;\r\n    }\r\n    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {\r\n        View userView = convertView;\r\n        if (convertView == null) {\r\n            userView = LayoutInflater.from(context).inflate(R.layout.single_row_booking,\r\n                    parent, false);\r\n        }\r\n\r\n        final MyBooking user = getItem(position);\r\n\r\n        ((TextView)userView.findViewById(R.id.tvFrom)).setText(user.getFromcity());\r\n        ((TextView)userView.findViewById(R.id.tvTo)).setText(user.getTocity());\r\n        ((TextView)userView.findViewById(R.id.tvDep)).setText(\"Date : \" +user.getTraveldate());\r\n        ((TextView)userView.findViewById(R.id.tvArival)).setText(user.getVclass() + \" Class\");\r\n        ((TextView)userView.findViewById(R.id.tvFare)).setText(\"Fare : \"+user.getFare());\r\n        return userView;\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/maadi/flightticketbooking/adapters/BookingAdapter.java b/app/src/main/java/com/maadi/flightticketbooking/adapters/BookingAdapter.java
+--- a/app/src/main/java/com/maadi/flightticketbooking/adapters/BookingAdapter.java	(revision 2a21160ad86e0865a65cf626487f1d0d1e72f533)
++++ b/app/src/main/java/com/maadi/flightticketbooking/adapters/BookingAdapter.java	(date 1687615090265)
+@@ -35,9 +35,9 @@
+ 
+         ((TextView)userView.findViewById(R.id.tvFrom)).setText(user.getFromcity());
+         ((TextView)userView.findViewById(R.id.tvTo)).setText(user.getTocity());
+-        ((TextView)userView.findViewById(R.id.tvDep)).setText("Date : " +user.getTraveldate());
++        ((TextView)userView.findViewById(R.id.tvDep)).setText("Ngày : " +user.getTraveldate());
+         ((TextView)userView.findViewById(R.id.tvArival)).setText(user.getVclass() + " Class");
+-        ((TextView)userView.findViewById(R.id.tvFare)).setText("Fare : "+user.getFare());
++        ((TextView)userView.findViewById(R.id.tvFare)).setText("Giá : "+user.getFare());
+         return userView;
+     }
+ 
+Index: app/src/main/res/layout/activity_booking_history.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\">\r\n\r\n    <ListView\r\n        android:visibility=\"gone\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:divider=\"@null\"\r\n        android:id=\"@+id/lvSearch\"/>\r\n\r\n    <LinearLayout\r\n        android:visibility=\"gone\"\r\n        android:id=\"@+id/LayoutData\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:orientation=\"vertical\"\r\n        android:gravity=\"center\">\r\n        <com.airbnb.lottie.LottieAnimationView\r\n            android:id=\"@+id/animOrder\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"200dp\"\r\n            app:lottie_autoPlay=\"true\"\r\n            app:lottie_loop=\"true\"\r\n            app:lottie_rawRes=\"@raw/empty_cat\" />\r\n\r\n        <TextView\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginTop=\"20dp\"\r\n            android:gravity=\"center\"\r\n            android:fontFamily=\"@font/montserrat_semibold\"\r\n            android:text=\"No Data Found according to this filter\"\r\n            android:textColor=\"@color/black\"\r\n            android:textSize=\"18sp\" />\r\n    </LinearLayout>\r\n\r\n</LinearLayout>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_booking_history.xml b/app/src/main/res/layout/activity_booking_history.xml
+--- a/app/src/main/res/layout/activity_booking_history.xml	(revision 2a21160ad86e0865a65cf626487f1d0d1e72f533)
++++ b/app/src/main/res/layout/activity_booking_history.xml	(date 1687619102447)
+@@ -4,7 +4,8 @@
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+-    android:orientation="vertical">
++    android:orientation="vertical"
++    android:background="@drawable/bg_home">
+ 
+     <ListView
+         android:visibility="gone"
+@@ -34,7 +35,7 @@
+             android:layout_marginTop="20dp"
+             android:gravity="center"
+             android:fontFamily="@font/montserrat_semibold"
+-            android:text="No Data Found according to this filter"
++            android:text="Không có dữ liệu bạn cần tìm"
+             android:textColor="@color/black"
+             android:textSize="18sp" />
+     </LinearLayout>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AndroidLayouts\">\r\n    <shared>\r\n      <config />\r\n    </shared>\r\n  </component>\r\n  <component name=\"AndroidLogFilters\">\r\n    <option name=\"TOOL_WINDOW_CONFIGURED_FILTER\" value=\"Show only selected application\" />\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"NONE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"cf1012da-a279-4fbc-87d2-7015164e26bc\" name=\"Default Changelist\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/src/main/res/layout/activity_book_ticket.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/src/main/res/layout/activity_book_ticket.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/src/main/res/layout/activity_search_vehical.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/src/main/res/layout/activity_search_vehical.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/src/main/res/layout/single_row_booking.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/src/main/res/layout/single_row_booking.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/src/main/res/layout/single_row_vehicle.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/src/main/res/layout/single_row_vehicle.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExecutionTargetManager\" SELECTED_TARGET=\"device_and_snapshot_combo_box_target[R5CT21AR8PN]\" />\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"ExternalProjectsManager\">\r\n    <system id=\"GRADLE\">\r\n      <state>\r\n        <projects_view />\r\n      </state>\r\n    </system>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1gzb1kUOMt6DKI5FtnudZGFbFFz\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"autoscrollFromSource\" value=\"true\" />\r\n    <option name=\"autoscrollToSource\" value=\"true\" />\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,\r\n    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,\r\n    &quot;last_directory_selection&quot;: &quot;D:/UIT/FLY/app/src/main/res/drawable&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/ADMIN/Desktop/New folder (2)/Flight Ticket Booking System Mini Project/FlightTicketBooking&quot;,\r\n    &quot;show.do.not.copy.http.proxy.settings.to.gradle&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"android.template.-1559378296\">\r\n      <recent name=\"com.maadi.movieticketbooking.activities\" />\r\n    </key>\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\UIT\\FLY\\app\\src\\main\\res\\drawable\" />\r\n      <recent name=\"D:\\UIT\\FLY\\app\\src\\main\\res\\raw\" />\r\n      <recent name=\"$PROJECT_DIR$/app/src/main/res/drawable\" />\r\n      <recent name=\"$PROJECT_DIR$/app/src/main/res/raw\" />\r\n      <recent name=\"E:\\Android\\Projects\\Booking\\BusTicketBooking\\app\\src\\main\\res\\layout\" />\r\n    </key>\r\n    <key name=\"android.template.1298036471\">\r\n      <recent name=\"com.maadi.movieticketbooking.activities\" />\r\n    </key>\r\n    <key name=\"android.template.41929038\">\r\n      <recent name=\"com.maadi.flightticketbooking\" />\r\n    </key>\r\n    <key name=\"android.template.-87826491\">\r\n      <recent name=\"com.maadi.movieticketbooking.activities\" />\r\n    </key>\r\n    <key name=\"android.template.-1185812727\">\r\n      <recent name=\"com.maadi.busticketbooking.activities\" />\r\n    </key>\r\n    <key name=\"android.template.-107619543\">\r\n      <recent name=\"com.maadi.movieticketbooking.activities\" />\r\n    </key>\r\n    <key name=\"android.template.-1060453185\">\r\n      <recent name=\"com.maadi.movieticketbooking.activities\" />\r\n    </key>\r\n    <key name=\"android.template.745733289\">\r\n      <recent name=\"com.maadi.movieticketbooking.activities\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"com.maadi.busticketbooking.adapters\" />\r\n      <recent name=\"com.maadi.busticketbooking.models\" />\r\n      <recent name=\"com.maadi.busticketbooking\" />\r\n      <recent name=\"com.maadi.movieticketbooking.models\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"AndroidJUnit\" factoryName=\"Android JUnit\">\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$MODULE_DIR$\" />\r\n      <method v=\"2\">\r\n        <option name=\"Android.Gradle.BeforeRunTask\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"app\" type=\"AndroidRunConfigurationType\" factoryName=\"Android App\" activateToolWindowBeforeRun=\"false\">\r\n      <module name=\"Flight_Ticket_Booking.app.main\" />\r\n      <option name=\"DEPLOY\" value=\"true\" />\r\n      <option name=\"DEPLOY_APK_FROM_BUNDLE\" value=\"false\" />\r\n      <option name=\"DEPLOY_AS_INSTANT\" value=\"false\" />\r\n      <option name=\"ARTIFACT_NAME\" value=\"\" />\r\n      <option name=\"PM_INSTALL_OPTIONS\" value=\"\" />\r\n      <option name=\"ALL_USERS\" value=\"false\" />\r\n      <option name=\"ALWAYS_INSTALL_WITH_PM\" value=\"false\" />\r\n      <option name=\"CLEAR_APP_STORAGE\" value=\"false\" />\r\n      <option name=\"DYNAMIC_FEATURES_DISABLED_LIST\" value=\"\" />\r\n      <option name=\"ACTIVITY_EXTRA_FLAGS\" value=\"\" />\r\n      <option name=\"MODE\" value=\"default_activity\" />\r\n      <option name=\"CLEAR_LOGCAT\" value=\"false\" />\r\n      <option name=\"SHOW_LOGCAT_AUTOMATICALLY\" value=\"false\" />\r\n      <option name=\"INSPECTION_WITHOUT_ACTIVITY_RESTART\" value=\"false\" />\r\n      <option name=\"TARGET_SELECTION_MODE\" value=\"DEVICE_AND_SNAPSHOT_COMBO_BOX\" />\r\n      <option name=\"SELECTED_CLOUD_MATRIX_CONFIGURATION_ID\" value=\"-1\" />\r\n      <option name=\"SELECTED_CLOUD_MATRIX_PROJECT_ID\" value=\"\" />\r\n      <option name=\"DEBUGGER_TYPE\" value=\"Auto\" />\r\n      <Auto>\r\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\r\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\r\n        <option name=\"WORKING_DIR\" value=\"\" />\r\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\r\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\r\n      </Auto>\r\n      <Hybrid>\r\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\r\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\r\n        <option name=\"WORKING_DIR\" value=\"\" />\r\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\r\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\r\n      </Hybrid>\r\n      <Java />\r\n      <Native>\r\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\r\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\r\n        <option name=\"WORKING_DIR\" value=\"\" />\r\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\r\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\r\n      </Native>\r\n      <Profilers>\r\n        <option name=\"ADVANCED_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"STARTUP_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"STARTUP_CPU_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"STARTUP_CPU_PROFILING_CONFIGURATION_NAME\" value=\"Java/Kotlin Method Sample (legacy)\" />\r\n        <option name=\"STARTUP_NATIVE_MEMORY_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"NATIVE_MEMORY_SAMPLE_RATE_BYTES\" value=\"2048\" />\r\n      </Profilers>\r\n      <option name=\"DEEP_LINK\" value=\"\" />\r\n      <option name=\"ACTIVITY_CLASS\" value=\"\" />\r\n      <option name=\"SEARCH_ACTIVITY_IN_GLOBAL_SCOPE\" value=\"false\" />\r\n      <option name=\"SKIP_ACTIVITY_VALIDATION\" value=\"false\" />\r\n      <method v=\"2\">\r\n        <option name=\"Android.Gradle.BeforeRunTask\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"cf1012da-a279-4fbc-87d2-7015164e26bc\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1599120157476</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1599120157476</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"update\">\r\n      <created>1687414356751</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1687414356751</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"update_font\">\r\n      <created>1687588097988</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1687588097989</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"update_font_2\">\r\n      <created>1687591468628</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1687591468629</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.History.Properties\">\r\n    <option name=\"COLUMN_ID_ORDER\">\r\n      <list>\r\n        <option value=\"Default.Root\" />\r\n        <option value=\"Default.Author\" />\r\n        <option value=\"Default.Date\" />\r\n        <option value=\"Default.Subject\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"update\" />\r\n    <MESSAGE value=\"update_font\" />\r\n    <MESSAGE value=\"update_font_2\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"update_font_2\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 2a21160ad86e0865a65cf626487f1d0d1e72f533)
++++ b/.idea/workspace.xml	(date 1687618257921)
+@@ -14,18 +14,21 @@
+   <component name="ChangeListManager">
+     <list default="true" id="cf1012da-a279-4fbc-87d2-7015164e26bc" name="Default Changelist" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/BookTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/BookTicket.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/BookingHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/BookingHistory.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/MyBookingDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/MyBookingDetail.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/adapters/BookingAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/adapters/BookingAdapter.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/adapters/PassengerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/adapters/PassengerAdapter.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_book_ticket.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_book_ticket.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_vehical.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_vehical.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_row_booking.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_row_booking.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_row_vehicle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_row_vehicle.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_booking_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_booking_history.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_booking_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_booking_detail.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R5CT21AR8PN]" />
++  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[47d3aab4]" />
+   <component name="ExternalProjectsData">
+     <projectState path="$PROJECT_DIR$">
+       <ProjectState />
+@@ -70,27 +73,27 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+-    &quot;last_directory_selection&quot;: &quot;D:/UIT/FLY/app/src/main/res/drawable&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ADMIN/Desktop/New folder (2)/Flight Ticket Booking System Mini Project/FlightTicketBooking&quot;,
+-    &quot;show.do.not.copy.http.proxy.settings.to.gradle&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.cidr.known.project.marker": "true",
++    "cidr.known.project.marker": "true",
++    "last_directory_selection": "D:/Github/SE104/app/src/main/res/drawable",
++    "last_opened_file_path": "D:/Github/SE104/app/src/main/res/drawable",
++    "show.do.not.copy.http.proxy.settings.to.gradle": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="android.template.-1559378296">
+       <recent name="com.maadi.movieticketbooking.activities" />
+     </key>
+     <key name="CopyFile.RECENT_KEYS">
++      <recent name="D:\Github\SE104\app\src\main\res\drawable" />
++      <recent name="D:\Github\SE104\app\src\main\res\layout" />
+       <recent name="D:\UIT\FLY\app\src\main\res\drawable" />
+       <recent name="D:\UIT\FLY\app\src\main\res\raw" />
+       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+-      <recent name="$PROJECT_DIR$/app/src/main/res/raw" />
+-      <recent name="E:\Android\Projects\Booking\BusTicketBooking\app\src\main\res\layout" />
+     </key>
+     <key name="android.template.1298036471">
+       <recent name="com.maadi.movieticketbooking.activities" />
+@@ -220,7 +223,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1687591468629</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="update_bg_book_search">
++      <created>1687613996711</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1687613996711</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.History.Properties">
+@@ -248,6 +258,7 @@
+     <MESSAGE value="update" />
+     <MESSAGE value="update_font" />
+     <MESSAGE value="update_font_2" />
+-    <option name="LAST_COMMIT_MESSAGE" value="update_font_2" />
++    <MESSAGE value="update_bg_book_search" />
++    <option name="LAST_COMMIT_MESSAGE" value="update_bg_book_search" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.maadi.flightticketbooking.utilities;\r\n\r\n\r\n\r\nimport com.maadi.flightticketbooking.models.City;\r\nimport com.maadi.flightticketbooking.models.User;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\n\r\npublic class ECONSTANT {\r\n    //\r\n    public static User logedUser;\r\n    public static List<City> cityList = new ArrayList<>();\r\n\r\n    public static final String TAG = \"TAG\";\r\n    private static final String IP = \"http://192.168.43.107/\";\r\n            private static final String BASE_URL = IP + \"flight_ticket_boooking_api/\";\r\n    private static final String BASE_IMAGE_URL = IP + \"flight_ticket_boooking_api/\";\r\n\r\n    public static final String URL_SIGNUP = BASE_URL + \"signup.php\";\r\n    public static final String URL_GET_CITY = BASE_URL + \"getcity.php\";\r\n    public static final String URL_SEARCH_VEHICLE = BASE_URL + \"searchvehicle.php\";\r\n    public static final String URL_IMG_USER = BASE_IMAGE_URL + \"images/user/\";\r\n    public static final String URL_LOGIN = BASE_URL + \"login.php\";\r\n    public static String URL_Book_TICKET = BASE_URL + \"bookticket.php\";\r\n    public static final String URL_BOOKING = BASE_URL + \"getmybooking.php\" ;\r\n    public static final String URL_GET_BANNER = BASE_URL + \"getbanner.php\";\r\n    public static final String URL_IMG_BANNERS = BASE_IMAGE_URL + \"images/banners/\";\r\n    public static final String URL_GET_BID = BASE_URL + \"getbookingid.php\";\r\n    public static final String URL_ADDP = BASE_URL + \"addpas.php\";\r\n    public static final String URL_GETPAS = BASE_URL + \"getpassengers.php\";\r\n\r\n    public static final String URL_CHANGE_PASS = BASE_URL + \"changepass.php\";\r\n    public static final String URL_SEARCH_HOSPITAL = BASE_URL + \"searchhospital.php\";\r\n    public static String URL_Contact_US = BASE_URL + \"addcontactus.php\";\r\n    public static String URL_ADD_DOnation = BASE_URL + \"adddonation.php\";\r\n\r\n\r\n    public static final String KEY_LOGED_USER = \"KEY_LOGED_USER\";\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java b/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java
+--- a/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java	(revision 2a21160ad86e0865a65cf626487f1d0d1e72f533)
++++ b/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java	(date 1687615950519)
+@@ -14,7 +14,7 @@
+     public static List<City> cityList = new ArrayList<>();
+ 
+     public static final String TAG = "TAG";
+-    private static final String IP = "http://192.168.43.107/";
++    private static final String IP = "http://192.168.104.41/";
+             private static final String BASE_URL = IP + "flight_ticket_boooking_api/";
+     private static final String BASE_IMAGE_URL = IP + "flight_ticket_boooking_api/";
+ 
