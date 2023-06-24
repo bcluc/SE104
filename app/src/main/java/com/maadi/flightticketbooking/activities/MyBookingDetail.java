@@ -47,7 +47,7 @@ public class MyBookingDetail extends AppCompatActivity {
         ((TextView) findViewById(R.id.bgrp)).setText(data.getFromcity());
         ((TextView) findViewById(R.id.phone)).setText(data.getTocity());
         ((TextView) findViewById(R.id.city)).setText(data.getTraveldate());
-        ((TextView) findViewById(R.id.detail)).setText(data.getVclass());
+        ((TextView) findViewById(R.id.detail)).setText(data.getVclass() + " Class");
         ((TextView) findViewById(R.id.fare)).setText(data.getFare());
 //        ((TextView) findViewById(R.id.bfate)).setText(data.getGender());
 //        ((TextView) findViewById(R.id.duration)).setText(data.getType());

@@ -37,7 +37,7 @@ public class PassengerAdapter extends ArrayAdapter<PassengerModel>  {
 
         TextView title = userView.findViewById(R.id.name);
         title.setText(user.getName());
-        ((TextView)userView.findViewById(R.id.age)).setText(user.getAge() + " Years");
+        ((TextView)userView.findViewById(R.id.age)).setText(user.getAge() + " tuổi");
         ((TextView)userView.findViewById(R.id.gender)).setText("" + user.getGender());
         ((TextView)userView.findViewById(R.id.type)).setText("" +user.getType());
 

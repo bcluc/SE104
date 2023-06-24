@@ -36,7 +36,7 @@ public class BookingHistory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking_history);
         lvSearch = (ListView) findViewById(R.id.lvSearch);
-        setTitle("My Bookings");
+        setTitle("Các vé đã đặt:");
         lvSearch.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

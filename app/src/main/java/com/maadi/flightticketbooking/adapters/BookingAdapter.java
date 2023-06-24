@@ -35,9 +35,9 @@ public class BookingAdapter extends ArrayAdapter<MyBooking>  {
 
         ((TextView)userView.findViewById(R.id.tvFrom)).setText(user.getFromcity());
         ((TextView)userView.findViewById(R.id.tvTo)).setText(user.getTocity());
-        ((TextView)userView.findViewById(R.id.tvDep)).setText("Date : " +user.getTraveldate());
+        ((TextView)userView.findViewById(R.id.tvDep)).setText("Ngày : " +user.getTraveldate());
         ((TextView)userView.findViewById(R.id.tvArival)).setText(user.getVclass() + " Class");
-        ((TextView)userView.findViewById(R.id.tvFare)).setText("Fare : "+user.getFare());
+        ((TextView)userView.findViewById(R.id.tvFare)).setText("Giá : "+user.getFare());
         return userView;
     }
 

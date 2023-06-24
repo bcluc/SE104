@@ -68,7 +68,7 @@ public class BookTicket extends AppCompatActivity {
         String[] typeArray = new String[]{
                 "Trẻ em (2-12 tuổi)",
                 "Trẻ em (Dưới 2 tuổi) ",
-                "Người lớm (Trên 12 tuổi)"};
+                "Người lớn (Trên 12 tuổi)"};
         ArrayAdapter<String> adapterT = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_dropdown_item, typeArray);
         adapterT.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

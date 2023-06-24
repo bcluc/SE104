@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/bg_home">
 
     <ListView
         android:visibility="gone"
@@ -34,7 +35,7 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:fontFamily="@font/montserrat_semibold"
-            android:text="No Data Found according to this filter"
+            android:text="Không có dữ liệu bạn cần tìm"
             android:textColor="@color/black"
             android:textSize="18sp" />
     </LinearLayout>

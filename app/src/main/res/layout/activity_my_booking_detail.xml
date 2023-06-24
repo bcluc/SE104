@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/bg_home">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="110dp"
-        android:background="@color/colorAccent"
-        android:fontFamily="@font/bold"
+        android:background="@drawable/p_background"
+        android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
-        android:text="My Booking Details"
+        android:text="Chi tiết vé đã đặt:"
         android:textColor="@color/white"
         android:textSize="28sp" />
 
@@ -22,160 +23,91 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:visibility="gone"
-                android:weightSum="2">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bkline"
-                    android:fontFamily="@font/bold"
-                    android:padding="4dp"
-                    android:text="Total Fare: "
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvname"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bkline"
-                    android:fontFamily="@font/regular"
-                    android:padding="4dp"
-                    android:textSize="16dp" />
-            </LinearLayout>
 
             <LinearLayout
+                android:padding="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
                 android:orientation="horizontal"
-                android:weightSum="2">
+                android:weightSum="3">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bkline"
-                    android:fontFamily="@font/bold"
-                    android:padding="4dp"
-                    android:text="From City : "
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/bgrp"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bkline"
-                    android:fontFamily="@font/regular"
+
+                    android:fontFamily="@font/montserrat_medium"
                     android:padding="4dp"
-                    android:textSize="16dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:orientation="horizontal"
-
-                android:weightSum="2">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bkline"
-                    android:fontFamily="@font/bold"
-                    android:padding="4dp"
-                    android:text="To City : "
+                    android:layout_marginLeft="10dp"
                     android:textColor="@color/colorAccent"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                    android:text="Điểm xuất phát"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:layout_marginTop="16dp"
+                    android:padding="4dp"
+                    android:background="@drawable/arrow_vector"
+                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
 
                 <TextView
                     android:id="@+id/phone"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/bkline"
-                    android:fontFamily="@font/regular"
+                    android:fontFamily="@font/montserrat_medium"
                     android:padding="4dp"
-                    android:textSize="16dp" />
+                    android:text="Điếm đến"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20dp" />
             </LinearLayout>
 
             <LinearLayout
+                android:padding="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
                 android:orientation="horizontal"
-                android:weightSum="2">
+                >
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bkline"
-                    android:fontFamily="@font/bold"
-                    android:padding="4dp"
-                    android:text="Travel Date : "
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/city"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bkline"
-                    android:fontFamily="@font/regular"
-                    android:padding="4dp"
-                    android:textSize="16dp" />
-            </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:orientation="horizontal"
-                android:weightSum="2">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bkline"
-                    android:fontFamily="@font/bold"
+                    android:fontFamily="@font/montserrat_medium"
                     android:padding="4dp"
-                    android:text="Vehicle Class : "
+                    android:text="Ngày "
+                    android:layout_marginLeft="10dp"
                     android:textColor="@color/colorAccent"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                    android:textSize="16dp" />
 
+                <ImageView
+                    android:background="@drawable/line_vector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
                 <TextView
                     android:id="@+id/detail"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bkline"
-                    android:fontFamily="@font/regular"
+
+
+                    android:fontFamily="@font/montserrat_medium"
                     android:padding="4dp"
+                    android:text="Class:"
+                    android:textColor="@color/colorAccent"
                     android:textSize="16dp" />
             </LinearLayout>
 
             <LinearLayout
+                android:padding="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
@@ -184,13 +116,13 @@
                 android:weightSum="2">
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bkline"
-                    android:fontFamily="@font/bold"
+                    android:layout_marginLeft="10dp"
+
+                    android:fontFamily="@font/montserrat_light"
                     android:padding="4dp"
-                    android:text="Total Fare : "
+                    android:text="Tổng tiền:  "
                     android:textColor="@color/colorAccent"
                     android:textSize="16dp"
                     android:textStyle="bold" />
@@ -200,193 +132,16 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/bkline"
-                    android:fontFamily="@font/regular"
+
+                    android:fontFamily="@font/montserrat_bold"
                     android:padding="4dp"
-                    android:textSize="16dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:orientation="horizontal"
-                android:visibility="gone"
-                android:weightSum="2">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bkline"
-                    android:fontFamily="@font/bold"
-                    android:padding="4dp"
-                    android:text="Passenger Gender : "
+                    android:text="Tổng Tiền"
                     android:textColor="@color/colorAccent"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/bfate"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bkline"
-                    android:fontFamily="@font/regular"
-                    android:padding="4dp"
                     android:textSize="16dp" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:orientation="horizontal"
-                android:visibility="gone"
-                android:weightSum="2">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bkline"
-                    android:fontFamily="@font/bold"
-                    android:padding="4dp"
-                    android:text="Passenger Type : "
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/duration"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bkline"
-                    android:fontFamily="@font/regular"
-                    android:padding="4dp"
-                    android:textSize="16dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="5dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:orientation="horizontal"
-                android:visibility="gone"
-                android:weightSum="2">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:layout_weight=".05"
-                    android:fontFamily="@font/bold"
-                    android:text="Payment Card Num : "
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/cardnumbers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.8"
-                    android:fontFamily="@font/regular"
-                    android:textSize="16dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="5dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:orientation="horizontal"
-                android:visibility="gone"
-                android:weightSum="2">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:layout_weight=".05"
-                    android:fontFamily="@font/bold"
-                    android:text="Payment Card year : "
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/cardyear"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.8"
-                    android:fontFamily="@font/regular"
-                    android:textSize="16dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="5dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:orientation="horizontal"
-                android:visibility="gone"
-                android:weightSum="2">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:layout_weight=".05"
-                    android:fontFamily="@font/bold"
-                    android:text="Payment card Month : "
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/cardm"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.8"
-                    android:fontFamily="@font/regular"
-                    android:textSize="16dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="5dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:orientation="horizontal"
-                android:visibility="gone"
-                android:weightSum="2">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:layout_weight=".05"
-                    android:fontFamily="@font/bold"
-                    android:text="Payment card CVV : "
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/cardcvv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.8"
-                    android:fontFamily="@font/regular"
-                    android:textSize="16dp" />
-            </LinearLayout>
 
 
         </LinearLayout>
@@ -398,7 +153,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:fontFamily="@font/bold"
-        android:text="Passengers:"
+        android:text="Thông tin hành khách:"
         android:textColor="#000"
         android:textSize="18sp" />
     <ListView
