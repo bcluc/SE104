@@ -103,13 +103,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(MainActivity.this, Profile.class));
             }
         });
-
+        findViewById(R.id.tv_showNotif).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(findViewById(R.id.slider).getVisibility() == View.VISIBLE )
+                {
+                    findViewById(R.id.slider).setVisibility(View.GONE);
+                }
+                else if(findViewById(R.id.slider).getVisibility() == View.GONE )
+                {
+                    findViewById(R.id.slider).setVisibility(View.VISIBLE);
+                }
+            }
+        });
         navigationView.setNavigationItemSelectedListener(this);
         View headerLayout = navigationView.getHeaderView(0);
         userImage = headerLayout.findViewById(R.id.ivNavUser);
         Glide.with(this).load(
                         ECONSTANT.URL_IMG_USER + ECONSTANT.logedUser.getUser_image())
                 .into(userImage);
+        ((TextView) findViewById(R.id.tv_userName)).setText(ECONSTANT.logedUser.getUser_name());
         ((TextView) headerLayout.findViewById(R.id.tvNavName)).setText(ECONSTANT.logedUser.getUser_name());
         ((TextView) headerLayout.findViewById(R.id.tvNavEmail)).setText(ECONSTANT.logedUser.getUser_email());
         navigationView.inflateMenu(R.menu.menuf);
