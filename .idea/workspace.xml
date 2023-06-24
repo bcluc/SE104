@@ -12,16 +12,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf1012da-a279-4fbc-87d2-7015164e26bc" name="Default Changelist" comment="">
+    <list default="true" id="cf1012da-a279-4fbc-87d2-7015164e26bc" name="Default Changelist" comment="update_history_activity">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/plane_land_vector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/plane_take_off_vector.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/BookTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/BookTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/BookingHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/BookingHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/MyBookingDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/MyBookingDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/adapters/BookingAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/adapters/BookingAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/adapters/PassengerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/adapters/PassengerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_booking_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_booking_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_booking_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_booking_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/VehicleDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/VehicleDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/line_vector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/line_vector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_about_us.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_about_us.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_vehicle_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_vehicle_detail.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,17 +71,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "last_directory_selection": "D:/Github/SE104/app/src/main/res/drawable",
-    "last_opened_file_path": "D:/Github/SE104/app/src/main/res/drawable",
-    "show.do.not.copy.http.proxy.settings.to.gradle": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;D:/Github/SE104/app/src/main/res/drawable&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Github/SE104/app/src/main/res/drawable&quot;,
+    &quot;show.do.not.copy.http.proxy.settings.to.gradle&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="android.template.-1559378296">
       <recent name="com.maadi.movieticketbooking.activities" />
@@ -230,7 +228,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687613996711</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update_history_activity">
+      <created>1687619796195</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687619796195</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update_history_activity">
+      <created>1687620506804</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687620506804</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -259,6 +271,7 @@
     <MESSAGE value="update_font" />
     <MESSAGE value="update_font_2" />
     <MESSAGE value="update_bg_book_search" />
-    <option name="LAST_COMMIT_MESSAGE" value="update_bg_book_search" />
+    <MESSAGE value="update_history_activity" />
+    <option name="LAST_COMMIT_MESSAGE" value="update_history_activity" />
   </component>
 </project>
