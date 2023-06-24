@@ -17,26 +17,28 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="4dp"
-            android:paddingTop="5dp">
+            android:paddingTop="5dp"
+            android:weightSum="6">
 
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_weight="5">
 
                 <TextView
-                    android:visibility="gone"
                     android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="6dp"
                     android:layout_marginTop="5dp"
-                    android:fontFamily="@font/bold"
+                    android:fontFamily="@font/montserrat_bold"
                     android:padding="2dp"
-                    android:text="Tên khách hàng"
+                    android:text="Tên chuyến bay"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:visibility="gone" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -50,7 +52,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="@font/semibold"
+                        android:fontFamily="@font/montserrat_semibold"
                         android:text="Điểm xuất phát"
                         android:textColor="@color/black" />
 
@@ -58,7 +60,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:fontFamily="@font/semibold"
+                        android:fontFamily="@font/montserrat_semibold"
                         android:gravity="center"
                         android:text="Tới"
                         android:textColor="@color/black" />
@@ -68,9 +70,9 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="@font/semibold"
+                        android:fontFamily="@font/montserrat_semibold"
                         android:gravity="right"
-                        android:text="Điểm đêến"
+                        android:text="Điểm đến"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
@@ -86,7 +88,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="@font/semibold"
+                        android:fontFamily="@font/montserrat_semibold"
                         android:text="Tên chuyến bay"
                         android:textColor="@color/black" />
 
@@ -95,24 +97,26 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:fontFamily="@font/semibold"
+                        android:fontFamily="@font/montserrat_semibold"
                         android:gravity="right"
                         android:text="Loại vé"
                         android:textColor="@color/black" />
                 </LinearLayout>
-
-                <TextView
-                    android:padding="6dp"
-                    android:id="@+id/tvFare"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/bold"
-                    android:gravity="right"
-                    android:textSize="16sp"
-                    android:text="Giá: 1 600 000"
-                    android:background="@drawable/v_background"
-                    android:textColor="@color/colorPrimary" />
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvFare"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/v_background"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="Giá: 1 600 000"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

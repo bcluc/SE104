@@ -12,17 +12,23 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf1012da-a279-4fbc-87d2-7015164e26bc" name="Default Changelist" comment="">
+    <list default="true" id="cf1012da-a279-4fbc-87d2-7015164e26bc" name="Default Changelist" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_vehical.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_vehical.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/BookTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/BookTicket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/v_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/v_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_row_booking.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_row_booking.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_row_city.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_row_city.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_row_passenger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_row_passenger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_row_vehicle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_row_vehicle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[e5cfdca8]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R5CT21AR8PN]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -60,9 +66,7 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="1gzb1kUOMt6DKI5FtnudZGFbFFz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -75,8 +79,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;D:/1.SCHOOL/HK4/SE104/app/src/main/res/drawable&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/1.SCHOOL/HK4/SE104/app/src/main/res/raw&quot;,
+    &quot;last_directory_selection&quot;: &quot;D:/UIT/FLY/app/src/main/res/drawable&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ADMIN/Desktop/New folder (2)/Flight Ticket Booking System Mini Project/FlightTicketBooking&quot;,
     &quot;show.do.not.copy.http.proxy.settings.to.gradle&quot;: &quot;true&quot;
   }
 }</component>
@@ -85,11 +89,11 @@
       <recent name="com.maadi.movieticketbooking.activities" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\1.SCHOOL\HK4\SE104\app\src\main\res\raw" />
-      <recent name="D:\1.SCHOOL\HK4\SE104\app\src\main\res\drawable" />
       <recent name="D:\UIT\FLY\app\src\main\res\drawable" />
       <recent name="D:\UIT\FLY\app\src\main\res\raw" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/raw" />
+      <recent name="E:\Android\Projects\Booking\BusTicketBooking\app\src\main\res\layout" />
     </key>
     <key name="android.template.1298036471">
       <recent name="com.maadi.movieticketbooking.activities" />
@@ -205,42 +209,7 @@
       <option name="project" value="LOCAL" />
       <updated>1687414356751</updated>
     </task>
-    <task id="LOCAL-00002" summary="update">
-      <created>1687539939447</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1687539939447</updated>
-    </task>
-    <task id="LOCAL-00003" summary="update">
-      <created>1687559141630</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1687559141630</updated>
-    </task>
-    <task id="LOCAL-00004" summary="update">
-      <created>1687559804355</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1687559804355</updated>
-    </task>
-    <task id="LOCAL-00005" summary="update">
-      <created>1687575598186</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1687575598186</updated>
-    </task>
-    <task id="LOCAL-00006" summary="update">
-      <created>1687580349922</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1687580349922</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

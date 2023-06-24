@@ -14,22 +14,23 @@
         android:id="@+id/etFl"
         android:background="@drawable/blue_fill__rounded_color"
         android:textColor="@color/white"
+        android:visibility="invisible"
         />
+
     <TextView
         android:id="@+id/etCName"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Tên thành phố"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center_vertical"
+        android:paddingLeft="18dp"
+        android:shadowColor="#80000000"
         android:shadowDx="10"
         android:shadowDy="10"
         android:shadowRadius="10"
-        android:shadowColor="#80000000"
+        android:text="Tên thành phố"
         android:textAllCaps="true"
-        android:gravity="center_vertical"
-        android:paddingLeft="18dp"
-        android:textSize="18sp"
-        android:fontFamily="@font/bold"
         android:textColor="@color/black"
-        />
+        android:textSize="18sp" />
 
 </LinearLayout>

@@ -66,9 +66,9 @@ public class BookTicket extends AppCompatActivity {
         Toast.makeText(this, "" + bookingID,
                 Toast.LENGTH_SHORT).show();
         String[] typeArray = new String[]{
-                "Child",
-                "Adult",
-                "Infant"};
+                "Trẻ em (2-12 tuổi)",
+                "Trẻ em (Dưới 2 tuổi) ",
+                "Người lớm (Trên 12 tuổi)"};
         ArrayAdapter<String> adapterT = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_dropdown_item, typeArray);
         adapterT.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -100,21 +100,21 @@ public class BookTicket extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(etBName.getText().toString().isEmpty()){
-                    etBName.setError("Must Fill Field");
+                    etBName.setError("Bạn chưa điền đủ thông tin");
                     etBName.requestFocus();
                     return;
                 }
                 if(etBAge.getText().toString().isEmpty()){
-                    etBAge.setError("Must Fill Field");
+                    etBAge.setError("Bạn chưa điền đủ thông tin");
                     etBAge.requestFocus();
                     return;
                 }
                 PassengerType = spType.getSelectedItem().toString();
                 if(((RadioButton)findViewById(R.id.radioMaleB)).isChecked()){
-                    gender = "Male";
+                    gender = "Nam";
                 }
                 else{
-                    gender = "FeMale";
+                    gender = "Nữ";
                 }
                 EHelpingFunctions.showLoading(BookTicket.this);
                 addPassenger();
@@ -146,7 +146,7 @@ public class BookTicket extends AppCompatActivity {
                 travelDate = y + ":" + m + ":" + d;
                 if(cardNum.isEmpty() || cardYear.isEmpty() || cardMonth.isEmpty() || cardCvv.isEmpty())
                 {
-                    EHelpingFunctions.showError(BookTicket.this, "Error", "Must Fill Card Fields");
+                    EHelpingFunctions.showError(BookTicket.this, "Error", "Bạn chưa điền đủ thông tin thẻ");
                     return;
                 }
                 EHelpingFunctions.showLoading(BookTicket.this);
@@ -193,8 +193,8 @@ public class BookTicket extends AppCompatActivity {
                                 if (response.getBoolean("data")) {
 
                                     new SweetAlertDialog(BookTicket.this, SweetAlertDialog.SUCCESS_TYPE)
-                                            .setTitleText("Success!")
-                                            .setContentText("Ticket Booked Successfully.")
+                                            .setTitleText("Thành công")
+                                            .setContentText("Vé của bạn đã được đặt!")
 
                                             .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                                                 @Override
@@ -209,7 +209,7 @@ public class BookTicket extends AppCompatActivity {
                                 } else {
                                     new SweetAlertDialog(BookTicket.this, SweetAlertDialog.ERROR_TYPE)
                                             .setTitleText("Oops...")
-                                            .setContentText("Could not book ticket!")
+                                            .setContentText("Quá trình đặt vé thất bại!")
                                             .show();
                                 }
                             } catch (JSONException e) {
@@ -280,8 +280,8 @@ public class BookTicket extends AppCompatActivity {
                                     }
 
                                     new SweetAlertDialog(BookTicket.this, SweetAlertDialog.SUCCESS_TYPE)
-                                            .setTitleText("Success!")
-                                            .setContentText("Passenger Added Successfully.")
+                                            .setTitleText("Thành công!")
+                                            .setContentText("Hành khách đã được thêm vào danh sách")
                                             .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                                                 @Override
                                                 public void onClick(SweetAlertDialog sweetAlertDialog) {
@@ -293,7 +293,7 @@ public class BookTicket extends AppCompatActivity {
                                 } else {
                                     new SweetAlertDialog(BookTicket.this, SweetAlertDialog.ERROR_TYPE)
                                             .setTitleText("Oops...")
-                                            .setContentText("Could not Add Passenger ticket!")
+                                            .setContentText("Quá trình thêm hành khách đã thất bại")
                                             .show();
                                 }
                             } catch (JSONException e) {
