@@ -49,7 +49,7 @@ public class SearchVehical extends AppCompatActivity {
         setContentView(R.layout.activity_search_vehical);
 
         lvSearch = (ListView) findViewById(R.id.lvSearch);
-        setTitle("Search Vehicle");
+        setTitle("Tìm chuyến bay");
         lvSearch.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

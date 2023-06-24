@@ -81,7 +81,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:paddingHorizontal="6dp"
-                    android:weightSum="2">
+                    android:weightSum="3">
 
                     <TextView
                         android:id="@+id/tvDep"
@@ -90,6 +90,15 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_semibold"
                         android:text="Thời gian xuất phát"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_light"
+                        android:gravity="center"
+                        android:text="Chi tiết"
                         android:textColor="@color/black" />
 
                     <TextView
@@ -103,6 +112,10 @@
                         android:textColor="@color/black" />
                 </LinearLayout>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
             <TextView
                 android:padding="6dp"
                 android:id="@+id/tvFare"
@@ -115,7 +128,7 @@
                 android:text="Giá: 1 600 000"
                 android:background="@drawable/v_background"
                 android:textColor="@color/colorPrimary" />
-
+             </LinearLayout>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

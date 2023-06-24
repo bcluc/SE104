@@ -36,9 +36,9 @@ public class VehicleAdapter extends ArrayAdapter<Vehical>  {
         title.setText(user.getVehicle_name());
         ((TextView)userView.findViewById(R.id.tvFrom)).setText(user.getFromcity());
         ((TextView)userView.findViewById(R.id.tvTo)).setText(user.getTocity());
-        ((TextView)userView.findViewById(R.id.tvDep)).setText("Departure : " +user.getDeptime());
-        ((TextView)userView.findViewById(R.id.tvArival)).setText("Arrival : "+user.getArivaltime());
-        ((TextView)userView.findViewById(R.id.tvFare)).setText("Fare : "+user.getEfare());
+        ((TextView)userView.findViewById(R.id.tvDep)).setText(user.getDeptime());
+        ((TextView)userView.findViewById(R.id.tvArival)).setText(user.getArivaltime());
+        ((TextView)userView.findViewById(R.id.tvFare)).setText("Giá: "+user.getEfare());
         return userView;
     }
 

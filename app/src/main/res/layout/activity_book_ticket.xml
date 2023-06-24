@@ -66,7 +66,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:fontFamily="@font/montserrat_medium"
-            android:text="Passenger Type:"
+            android:text="Hành khách:"
             android:textColor="#000"
             android:textSize="16sp" />
 
@@ -92,8 +92,8 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:fontFamily="@font/medium"
-            android:text="Gender:"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Giới tính: "
             android:textColor="#000"
             android:textSize="16sp" />
 
@@ -110,17 +110,19 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
                 android:buttonTint="@color/colorPrimary"
                 android:checked="true"
-                android:text="Male" />
+                android:text="Nam" />
 
             <RadioButton
                 android:id="@+id/radioFemaleB"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
                 android:buttonTint="@color/colorPrimary"
-                android:text="Female" />
+                android:text="Nữ" />
 
         </RadioGroup>
 
@@ -139,8 +141,8 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
-            android:fontFamily="@font/medium"
-            android:text="Passenger Age:"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Tuổi: "
             android:textColor="#000"
             android:textSize="14sp" />
 
@@ -152,7 +154,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginRight="20dp"
             android:background="@android:color/transparent"
-            android:fontFamily="@font/bold"
+            android:fontFamily="@font/montserrat_bold"
             android:gravity="bottom"
             android:inputType="number"
             android:textSize="20sp" />
@@ -170,10 +172,10 @@
             android:layout_height="50dp"
             android:layout_gravity="right"
             android:layout_margin="10dp"
-            android:background="@drawable/blue_fill__rounded_color"
-            android:fontFamily="@font/bold"
+            android:background="@drawable/shapelogin_red"
+            android:fontFamily="@font/montserrat_bold"
             android:paddingHorizontal="30dp"
-            android:text="Add Passenger"
+            android:text="Thêm hành khách"
             android:textAllCaps="false"
             android:textColor="@color/white" />
 
@@ -185,7 +187,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:fontFamily="@font/medium"
-            android:text="Passengers:"
+            android:text="Hành khách: "
             android:textColor="#000"
             android:textSize="16sp" />
 
@@ -210,8 +212,8 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:fontFamily="@font/medium"
-            android:text="Seat Type:"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Loại vé:"
             android:textColor="#000"
             android:textSize="16sp" />
 
@@ -228,6 +230,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
                 android:buttonTint="@color/colorPrimary"
                 android:checked="true"
                 android:text="Economy" />
@@ -236,6 +239,7 @@
                 android:id="@+id/radioBusi"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
                 android:layout_weight="1"
                 android:buttonTint="@color/colorPrimary"
                 android:text="Business" />
@@ -256,8 +260,8 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:fontFamily="@font/medium"
-            android:text="Booking Date:"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Ngày:"
             android:textColor="#000"
             android:textSize="16sp" />
 
@@ -282,8 +286,8 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:fontFamily="@font/medium"
-            android:text="Total Fare:"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Tổng:"
             android:textColor="#000"
             android:textSize="16sp" />
 
@@ -293,7 +297,7 @@
             android:layout_height="30dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:fontFamily="@font/bold"
+            android:fontFamily="@font/montserrat_bold"
             android:gravity="bottom"
             android:text="1200"
             android:textSize="20sp" />
@@ -312,8 +316,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="10dp"
-            android:fontFamily="@font/bold"
-            android:text="PAYMENT METHOD:"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="PHƯƠNG THỨC THANH TOÁN:"
             android:textColor="#F44336" />
 
         <LinearLayout
@@ -328,7 +332,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cv_cardTitle="Pay Now"
-                app:cv_submitBtnText="Done" />
+                app:cv_submitBtnText="HOÀN THÀNH" />
         </LinearLayout>
 
         <Button
@@ -340,8 +344,8 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/btn_circle"
-            android:fontFamily="@font/semi_bold"
-            android:text="Book Ticket"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="ĐẶT VÉ"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:visibility="gone" />

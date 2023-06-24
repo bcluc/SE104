@@ -12,15 +12,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf1012da-a279-4fbc-87d2-7015164e26bc" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cf1012da-a279-4fbc-87d2-7015164e26bc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/BookTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/BookTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/utilities/ECONSTANT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/v_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/v_background.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_row_booking.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_row_booking.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_row_city.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_row_city.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_row_passenger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_row_passenger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/SearchVehical.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/activities/SearchVehical.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/adapters/VehicleAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/maadi/flightticketbooking/adapters/VehicleAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_book_ticket.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_book_ticket.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_vehical.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_search_vehical.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/single_row_vehicle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/single_row_vehicle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687414356751</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update_font">
+      <created>1687588097988</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1687588097989</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -235,6 +239,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update_font" />
+    <option name="LAST_COMMIT_MESSAGE" value="update_font" />
   </component>
 </project>

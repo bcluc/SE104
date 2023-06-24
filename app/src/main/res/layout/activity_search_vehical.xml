@@ -22,8 +22,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:fontFamily="@font/bold"
-                android:text="Selected Cities"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Chọn điểm xuất phát, điểm đến"
                 android:textColor="@color/colorAccent"
                 android:textSize="18sp" />
 
@@ -51,8 +51,8 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:fontFamily="@font/bold"
-                            android:text="From City: "
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="Từ: "
                             android:textColor="@color/colorAccent" />
 
                         <RelativeLayout
@@ -65,8 +65,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
-                                android:fontFamily="@font/semibold"
-                                android:text=" City"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text=" Thành phố"
                                 android:textColor="@color/black" />
 
                             <ImageView
@@ -89,8 +89,8 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:fontFamily="@font/bold"
-                            android:text="To City: "
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="Đến"
                             android:textColor="@color/colorAccent" />
 
                         <RelativeLayout
@@ -103,8 +103,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
-                                android:fontFamily="@font/semibold"
-                                android:text=" City"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text=" Thành phố"
                                 android:textColor="@color/black" />
                             <ImageView
                                 android:layout_alignParentRight="true"
@@ -137,7 +137,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="Available Vehicles"
+        android:text="Các chuyến bay khả dụng:"
+        android:fontFamily="@font/montserrat"
         android:textColor="@color/colorPrimary"
         android:textSize="20sp" />
 
@@ -152,10 +153,10 @@
         android:id="@+id/tvNote"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fontFamily="@font/bold"
+        android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
-        android:padding="8dp"
-        android:text="Select Route and hit on Search button to Search Vehicles."
+        android:padding="15dp"
+        android:text="Lựa chọn hành trình bạn muốn và nhấn nút tìm kiếm"
         android:textColor="@color/colorAccent"
         android:textSize="20sp" />
 
@@ -181,7 +182,7 @@
             android:layout_marginTop="20dp"
             android:fontFamily="@font/semibold"
             android:gravity="center"
-            android:text="No Data Found according to this filter"
+            android:text="Hiện không có chuyến bay khả dung"
             android:textColor="@color/black"
             android:textSize="16sp" />
     </LinearLayout>
