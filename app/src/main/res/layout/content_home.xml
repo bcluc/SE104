@@ -206,7 +206,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_marginVertical="8dp"
-                        android:layout_marginStart="8dp"
+                        android:layout_marginStart="4dp"
                         android:layout_marginEnd="4dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="16dp"
@@ -311,7 +311,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/montserrat"
                             android:gravity="center"
-                            android:text="About Us"
+                            android:text="Chi tiết"
                             android:textColor="#000"
                             android:textSize="20sp" />
 
