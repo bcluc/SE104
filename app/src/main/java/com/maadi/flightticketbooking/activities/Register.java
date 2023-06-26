@@ -151,12 +151,12 @@ public class Register extends AppCompatActivity {
                     address = etSAddress.getText().toString();
 
                     if (name.isEmpty()) {
-                        etName.setError("Must Fill Field");
+                        etName.setError("Điền đầy đủ thông tin");
                         etName.requestFocus();
                         return;
                     }
                     if (email.isEmpty()) {
-                        etEmail.setError("Must Fill Field");
+                        etEmail.setError("Điền đầy đủ thông tin");
                         etEmail.requestFocus();
                         return;
                     }
@@ -166,7 +166,7 @@ public class Register extends AppCompatActivity {
                         return;
                     }
                     if (password.isEmpty()) {
-                        etpassword.setError("Must Fill Field");
+                        etpassword.setError("Điền đầy đủ thông tin");
                         etpassword.requestFocus();
                         return;
                     }
@@ -176,19 +176,19 @@ public class Register extends AppCompatActivity {
                         return;
                     }
                     if (phone.isEmpty()) {
-                        etphone.setError("Must Fill Field");
+                        etphone.setError("Điền đầy đủ thông tin");
                         etphone.requestFocus();
                         return;
                     }
                     if (address.isEmpty()) {
-                        etSAddress.setError("Must Fill Field");
+                        etSAddress.setError("Điền đầy đủ thông tin");
                         etSAddress.requestFocus();
                         return;
                     }
 
-                    if(tvSCity.equals("Select City"))
+                    if(tvSCity.equals("Chọn thành phố"))
                     {
-                        EHelpingFunctions.showError(Register.this,"Error", "Must Select City");
+                        EHelpingFunctions.showError(Register.this,"Error", "Cần chọn thành phố");
                     }
                     EHelpingFunctions.showLoading(Register.this);
                     new MyTask().execute();
@@ -227,6 +227,9 @@ public class Register extends AppCompatActivity {
             if(result!= null )
             {
                 resultUri = Uri.parse(result);
+            }
+            else{
+                resultUri = Uri.parse("android.resource://com.maadi.flightticketbooking/drawable/ava_sample");
             }
             ivUser.setImageURI(resultUri);
             final InputStream imageStream;
