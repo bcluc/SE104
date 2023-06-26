@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 26, 2022 at 12:39 PM
+-- Generation Time: Jun 26, 2023 at 12:39 PM
 -- Server version: 5.6.50
 -- PHP Version: 7.4.28
 
@@ -36,34 +36,34 @@ CREATE TABLE `booking` (
   `booking_journey_date` varchar(255) NOT NULL,
   `booking_seat_type` varchar(255) NOT NULL,
   `booking_status` varchar(255) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `booking`
 --
 
 INSERT INTO `booking` (`booking_id`, `booking_user_id`, `booking_route_id`, `booking_date`, `booking_total_fare`, `booking_journey_date`, `booking_seat_type`, `booking_status`) VALUES
-(1, '7', '4', '05 March, 2017', '11250', '16 March,2017', 'Economy', '0'),
-(2, '7', '3', '05 March, 2017', '200', '23 March,2017', 'Economy', '0'),
-(3, '7', '4', '05 March, 2017', '8250', '24 March,2017', 'Economy', '0'),
-(4, '7', '3', '05 March, 2017', '1300', '23 March,2017', 'Economy', '0'),
-(5, '7', '3', '22 February, 2019', '200', '23 February,2019', 'Economy', '0'),
-(6, '7', '3', '22 February, 2019', '600', '15 February,2019', 'Economy', '0'),
-(7, '7', '3', '22 February, 2019', '900', '14 February,2019', 'Economy', '0'),
-(8, '7', '4', '22 February, 2019', '6375', '26 February,2019', 'Economy', '0'),
-(9, '8', '4', '2022-04-18 23:01:43', '1700', '2022321', 'Business', '0'),
-(10, '8', '4', '2022-04-18 23:03:35', '1700', '2022321', 'Business', '0'),
-(11, '8', '4', '2022-04-18 23:06:50', '1700', '2022321', 'Business', '0'),
-(12, '8', '4', '2022-04-18 23:07:37', '1700', '2022321', 'Business', '0'),
-(13, '8', '4', '2022-04-18 23:07:59', '1700', '2022321', 'Business', '0'),
-(14, '8', '4', '2022-04-18 23:08:19', '1700', '2022321', 'Business', '0'),
-(16, '8', '6', '2022-04-18 23:30:36', '300', '2022:3:21', 'Business', '0'),
-(17, '8', '4', '2022-04-19 00:27:41', '1700', '2021:3:30', 'Business', '0'),
-(18, '20', '4', '2022-04-22 18:55:48', '1700', '2029:3:22', 'Business', '0'),
-(19, '20', '4', '2022-04-29 15:08:10', '7500', '2027:3:29', 'Economy', '0'),
-(20, '7', '4', '2022-04-29 15:25:12', '', '', '', '0'),
-(21, '7', '4', '2022-06-26 16:55:04', '', '', '', '0'),
-(22, '7', '4', '2022-06-26 17:06:46', '1500', '2022:5:26', 'Economy', '0');
+(1, '7', '4', '2019-03-05', '11250', '2019-03-16', 'Economy', '0'),
+(2, '7', '3', '2019-03-05', '200', '2019-03-23', 'Economy', '0'),
+(3, '7', '4', '2019-03-05', '8250', '2019-03-24', 'Economy', '0'),
+(4, '7', '3', '2019-03-05', '1300', '2019-03-23', 'Economy', '0'),
+(5, '7', '3', '2019-02-22', '200', '2019-02-23', 'Economy', '0'),
+(6, '7', '3', '2021-02-22', '600', '2021-02-15', 'Economy', '0'),
+(7, '7', '3', '2021-02-22', '900', '2021-02-14', 'Economy', '0'),
+(8, '7', '4', '2021-02-22', '6375', '2021-02-26', 'Economy', '0'),
+(9, '8', '4', '2023-04-18 23:01:43', '1700', '2023-3-21', 'Business', '0'),
+(10, '8', '4', '2023-04-18 23:03:35', '1700', '2023-3-21', 'Business', '0'),
+(11, '8', '4', '2023-04-18 23:06:50', '1700', '2023-3-21', 'Business', '0'),
+(12, '8', '4', '2023-04-18 23:07:37', '1700', '2023-3-21', 'Business', '0'),
+(13, '8', '4', '2023-04-18 23:07:59', '1700', '2023-3-21', 'Business', '0'),
+(14, '8', '4', '2023-04-18 23:08:19', '1700', '2023-3-21', 'Business', '0'),
+(16, '8', '6', '2023-04-18 23:30:36', '300', '2023-3-21', 'Business', '0'),
+(17, '8', '4', '2023-04-19 00:27:41', '1700', '2021-3-30', 'Business', '0'),
+(18, '20', '4', '2023-04-22 18:55:48', '1700', '2029-3-22', 'Business', '0'),
+(19, '20', '4', '2023-04-29 15:08:10', '7500', '2027-3-29', 'Economy', '0'),
+(20, '7', '4', '2023-04-29 15:25:12', '', '', '', '0'),
+(21, '7', '4', '2023-06-26 16:55:04', '', '', '', '0'),
+(22, '7', '4', '2023-06-26 17:06:46', '1500', '2023-5-26', 'Economy', '0');
 
 -- --------------------------------------------------------
 
@@ -74,7 +74,7 @@ INSERT INTO `booking` (`booking_id`, `booking_user_id`, `booking_route_id`, `boo
 CREATE TABLE `city` (
   `city_id` int(10) UNSIGNED NOT NULL,
   `city_name` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `city`
@@ -97,7 +97,7 @@ CREATE TABLE `city` (
 (14, N'Tây Ninh'),
 (15, N'TP. Hồ Chí Minh'),
 (16, N'Cần Thơ'),
-(17, N'Cà Mau'),
+(17, N'Cà Mau');
 
 -- --------------------------------------------------------
 
@@ -108,7 +108,7 @@ CREATE TABLE `city` (
 CREATE TABLE `coach_type` (
   `ct_id` int(11) NOT NULL,
   `ct_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `coach_type`
@@ -129,18 +129,18 @@ CREATE TABLE `company` (
   `company_name` varchar(255) NOT NULL,
   `company_image` varchar(255) NOT NULL,
   `company_description` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `company`
 --
 
 INSERT INTO `company` (`company_id`, `company_name`, `company_image`, `company_description`) VALUES
-(1, 'Air India', 'air-india-logo-156x156.gif', 'Air India is the flag carrier airline of India headquartered at New Delhi.[8] It is owned by Air India Limited, a government-owned enterprise, and operates a fleet of Airbus and Boeing aircraft serving 94 domestic and international destinations.'),
-(2, 'Air Oman', 'untitled-1_287.png', 'Air Oman is the flag carrier airline of India headquartered at New Delhi.[8] It is owned by Air India Limited, a government-owned enterprise, and operates a fleet of Airbus and Boeing aircraft serving 94 domestic and international destinations.'),
-(3, 'Air France', 'logo-af-app.png', 'Air France is the flag carrier airline of India headquartered at New Delhi.[8] It is owned by Air India Limited, a government-owned enterprise, and operates a fleet of Airbus and Boeing aircraft serving 94 domestic and international destinations.'),
-(4, 'Air Canada', 'Screen-shot-2013-03-17-at-11.27.43-PM.png', 'Air Canada is the flag carrier airline of India headquartered at New Delhi.[8] It is owned by Air India Limited, a government-owned enterprise, and operates a fleet of Airbus and Boeing aircraft serving 94 domestic and international destinations.'),
-(5, 'American vehicle', 'american.png', 'American vehicle is the flag carrier airline of India headquartered at New Delhi.[8] It is owned by Air India Limited, a government-owned enterprise, and operates a fleet of Airbus and Boeing aircraft serving 94 domestic and international destinations.'),
+(1, 'VietNam Airline', 'air-india-logo-156x156.gif', N'Hãng hàng không Vietnam Airlines được xem là hãng hàng không truyền thống chất lượng, dịch vụ tiện ích tuy nhiên mức giá khá cao.'),
+(2, 'Vietjet Air ', 'untitled-1_287.png', N' Vietjet Air chính là hãng hàng không tư nhân đầu tiên tại Việt Nam.Vietjet Air hiện có hơn cả trăm chuyến bay trong và ngoài nước mỗi ngày. Giúp khách hàng dễ dàng chọn lựa được chuyến bay và thời gian phù hợp.'),
+(3, 'Bamboo Airways', 'logo-af-app.png', N'Bamboo Airways thực hiện mô hình Hybrid được triển khai khá toàn diện từ các dịch vụ đặt vé, hành lý, ăn uống cho đến giải trí. Để bất cứ đối tượng khách hàng nào cũng tìm được sự thỏa mãn với những gói giá trị gia tăng phong phú và mức giá cạnh tranh.'),
+(4, 'Vietravel Airline', 'Screen-shot-2013-03-17-at-11.27.43-PM.png', N'Vietravel Airlines thực hiện Hybrid mở bán vé đồng hạng với 17 mức giá từ thấp đến cao. Áp dụng 3 chính sách đặc biệt bao gồm hỗ trợ sai sót, hỗ trợ trùng booking và chính sách nhân ái.'),
+(5, 'Pacific Airline', 'american.png', N'Pacific Airlines là hãng hàng không giá rẻ đầu tiên có trụ sở tại Sân bay Quốc tế Tân Sơn Nhất, Thành phố Hồ Chí Minh, Việt Nam. Với tiêu chí hoạt động là cung cấp vé máy bay giá rẻ mỗi ngày.'),
 (6, 'Etihad vehicle', 'etihad.png', 'Etihad vehicle is the flag carrier airline of India headquartered at New Delhi.[8] It is owned by Air India Limited, a government-owned enterprise, and operates a fleet of Airbus and Boeing aircraft serving 94 domestic and international destinations.');
 
 -- --------------------------------------------------------
@@ -154,18 +154,18 @@ CREATE TABLE `contactus` (
   `userid` int(11) NOT NULL,
   `text` varchar(2000) NOT NULL,
   `adddate` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `contactus`
 --
 
 INSERT INTO `contactus` (`id`, `userid`, `text`, `adddate`) VALUES
-(1, 1, 'Hi, Please Reply to my question.', '2022-04-06 00:00:00'),
-(2, 2, 'Hi', '2022-04-09 22:23:53'),
-(3, 2, 'Hi app is good thanks for love', '2022-04-09 22:25:45'),
-(4, 8, 'Great work', '2022-04-13 23:15:01'),
-(5, 8, 'Test', '2022-04-19 00:27:58');
+(1, 1, 'Hi, Please Reply to my question.', '2023-04-06 00:00:00'),
+(2, 2, 'Hi', '2023-04-09 22:23:53'),
+(3, 2, 'Hi app is good thanks for love', '2023-04-09 22:25:45'),
+(4, 8, 'Great work', '2023-04-13 23:15:01'),
+(5, 8, 'Test', '2023-04-19 00:27:58');
 
 -- --------------------------------------------------------
 
@@ -176,15 +176,15 @@ INSERT INTO `contactus` (`id`, `userid`, `text`, `adddate`) VALUES
 CREATE TABLE `country` (
   `country_id` int(11) NOT NULL,
   `country_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `country`
 --
 
 INSERT INTO `country` (`country_id`, `country_name`) VALUES
-(1, 'India'),
-(2, 'USA');
+(1, N'Việt Nam'),
+(2, N'USA');
 
 -- --------------------------------------------------------
 
@@ -198,7 +198,7 @@ CREATE TABLE `login` (
   `login_password` varchar(255) NOT NULL,
   `login_level` varchar(255) NOT NULL,
   `login_date` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `login`
@@ -216,7 +216,7 @@ INSERT INTO `login` (`login_id`, `login_user`, `login_password`, `login_level`, 
 CREATE TABLE `month` (
   `month_id` int(11) NOT NULL,
   `month_name` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `month`
@@ -249,26 +249,26 @@ CREATE TABLE `passengar` (
   `passengar_name` varchar(255) NOT NULL,
   `passengar_gender` varchar(255) NOT NULL,
   `passengar_age` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `passengar`
 --
 
 INSERT INTO `passengar` (`passengar_id`, `passengar_booking_id`, `passengar_type`, `passengar_name`, `passengar_gender`, `passengar_age`) VALUES
-(41, '12', 'Adult', 'Shankar Singh', 'Female', '35'),
-(42, '13', 'Adult', 'Shankar Singh', 'Female', '35'),
-(43, '14', 'Adult', 'Shankar Singh', 'Female', '35'),
-(47, '16', 'Child', 'Kharak singh', 'Female', '12'),
-(48, '17', 'Adult', 'Test name', 'Female', '25'),
-(49, '18', 'Adult', 'Kaushal', 'Female', '23'),
-(50, '19', 'Adult', 'Kaushal', 'Male', '15'),
-(51, '19', 'Child', 'Amit', 'Male', '12'),
-(52, '19', 'Child', 'Sunil', 'Male', '12'),
-(53, '19', 'Child', 'Geets', 'FeMale', '25'),
-(54, '19', 'Child', 'Jay', 'Male', '25'),
-(55, '20', 'Adult', 'Gv', 'Male', '899'),
-(56, '22', 'Adult', 'Kaushal Kishore', 'Male', '35');
+(41, '12', N'Người Lớn', N'Nguyễn Văn A', N'Nam', '35'),
+(42, '13', N'Người lớn', N'Nguyễn Văn A', N'Nam', '35'),
+(43, '14', N'Người lớn', N'Nguyễn Văn A', N'Nam', '35'),
+(47, '16', N'Trẻ em', N'Nguyễn Văn An', N'Nam', '12'),
+(48, '17', N'Người lớn', N'Test name', N'Nữ', '25'),
+(49, '18', N'Người lớn', N'Nguyễn Thị B', N'Nữ', '23'),
+(50, '19', N'Người lớn', N'Phan Lê Hoàng Kim', N'Nữ', '15'),
+(51, '19', N'Trẻ em', N'Dương Tấn Hoàng', N'Nam', '12'),
+(52, '19', N'Trẻ em', N'Kamisato Ayato', N'Nam', '12'),
+(53, '19', N'Trẻ em', N'Đào Lan Anh', N'Nữ', '25'),
+(54, '19', N'Trẻ em', N'Trần Văn Bê', N'Nam', '25'),
+(55, '20', N'Người lớn', N'Ayaka', N'Nữ', '18'),
+(56, '22', N'Người lớn', N'Kaushal Kishore', N'Nam', '35');
 
 -- --------------------------------------------------------
 
@@ -283,7 +283,7 @@ CREATE TABLE `payment` (
   `month` varchar(250) NOT NULL,
   `year` varchar(250) NOT NULL,
   `cvv` varchar(250) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `payment`
@@ -292,8 +292,8 @@ CREATE TABLE `payment` (
 INSERT INTO `payment` (`id`, `bookid`, `cardnum`, `month`, `year`, `cvv`) VALUES
 (2, 16, '4236 5489 7378 7543', '02', '36', '362'),
 (3, 17, '3612 4846 7379 7875', '02', '36', '365'),
-(4, 18, '8888 8888 8888 8888', '2', '22', '122'),
-(5, 19, '5888 8888 8888 8888', '2', '58', '888'),
+(4, 18, '8888 8888 8888 8888', '02', '22', '122'),
+(5, 19, '5888 8888 8888 8888', '02', '58', '888'),
 (6, 22, '7865 7834 6587 3645', '07', '23', '343');
 
 -- --------------------------------------------------------
@@ -305,7 +305,7 @@ INSERT INTO `payment` (`id`, `bookid`, `cardnum`, `month`, `year`, `cvv`) VALUES
 CREATE TABLE `role` (
   `role_id` int(11) NOT NULL,
   `role_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `role`
@@ -313,7 +313,7 @@ CREATE TABLE `role` (
 
 INSERT INTO `role` (`role_id`, `role_name`) VALUES
 (1, 'Admin'),
-(2, 'Customer');
+(2, N'Khách hàng');
 
 -- --------------------------------------------------------
 
@@ -331,7 +331,7 @@ CREATE TABLE `route` (
   `route_economy_fare` varchar(255) NOT NULL,
   `route_business_fare` varchar(255) NOT NULL,
   `route_duration` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 --
 -- Dumping data for table `route`
@@ -355,7 +355,7 @@ INSERT INTO `route` (`route_id`, `route_vehicle_id`, `route_from_city`, `route_f
 CREATE TABLE `state` (
   `state_id` int(11) NOT NULL,
   `state_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `state`
@@ -408,18 +408,18 @@ CREATE TABLE `user` (
   `user_gender` varchar(255) DEFAULT NULL,
   `user_dob` varchar(255) DEFAULT NULL,
   `user_image` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`user_id`, `user_level_id`, `user_username`, `user_password`, `user_name`, `user_add1`, `user_add2`, `user_city`, `user_state`, `user_country`, `user_email`, `user_mobile`, `user_gender`, `user_dob`, `user_image`) VALUES
-(7, '2', 'customer', 'test', 'Amit Kumar', 'House no : 768', 'Sector 2B', '2', '1', '2', 'amit@gmail.com', '9324324546', '', '26 December,2015', 'p1.jpg'),
-(8, '2', 'suman', 'test', 'Suman Singh', 'House no : 768', 'Sector 2A', '1', '2', '1', 'suman@gmail.com', '987654321', '', '13 January,1961', 'p2.jpg'),
-(10, '2', 'manasa', 'test', 'Manasa', 'New Delhi', 'India', '2', '2', '1', 'manasa@gmail.com', '9876543212', '', '18 January,1968', 'p3.jpg'),
-(16, '1', 'admin', 'test', 'Kaushal Kishore', 'House No : 355, Sector 23', 'Sector 2A', '1', '1', '1', 'kaushal.rahuljaiswal@gmail.com', '9567654565', '', '10 March,2016', 'Image.jpg'),
-(19, '2', NULL, '000000', 'Test user', 'Hsbsuz #64 hamafaudns ', NULL, '6', NULL, NULL, 't@mail.com', '362598745', NULL, NULL, 't@mail.com.jpg');
+(7, '2', 'customer', 'test', N'Trần Văn Thuận', N'187 Vo Thanh Trang street,', N'Quận Tân Bình', '2', '1', '1', 'amit@gmail.com', '9324324546', '', '26 December,2015', 'p1.jpg'),
+(8, '2', 'suman', 'test', N'Nguyễn Văn A', N'9 Group 13, Cau Dien Townlet', N'Từ Điểm', '1', '2', '1', 'suman@gmail.com', '987654321', '', '13 January,1961', 'p2.jpg'),
+(10, '2', 'manasa', 'test', N'Dương Tấn Hoàng', N'15I F3 Thai Thinh', N'Việt Nam', '2', '2', '1', 'manasa@gmail.com', '9876543212', '', '18 January,1968', 'p3.jpg'),
+(16, '1', 'admin', 'test', N'Phan Lê Hoàng Kim', N'Floor 3, 12 Hoa Binh Street', N'An Cư', '1', '1', '1', 'kaushal.rahuljaiswal@gmail.com', '9567654565', '', '10-3-2016', 'Image.jpg'),
+(19, '2', NULL, '000000', N'Test user', N'testaddress ', NULL, '6', NULL, NULL, 't@mail.com', '362598745', NULL, NULL, 't@mail.com.jpg');
 
 -- --------------------------------------------------------
 
@@ -439,17 +439,17 @@ CREATE TABLE `vehicle` (
   `vehicle_arrival` varchar(255) NOT NULL,
   `vehicle_travel_time` varchar(255) NOT NULL,
   `vehicle_total_distance` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 --
 -- Dumping data for table `vehicle`
 --
 
 INSERT INTO `vehicle` (`vehicle_id`, `vehicle_company_id`, `vehicle_at_id`, `vehicle_name`, `vehicle_no`, `vehicle_from`, `vehicle_deaprture`, `vehicle_to`, `vehicle_arrival`, `vehicle_travel_time`, `vehicle_total_distance`) VALUES
-(2, '1', '2', 'Air India', 'AI-1563', '2', '12:20 AM', '16', '09:12 PM', '12 Hours', '1200 KM'),
-(3, '2', '2', 'Oman Airs', 'OA-9078', '2', '09:30 AM', '16', '10:45 PM', '07 Hours', '1200'),
-(4, '3', '2', 'Air France', 'FR-22104', '5', '07:40 AM', '1', '08:12 PM', '09 Hours', ''),
-(5, '4', '2', 'Air Canada', 'AC-12324', '2', '06:55 AM', '17', '03:00 AM', '26 Hours', '1462');
+(2, '1', '2', 'VietNam Airline', 'AI-1563', '2', '12:20 AM', '16', '09:12 PM', '12 Hours', '1200 KM'),
+(3, '2', '2', 'Vietjet Air', 'OA-9078', '2', '09:30 AM', '16', '10:45 PM', '07 Hours', '1200'),
+(4, '3', '2', 'Bamboo Airways', 'FR-22104', '5', '07:40 AM', '1', '08:12 PM', '09 Hours', ''),
+(5, '4', '2', 'Vietravel Airline', 'AC-12324', '2', '06:55 AM', '17', '03:00 AM', '26 Hours', '1462');
 
 -- --------------------------------------------------------
 
@@ -460,7 +460,7 @@ INSERT INTO `vehicle` (`vehicle_id`, `vehicle_company_id`, `vehicle_at_id`, `veh
 CREATE TABLE `vehicle_type` (
   `at_id` int(11) NOT NULL,
   `at_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 --
 -- Dumping data for table `vehicle_type`
