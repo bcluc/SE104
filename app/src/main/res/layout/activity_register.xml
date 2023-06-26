@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#182058"
     android:orientation="vertical">
 
     <ScrollView
@@ -18,19 +19,10 @@
             android:orientation="vertical">
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginStart="30dp"
-                android:text="Đăng ký"
-                android:fontFamily="@font/montserrat_extrabold"
-                android:textColor="@color/white"
-                android:textSize="40dp"/>
             <RelativeLayout
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
-                android:layout_height="136dp"
+                android:layout_height="135dp"
                 android:gravity="center"
                 android:layout_marginBottom="16dp">
 
@@ -38,7 +30,7 @@
                     android:id="@+id/ivUser"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
-                    android:src="@drawable/ava_sample"
+                    android:src="@drawable/noavatar"
                     app:civ_border_color="@color/white"
                     app:civ_border_overlay="true"
                     app:civ_border_width="2dp"
@@ -63,174 +55,214 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26.7dp">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="672.3dp"
                     android:layout_marginHorizontal="30.3dp"
                     android:layout_marginBottom="35dp"
+                    android:background="@drawable/white_rounded_corner"
                     android:orientation="vertical"
                     android:paddingLeft="16dp">
 
-
                     <TextView
+                        android:fontFamily="@font/montserrat_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Họ tên"
+                        android:layout_marginTop="21.5dp"
+                        android:gravity="center_horizontal"
+                        android:text="Đăng ký"
+                        android:textColor="#333232"
+                        android:textSize="23.3sp" />
+
+                    <TextView
                         android:fontFamily="@font/montserrat_medium"
-                        android:textColor="@color/white"
-                        android:textSize="18sp" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="27.3dp"
+                        android:text="Full Name"
+                        android:textColor="#9e9d9d"
+                        android:textSize="12.3sp" />
                     <EditText
                         android:id="@+id/etSName"
                         android:layout_width="match_parent"
-                        android:layout_height="53dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/btn_roung_20"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17.3dp"
+                        android:layout_marginTop="12dp"
                         android:fontFamily="@font/montserrat_medium"
-                        android:gravity="center|start"
-                        android:hint="Nguyễn Văn A"
+                        android:background="@android:color/transparent"
                         android:maxLines="1"
-                        android:paddingStart="10dp"
-                        android:textColor="@color/black"
-                        android:textColorHint="#99000000"
+                        android:textColorHint="#c2c2c2"
                         android:textCursorDrawable="@drawable/grey_cursor_color"
                         android:textSize="15sp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="6.7dp"
+                        android:layout_marginRight="17.3dp"
+                        android:background="#9e9e9e" />
 
                     <TextView
+                        android:fontFamily="@font/montserrat_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="27.3dp"
                         android:text="Email"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:textColor="@color/white"
-                        android:textSize="18sp" />
+                        android:textColor="#9e9d9d"
+                        android:textSize="12.3sp" />
                     <EditText
                         android:id="@+id/etSEmail"
+                        android:layout_marginRight="17.3dp"
                         android:layout_width="match_parent"
-                        android:layout_height="53dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/btn_roung_20"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
                         android:fontFamily="@font/montserrat_medium"
-                        android:gravity="center|start"
-                        android:hint="ex@gmail.com"
+                        android:background="@android:color/transparent"
                         android:maxLines="1"
-                        android:paddingStart="10dp"
-                        android:textColor="@color/black"
-                        android:textColorHint="#99000000"
+                        android:textColorHint="#c2c2c2"
                         android:textCursorDrawable="@drawable/grey_cursor_color"
                         android:textSize="15sp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="6.7dp"
+                        android:layout_marginRight="17.3dp"
+                        android:background="#9e9e9e" />
+
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="32dp"
-                        android:text="Mật khẩu"
+                        android:text="Password"
+                        android:textColor="#9e9d9d"
                         android:fontFamily="@font/montserrat_medium"
-                        android:textColor="@color/white"
-                        android:textSize="18sp" />
+                        android:textSize="12.3sp" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17.3dp"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
 
 
-                    <EditText
+                        <EditText
                             android:id="@+id/etSPassword"
                             android:layout_width="match_parent"
-                            android:layout_height="53dp"
-                            android:layout_marginTop="5dp"
-                            android:background="@drawable/btn_roung_20"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:inputType="textPassword"
                             android:fontFamily="@font/montserrat_medium"
-                            android:gravity="center|start"
-                            android:hint="password"
+                            android:maxLength="10"
                             android:maxLines="1"
-                            android:paddingStart="10dp"
-                            android:textColor="@color/black"
-                            android:textColorHint="#99000000"
-                            android:textCursorDrawable="@drawable/grey_cursor_color"
-                            android:textSize="15sp"
-                            android:inputType="textPassword" />
+                            android:textColor="#333232"
+                            android:textCursorDrawable="@drawable/grey_cursor_color" />
 
+
+
+
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="6.7dp"
+                        android:layout_marginRight="17.3dp"
+                        android:layout_marginBottom="27dp"
+                        android:background="#9e9e9e" />
 
                     <TextView
+                        android:fontFamily="@font/regular"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="27.3dp"
-                        android:text="Số điện thoại"
+                        android:text="Phone Number"
                         android:fontFamily="@font/montserrat_medium"
-                        android:textColor="@color/white"
-                        android:textSize="18sp" />
+                        android:textColor="#9e9d9d"
+                        android:textSize="12.3sp" />
                     <EditText
                         android:id="@+id/etSPhone"
                         android:layout_width="match_parent"
-                        android:layout_height="53dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/btn_roung_20"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:gravity="center|start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17.3dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@android:color/transparent"
                         android:maxLines="1"
-                        android:paddingStart="10dp"
-                        android:textColor="@color/black"
-                        android:textColorHint="#99000000"
+                        android:textColorHint="#c2c2c2"
+                        android:fontFamily="@font/montserrat_medium"
                         android:textCursorDrawable="@drawable/grey_cursor_color"
-                        android:textSize="15sp"/>
+                        android:textSize="15sp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="6.7dp"
+                        android:layout_marginRight="17.3dp"
+                        android:background="#9e9e9e" />
 
                     <TextView
+                        android:fontFamily="@font/montserrat_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="27.3dp"
-                        android:text="Địa chỉ"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:textColor="@color/white"
-                        android:textSize="18sp" />
+                        android:text="Address"
+                        android:textColor="#9e9d9d"
+                        android:textSize="12.3sp" />
                     <EditText
                         android:id="@+id/etSAddress"
                         android:layout_width="match_parent"
-                        android:layout_height="53dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/btn_roung_20"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:gravity="center|start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17.3dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@android:color/transparent"
                         android:maxLines="1"
-                        android:paddingStart="10dp"
-                        android:textColor="@color/black"
-                        android:textColorHint="#99000000"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColorHint="#c2c2c2"
                         android:textCursorDrawable="@drawable/grey_cursor_color"
                         android:textSize="15sp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="6.7dp"
+                        android:layout_marginRight="17.3dp"
+                        android:background="#9e9e9e" />
+
                     <TextView
+                        android:fontFamily="@font/montserrat_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="27.3dp"
-                        android:text="Thành phố"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:textColor="@color/white"
-                        android:textSize="18sp" />
+                        android:text="City"
+                        android:textColor="#9e9d9d"
+                        android:textSize="12.3sp" />
                     <TextView
                         android:id="@+id/tvSCity"
                         android:layout_width="match_parent"
-                        android:layout_height="53dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/btn_roung_20"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:gravity="center|start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17.3dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@android:color/transparent"
                         android:maxLines="1"
-                        android:paddingStart="10dp"
-                        android:textColor="@color/black"
-                        android:textColorHint="#99000000"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColorHint="#c2c2c2"
                         android:textCursorDrawable="@drawable/grey_cursor_color"
-                        android:textSize="15sp"/>
-
-                    <ImageView
-                        android:id="@+id/btnSignUp"
-                        android:layout_marginTop="60dp"
-                        android:layout_width="148dp"
-                        android:layout_height="48dp"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/montserrat_semibold"
-                        android:textColor="@color/white"
-                        android:textSize="15sp"
-                        android:background="@drawable/blue_fill__rounded_color"
-                        android:text="Đăng ký"
-                        android:backgroundTint="#3E6FEF" />
+                        android:textSize="15sp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="6.7dp"
+                        android:layout_marginRight="17.3dp"
+                        android:background="#9e9e9e" />
 
 
                 </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/btnSignUp"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginRight="40dp"
+                    android:src="@drawable/circle_arrow" />
 
 
             </FrameLayout>
@@ -238,4 +270,3 @@
     </ScrollView>
 
 </RelativeLayout>
-
