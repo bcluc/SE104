@@ -161,9 +161,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.nav_logout: {
                 new SweetAlertDialog(MainActivity.this, SweetAlertDialog.WARNING_TYPE)
-                        .setTitleText("Are you sure...!")
-                        .setContentText("You want to Log Out")
-                        .setConfirmButton("Confirm", new SweetAlertDialog.OnSweetClickListener() {
+                        .setTitleText("Are you sure...?")
+                        .setContentText("Đăng xuất?")
+                        .setConfirmButton("Xác nhận đăng xuất", new SweetAlertDialog.OnSweetClickListener() {
                             @Override
                             public void onClick(SweetAlertDialog sweetAlertDialog) {
                                 sweetAlertDialog.dismissWithAnimation();

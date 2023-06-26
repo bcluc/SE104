@@ -7,19 +7,19 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/home"
-            android:title="Trang chủ" />
+            android:title="Home" />
         <item
             android:id="@+id/nav_add"
             android:icon="@drawable/ic_baseline_search_24"
-            android:title="Tìm chuyến bay" />
+            android:title="Tìm kiếm chuyến bay" />
         <item
             android:id="@+id/nav_booking"
             android:icon="@drawable/ic_baseline_book_24"
-            android:title="Lịch sử đặt vé" />
+            android:title="Lịch sử đặt chuyến" />
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_baseline_person_24"
-            android:title="Tài khoản của tôi" />
+            android:title="Tài khoản" />
 
         <item
             android:id="@+id/nav_logout"

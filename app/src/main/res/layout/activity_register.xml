@@ -216,7 +216,7 @@
                         android:textCursorDrawable="@drawable/grey_cursor_color"
                         android:textSize="15sp"/>
 
-                    <androidx.appcompat.widget.AppCompatButton
+                    <ImageView
                         android:id="@+id/btnSignUp"
                         android:layout_marginTop="60dp"
                         android:layout_width="148dp"
