@@ -124,7 +124,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="32dp"
-                        android:text="Password"
+                        android:text="Mật khẩu"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
@@ -152,7 +152,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="27.3dp"
-                        android:text="Phone Number"
+                        android:text="Số điện thoại"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
@@ -175,7 +175,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="27.3dp"
-                        android:text="Address"
+                        android:text="Địa chỉ"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
@@ -197,7 +197,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="27.3dp"
-                        android:text="City"
+                        android:text="Thành phố"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
