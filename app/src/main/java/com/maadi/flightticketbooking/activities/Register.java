@@ -161,7 +161,7 @@ public class Register extends AppCompatActivity {
                         return;
                     }
                     if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                        etEmail.setError("Must enter valid Email");
+                        etEmail.setError("Email không hợp lệ");
                         etEmail.requestFocus();
                         return;
                     }
@@ -171,7 +171,7 @@ public class Register extends AppCompatActivity {
                         return;
                     }
                     if (password.length() < 6) {
-                        etpassword.setError("Minimum length of password should be 6");
+                        etpassword.setError("Mật khẩu ít nhất 6 kí tự");
                         etpassword.requestFocus();
                         return;
                     }

@@ -81,7 +81,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="27.3dp"
-                        android:text="Full Name"
+                        android:text="Họ và tên"
                         android:textColor="#9e9d9d"
                         android:textSize="12.3sp" />
                     <EditText
@@ -135,7 +135,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="32dp"
-                        android:text="Password"
+                        android:text="Mật khẩu"
                         android:textColor="#9e9d9d"
                         android:fontFamily="@font/montserrat_medium"
                         android:textSize="12.3sp" />
@@ -175,7 +175,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="27.3dp"
-                        android:text="Phone Number"
+                        android:text="Số điện thoại"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="#9e9d9d"
                         android:textSize="12.3sp" />
@@ -203,7 +203,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="27.3dp"
-                        android:text="Address"
+                        android:text="Địa chỉ"
                         android:textColor="#9e9d9d"
                         android:textSize="12.3sp" />
                     <EditText
@@ -230,7 +230,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="27.3dp"
-                        android:text="City"
+                        android:text="Thành phố"
                         android:textColor="#9e9d9d"
                         android:textSize="12.3sp" />
                     <TextView
