@@ -74,14 +74,48 @@ public class MyBookingDetail extends AppCompatActivity {
                             EHelpingFunctions.stopLoading();
                             final Gson gson = new Gson();
                             Log.e(TAG, "onResponse: " + response.toString());
+                            try {
+                                if (response.getBoolean("status") == true) {
+                                    ListPe.setVisibility(View.VISIBLE);
+                                    JSONArray s = response.getJSONArray("data");
+                                    for (int i = 0; i < s.length(); i++) {
+                                        PassengerModel c = new PassengerModel();
+                                        c.setAge((s.getJSONObject(i).getString("age")));
+                                        c.setGender(s.getJSONObject(i).getString("gender"));
+                                        c.setName(s.getJSONObject(i).getString("name"));
+                                        c.setType(s.getJSONObject(i).getString("type"));
+                                        listPessenger.add(c);
+                                    }
 
+                                    passengerAdapter = new
+                                            PassengerAdapter(
+                                            MyBookingDetail.this,
+                                            listPessenger);
+                                    ListPe.setAdapter(passengerAdapter);
+
+
+                                } else {
+
+
+                                }
+                            } catch (Exception e) {
+                                new SweetAlertDialog(MyBookingDetail.this, SweetAlertDialog.ERROR_TYPE)
+                                        .setTitleText("Oops...")
+                                        .setContentText("" + e.toString())
+                                        .show();
+                                Log.e(TAG, "onResponse: EXP: " + e.toString());
+                            }
                         }
                     },
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
                             Log.e(TAG, "onErrorResponse: " + error.toString());
-
+                            EHelpingFunctions.stopLoading();
+                            new SweetAlertDialog(MyBookingDetail.this, SweetAlertDialog.ERROR_TYPE)
+                                    .setTitleText("Oops...")
+                                    .setContentText("" + error.toString())
+                                    .show();
                         }
                     });
             MyNetwork.getInstance(MyBookingDetail.this).addToRequestQueue(insertRequest);

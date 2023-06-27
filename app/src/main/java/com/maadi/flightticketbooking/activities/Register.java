@@ -99,7 +99,9 @@ public class Register extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(Register.this);
                 ViewGroup viewGroup = findViewById(android.R.id.content);
                 View dialogView = LayoutInflater.from(Register.this).inflate(R.layout.city_dialog, viewGroup, false);
-
+                builder.setView(dialogView);
+                final AlertDialog alertDialog = builder.create();
+                ListView lvCity = dialogView.findViewById(R.id.ListCity);
                 lvCity.setAdapter(cityAdapter);
                 EditText etCity = dialogView.findViewById(R.id.etCity);
                 ImageView ivClose = dialogView.findViewById(R.id.ivClose);
@@ -125,7 +127,17 @@ public class Register extends AppCompatActivity {
                     public void afterTextChanged(Editable s) {
                     }
                 });
-
+                lvCity.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        cityAdapter.getItem(i).getCityname();
+                        cityID = cityAdapter.getItem(i).getCityid();
+                        //Toast.makeText(Register.this, ""+cityAdapter.getItem(i).getCityName(), Toast.LENGTH_SHORT).show();
+                        alertDialog.dismiss();
+                        ((TextView)findViewById(R.id.tvSCity)).setText( cityAdapter.getItem(i).getCityname());
+                    }
+                });
+                alertDialog.show();
             }
         });
         findViewById(R.id.btnSignUp).setOnClickListener(new View.OnClickListener() {

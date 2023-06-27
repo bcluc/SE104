@@ -1,8 +1,8 @@
 package com.maadi.flightticketbooking.models;
 
 public class Developer {
-    private String url_demo = "http://www.google.com";
-    private String url_pay = "http://www.google.com";
+    private String url_demo = "https://youtu.be/4LabJ-G1FuU";
+    private String url_pay = "https://youtu.be/yb4TCWw_WOU";
     private String phone_number = "tel:" + "01234567";
 
     public Developer() {
