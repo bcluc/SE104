@@ -259,8 +259,6 @@ public class BookTicket extends AppCompatActivity {
                             Log.e(TAG, "onResponse: " + response.toString());
                             try {
                                 if (response.getBoolean("data")) {
-
-
                                     PassengerModel passengerModel = new PassengerModel(etBName.getText().toString(),
                                             etBAge.getText().toString(),
                                             gender,

@@ -30,13 +30,7 @@ public class ECONSTANT {
     public static final String URL_GET_BID = BASE_URL + "getbookingid.php";
     public static final String URL_ADDP = BASE_URL + "addpas.php";
     public static final String URL_GETPAS = BASE_URL + "getpassengers.php";
-
-    public static final String URL_CHANGE_PASS = BASE_URL + "changepass.php";
-    public static final String URL_SEARCH_HOSPITAL = BASE_URL + "searchhospital.php";
     public static String URL_Contact_US = BASE_URL + "addcontactus.php";
-    public static String URL_ADD_DOnation = BASE_URL + "adddonation.php";
-
-
     public static final String KEY_LOGED_USER = "KEY_LOGED_USER";
 
 

@@ -28,7 +28,7 @@
         android:layout_gravity="left"
         android:layout_marginTop="52.7dp"
         android:fontFamily="@font/montserrat"
-        android:text="Email"
+        android:text="Nhập tin nhắn"
         android:textColor="@color/colorAccent"
         android:textSize="22sp" />
     <EditText
@@ -37,7 +37,7 @@
         android:layout_margin="10dp"
         android:maxLines="8"
         android:drawablePadding="10dp"
-        android:hint="Nhập email"
+        android:hint="Nhập tại đây"
         android:inputType="textCapSentences|textMultiLine"
         android:fontFamily="@font/montserrat_semibold"
         android:id="@+id/etcontactus"
