@@ -60,8 +60,7 @@ public class Splash extends AppCompatActivity {
                                     } catch (InterruptedException e) {
                                         Log.e(TAG, "run: "+e.toString());
                                     }
-                                    startActivity(new Intent(Splash.this, Welcome.class));
-                                    finish();
+
                                 }
                             };
                             thread1.start();
