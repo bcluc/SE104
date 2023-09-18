@@ -8,14 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="white_B">#FBFBFBFB</color>
-<<<<<<< HEAD
+
     <color name="black_green">#263238</color>
     <color name="blue">#3E6FEF</color>
     <color name="black_light">#63767E</color>
 
-=======
     <color name="while_gray">#E3EAED</color>
     <color name="gray_font">#000000</color>
     <color name="black_50">#80000000</color>
->>>>>>> hung-admin-branch
 </resources>
